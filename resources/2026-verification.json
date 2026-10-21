@@ -1,0 +1,78 @@
+{
+  "checked_on": "2026-10-21",
+  "course": "noc26_ge93",
+  "weeks": [
+    {
+      "week": 1,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=17&assessmentId=214",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 2,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=22&assessmentId=226",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 3,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=27&assessmentId=231",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 4,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=32&assessmentId=236",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 5,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=37&assessmentId=240",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 6,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=41&assessmentId=247",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 7,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=46&assessmentId=253",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 8,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=51&assessmentId=260",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 9,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=56&assessmentId=266",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 10,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=61&assessmentId=272",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 11,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=65&assessmentId=279",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    },
+    {
+      "week": 12,
+      "assessment": "https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93?unitId=70&assessmentId=286",
+      "questions": 10,
+      "official_pdf_key_matches": 10
+    }
+  ]
+}
