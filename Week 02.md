@@ -102,8 +102,6 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ![Week 02, 2026, source page 4](resources/screenshots/Week_02/2026/2026_Week_02_Page_04.png)
 
-This diagram supports Q6–Q10; the question frames and worked answers follow.
-
 ### 2026 — Page 05
 
 ![Week 02, 2026, source page 5](resources/screenshots/Week_02/2026/2026_Week_02_Page_05.png)
