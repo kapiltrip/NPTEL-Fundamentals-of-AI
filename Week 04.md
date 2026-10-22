@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2003.md) · [Next](Week%2005.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 04, 2026, source page 1](resources/screenshots/Week_04/2026_Week_04_Page_01.png)
+![Week 04, 2026, source page 1](resources/screenshots/Week_04/2026/2026_Week_04_Page_01.png)
 
 #### 2026 Q1
 
@@ -44,7 +44,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 04, 2026, source page 2](resources/screenshots/Week_04/2026_Week_04_Page_02.png)
+![Week 04, 2026, source page 2](resources/screenshots/Week_04/2026/2026_Week_04_Page_02.png)
 
 #### 2026 Q4
 
@@ -88,7 +88,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 04, 2026, source page 3](resources/screenshots/Week_04/2026_Week_04_Page_03.png)
+![Week 04, 2026, source page 3](resources/screenshots/Week_04/2026/2026_Week_04_Page_03.png)
 
 #### 2026 Q9
 
@@ -120,7 +120,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 04, 2025, source page 9](resources/screenshots/Week_04/2025_Week_04_Page_01.jpg)
+![Week 04, 2025, source page 9](resources/screenshots/Week_04/2025/2025_Week_04_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -140,7 +140,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 04, 2025, source page 10](resources/screenshots/Week_04/2025_Week_04_Page_02.jpg)
+![Week 04, 2025, source page 10](resources/screenshots/Week_04/2025/2025_Week_04_Page_02.jpg)
 
 #### 2025 Q3
 
@@ -148,7 +148,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** A — Both I and II.
 
-**Why:** Proof search can confirm every entailed sentence eventually. There is no general procedure that always terminates with the correct negative answer for every non-entailment.
+**Why:** Proof search can confirm every entailed sentence eventually. There is no general procedure that always terminates with the correct negative answer for every non-entailment. Individual negative cases may still be established; semidecidability concerns the absence of a general procedure guaranteed to decide every case.
 
 #### 2025 Q4
 
@@ -168,7 +168,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 04, 2025, source page 11](resources/screenshots/Week_04/2025_Week_04_Page_03.jpg)
+![Week 04, 2025, source page 11](resources/screenshots/Week_04/2025/2025_Week_04_Page_03.jpg)
 
 #### 2025 Q6
 
@@ -196,7 +196,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 04
 
-![Week 04, 2025, source page 12](resources/screenshots/Week_04/2025_Week_04_Page_04.jpg)
+![Week 04, 2025, source page 12](resources/screenshots/Week_04/2025/2025_Week_04_Page_04.jpg)
 
 #### 2025 Q9
 
@@ -208,7 +208,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 05
 
-![Week 04, 2025, source page 13](resources/screenshots/Week_04/2025_Week_04_Page_05.jpg)
+![Week 04, 2025, source page 13](resources/screenshots/Week_04/2025/2025_Week_04_Page_05.jpg)
 
 #### 2025 Q10
 
@@ -222,6 +222,152 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=Y0k5-TBt798&t=35s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 04, 2024, source page 0:35](resources/screenshots/Week_04/2024/2024_Week_04_Frame_035.jpg)
+
+[Source video at 0:35](https://www.youtube.com/watch?v=Y0k5-TBt798&t=35s)
+
+#### 2024 Q1
+
+**Question recap:** Which statements describe the physical-symbol-system view?
+
+**Answer:** A and D.
+
+**Why:** Symbols can represent knowledge and thought is modelled as symbol processing. Here C says intelligent behaviour cannot be achieved through symbol manipulation, so C contradicts the symbolic hypothesis. The similar 2025 question says can and therefore includes C. B describes a connectionist approach. Read the negation before reusing an answer from another year.
+
+#### 2024 Q2
+
+**Question recap:** How do data, information, and knowledge match the definitions?
+
+**Answer:** A — P:X, Q:Z, R:Y.
+
+**Why:** Data are primitive facts; information is data with interpretation; knowledge includes useful relationships that support further conclusions. Match the meanings first, then select the letter. The order of definitions is deliberately shuffled.
+
+### 2024 — Page 02
+
+![Week 04, 2024, source page 0:50](resources/screenshots/Week_04/2024/2024_Week_04_Frame_050.jpg)
+
+[Source video at 0:50](https://www.youtube.com/watch?v=Y0k5-TBt798&t=50s)
+
+#### 2024 Q3
+
+**Question recap:** How is a proposition assigned meaning?
+
+**Answer:** A — Semantics through an interpretation.
+
+**Why:** Syntax determines whether a sentence is well formed. An interpretation connects its symbols with domain objects, functions, and relations so truth can be evaluated. A proof uses meanings and rules to derive a conclusion; it does not itself define every symbol's meaning.
+
+### 2024 — Page 03
+
+![Week 04, 2024, source page 1:05](resources/screenshots/Week_04/2024/2024_Week_04_Frame_065.jpg)
+
+[Source video at 1:05](https://www.youtube.com/watch?v=Y0k5-TBt798&t=65s)
+
+#### 2024 Q4
+
+**Question recap:** Which statement is specifically the closed-world assumption?
+
+**Answer:** D — Statement II only.
+
+**Why:** The closed-world assumption treats an unestablished ground fact as false. Statement I concerns the separate unique-names assumption: different constant names denote different objects. Neither assumption follows automatically from ordinary first-order logic, and they should not be merged merely because databases often use both.
+
+### 2024 — Page 04
+
+![Week 04, 2024, source page 1:20](resources/screenshots/Week_04/2024/2024_Week_04_Frame_080.jpg)
+
+[Source video at 1:20](https://www.youtube.com/watch?v=Y0k5-TBt798&t=80s)
+
+#### 2024 Q5
+
+**Question recap:** Which quantifier-satisfaction statement is correct?
+
+**Answer:** C — I only.
+
+**Why:** A universal statement must hold for every assignment of its variable. An existential requires at least one witness and permits the property to hold for all objects as well. Statement II's extra “but not all” restriction is therefore false.
+
+### 2024 — Page 05
+
+![Week 04, 2024, source page 1:35](resources/screenshots/Week_04/2024/2024_Week_04_Frame_095.jpg)
+
+[Source video at 1:35](https://www.youtube.com/watch?v=Y0k5-TBt798&t=95s)
+
+#### 2024 Q6
+
+**Question recap:** Does the inability to express individuals explain propositional logic's weakness?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** Propositional atoms hide their internal objects and relations. Generalising over individuals then requires separate atoms rather than one quantified rule. FOL adds variables, predicates, functions, and quantifiers to express that structure directly.
+
+### 2024 — Page 06
+
+![Week 04, 2024, source page 1:50](resources/screenshots/Week_04/2024/2024_Week_04_Frame_110.jpg)
+
+[Source video at 1:50](https://www.youtube.com/watch?v=Y0k5-TBt798&t=110s)
+
+#### 2024 Q7
+
+**Question recap:** Why is knowledge representation called a surrogate?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** The representation stands in for a real object or world. The agent can derive consequences using that substitute without executing every possible physical action. Conclusions are useful only to the extent that the representation captures the relevant aspects of reality.
+
+### 2024 — Page 07
+
+![Week 04, 2024, source page 2:05](resources/screenshots/Week_04/2024/2024_Week_04_Frame_125.jpg)
+
+[Source video at 2:05](https://www.youtube.com/watch?v=Y0k5-TBt798&t=125s)
+
+#### 2024 Q8
+
+**Question recap:** Which quantifier orders can be exchanged here?
+
+**Answer:** C — I only.
+
+**Why:** Two universal quantifiers commute: $\forall x\forall yP(x,y)\equiv\forall y\forall xP(x,y)$. Mixed quantifiers generally do not. On the domain $\{1,2\}$ with $P(x,y)$ meaning $x=y$, $\forall y\exists xP(x,y)$ is true but $\exists x\forall yP(x,y)$ is false: there is no single x equal to both objects.
+
+### 2024 — Page 08
+
+![Week 04, 2024, source page 2:20](resources/screenshots/Week_04/2024/2024_Week_04_Frame_140.jpg)
+
+[Source video at 2:20](https://www.youtube.com/watch?v=Y0k5-TBt798&t=140s)
+
+#### 2024 Q9
+
+**Question recap:** How is the professor–dean statement translated?
+
+**Answer:** B — $\forall x\forall y[(Professor(x)\land Dean(y))\rightarrow(Friend(x,y)\lor\neg Know(x,y))]$.
+
+**Why:** Each relevant professor–dean pair must satisfy at least one alternative. Implication restricts the assertion to that pair; conjunction would incorrectly assert that arbitrary domain members are professors and deans. Keep the negation on Know.
+
+### 2024 — Page 09
+
+![Week 04, 2024, source page 2:35](resources/screenshots/Week_04/2024/2024_Week_04_Frame_155.jpg)
+
+[Source video at 2:35](https://www.youtube.com/watch?v=Y0k5-TBt798&t=155s)
+
+#### 2024 Q10
+
+**Question recap:** How should the criticism restriction be represented?
+
+**Answer:** The intended option is A, with the same friendship-direction caveat as the 2025 copy.
+
+**Why:** A precise directed-relation form is $\forall x\forall y[(Person(x)\land Person(y)\land Criticize(x,y))\rightarrow\neg Friend(x,y)]$. The printed option reverses the friendship arguments to $Friend(y,x)$; that is equivalent only if friendship is assumed symmetric. “Only” makes non-friendship a necessary condition for criticism, not a reason to criticise every non-friend.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -232,7 +378,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 04, 2019, source page 1](resources/screenshots/Week_04/2019_Week_04.png)
+![Week 04, 2019, source page 1](resources/screenshots/Week_04/2019/2019_Week_04.png)
 
 #### 2019 Q1
 
@@ -248,7 +394,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 **Answer:** A — Both I and II.
 
-**Why:** Entailed conclusions can eventually be proved by a complete procedure. Non-entailment does not generally admit a guaranteed terminating negative test.
+**Why:** Entailed conclusions can eventually be proved by a complete procedure. Non-entailment does not generally admit a guaranteed terminating negative test. Individual negative cases may still be established; semidecidability concerns the absence of a general procedure guaranteed to decide every case.
 
 #### 2019 Q3
 

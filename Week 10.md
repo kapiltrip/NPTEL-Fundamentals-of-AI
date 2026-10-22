@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2009.md) · [Next](Week%2011.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 10, 2026, source page 1](resources/screenshots/Week_10/2026_Week_10_Page_01.png)
+![Week 10, 2026, source page 1](resources/screenshots/Week_10/2026/2026_Week_10_Page_01.png)
 
 #### 2026 Q1
 
@@ -44,7 +44,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 10, 2026, source page 2](resources/screenshots/Week_10/2026_Week_10_Page_02.png)
+![Week 10, 2026, source page 2](resources/screenshots/Week_10/2026/2026_Week_10_Page_02.png)
 
 #### 2026 Q4
 
@@ -72,7 +72,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 10, 2026, source page 3](resources/screenshots/Week_10/2026_Week_10_Page_03.png)
+![Week 10, 2026, source page 3](resources/screenshots/Week_10/2026/2026_Week_10_Page_03.png)
 
 #### 2026 Q7
 
@@ -120,7 +120,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 10, 2025, source page 35](resources/screenshots/Week_10/2025_Week_10_Page_01.jpg)
+![Week 10, 2025, source page 35](resources/screenshots/Week_10/2025/2025_Week_10_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -148,7 +148,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 10, 2025, source page 36](resources/screenshots/Week_10/2025_Week_10_Page_02.jpg)
+![Week 10, 2025, source page 36](resources/screenshots/Week_10/2025/2025_Week_10_Page_02.jpg)
 
 #### 2025 Q4
 
@@ -168,7 +168,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 10, 2025, source page 37](resources/screenshots/Week_10/2025_Week_10_Page_03.jpg)
+![Week 10, 2025, source page 37](resources/screenshots/Week_10/2025/2025_Week_10_Page_03.jpg)
 
 #### 2025 Q6
 
@@ -184,7 +184,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** B — Approximately 0.971 bits.
 
-**Why:** There are six Yes and four No examples, so $H=-0.6\log_2 0.6-0.4\log_2 0.4\approx0.971$.
+**Why:** There are six Yes and four No labels in the ten rows: $H=-0.6\log_2(0.6)-0.4\log_2(0.4)=0.970951$ bits. A pure subset has entropy zero; an evenly split binary subset has one bit. Do not transfer the 2026 answer of one bit to this different class distribution.
 
 #### 2025 Q8
 
@@ -192,11 +192,11 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** D — Outlook.
 
-**Why:** Its weighted child entropy is approximately 0.649, giving gain $0.971-0.649\approx0.322$. This exceeds the gains of Humidity, Temperature, and Wind for the displayed ten rows.
+**Why:** Sunny has one Yes and three No, Overcast has two Yes, and Rain has three Yes and one No. Their entropies are approximately 0.8113, 0, and 0.8113. Weighted remainder is $(4/10)(0.8113)+(2/10)(0)+(4/10)(0.8113)=0.6490$, so Outlook gain is $0.9710-0.6490=0.3219$. Temperature, Humidity, and Wind give only about 0.0955, 0.1245, and 0.0913 respectively.
 
 ### 2025 — Page 04
 
-![Week 10, 2025, source page 38](resources/screenshots/Week_10/2025_Week_10_Page_04.jpg)
+![Week 10, 2025, source page 38](resources/screenshots/Week_10/2025/2025_Week_10_Page_04.jpg)
 
 #### 2025 Q9
 
@@ -218,6 +218,134 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=27s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 10, 2024, source page 0:27](resources/screenshots/Week_10/2024/2024_Week_10_Frame_027.jpg)
+
+[Source video at 0:27](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=27s)
+
+#### 2024 Q1
+
+**Question recap:** Which AI strand studies how intelligent behaviour arises?
+
+**Answer:** A — The cognitive approach.
+
+**Why:** The objective is to understand the mechanisms of intelligence. The engineering approach focuses on constructing effective intelligent systems. These aims can inform one another, but the question asks which strand emphasises understanding.
+
+#### 2024 Q2
+
+**Question recap:** What predicts a numerical dependent variable from explanatory variables?
+
+**Answer:** A — Regression.
+
+**Why:** A regression model maps predictors to a numerical response, such as price or temperature. Classification predicts a category, while clustering groups observations without a supplied target label. The output type is the useful distinction for this question.
+
+### 2024 — Page 02
+
+![Week 10, 2024, source page 0:57](resources/screenshots/Week_10/2024/2024_Week_10_Frame_057.jpg)
+
+[Source video at 0:57](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=57s)
+
+#### 2024 Q3
+
+**Question recap:** What is the learned approximation h called?
+
+**Answer:** B — A hypothesis.
+
+**Why:** The learner infers h from examples of an unknown target function f. Matching the training examples is not enough: the hypothesis should also work on new examples. The term applies to regression functions as well as classifiers.
+
+#### 2024 Q4
+
+**Question recap:** Which ML-versus-statistics statements hold?
+
+**Answer:** B — II only.
+
+**Why:** ML can handle high-dimensional data and learn useful representations of their structure. Statement I incorrectly confines it to low-dimensional inputs. These are broad disciplinary emphases, not a strict rule separating all statistics from all machine learning.
+
+### 2024 — Page 03
+
+![Week 10, 2024, source page 1:17](resources/screenshots/Week_10/2024/2024_Week_10_Frame_077.jpg)
+
+[Source video at 1:17](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=77s)
+
+#### 2024 Q5
+
+**Question recap:** Which practical decision-tree issues are listed?
+
+**Answer:** A, C, and D — Missing data, continuous-valued features, and multivalued features.
+
+**Why:** Missing values need a handling rule, continuous features need split thresholds, and high-cardinality features can make some split scores misleading. “Approximation” is a general learning idea rather than the specific issue named by these options. These choices match the concrete implementation concerns in the question.
+
+### 2024 — Page 04
+
+![Week 10, 2024, source page 1:37](resources/screenshots/Week_10/2024/2024_Week_10_Frame_097.jpg)
+
+[Source video at 1:37](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=97s)
+
+#### 2024 Q6
+
+**Question recap:** Why use information theory for attribute selection?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** Entropy quantifies class uncertainty, and information gain is parent entropy minus weighted child entropy. A split is useful when it leaves less uncertainty about the label. Weight child entropies by their subset sizes rather than averaging branches equally.
+
+#### 2024 Q7
+
+**Question recap:** How can irrelevant attributes contribute to tree overfitting?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** Extra candidate splits give the tree more ways to distinguish accidental details of the training sample. A deep tree can then fit noise rather than reusable structure. Pruning, minimum leaf sizes, and held-out validation can help control this behaviour.
+
+### 2024 — Page 05
+
+![Week 10, 2024, source page 1:57](resources/screenshots/Week_10/2024/2024_Week_10_Frame_117.jpg)
+
+[Source video at 1:57](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=117s)
+
+#### 2024 Q8
+
+**Question recap:** How does the course connect knowledge acquisition with learning?
+
+**Answer:** A — The intended answer under the question's broad definition.
+
+**Why:** Learning is described as acquisition and integration of knowledge, which explains the assertion in that pedagogical sense. This does not mean every AI system must learn all its own knowledge: a programmer can also supply facts and rules. Keep the definition separate from a claim about every implementation.
+
+### 2024 — Page 06
+
+![Week 10, 2024, source page 2:17](resources/screenshots/Week_10/2024/2024_Week_10_Frame_137.jpg)
+
+[Source video at 2:17](https://www.youtube.com/watch?v=7y9Asf2yBy8&t=137s)
+
+#### 2024 Q9
+
+**Question recap:** Which theory is named for a learning agent's goals and likelihoods?
+
+**Answer:** B — Utility theory in the course's repeated key; technically decision theory combines utilities and probabilities.
+
+**Why:** Utility represents how desirable an outcome is, while probability represents its likelihood. Expected utility combines both to compare actions. The same wording occurs in the official 2019 archive, so its expected letter should not be confused with the more precise conceptual distinction.
+
+#### 2024 Q10
+
+**Question recap:** What learning uses unlabelled data to supplement labelled examples?
+
+**Answer:** C — Semisupervised learning.
+
+**Why:** The method combines a small labelled set with additional unlabelled examples in a supervised task. Unsupervised learning has no supplied target labels, while active learning selects which examples to ask an annotator to label. Reinforcement learning learns from interaction and rewards.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -228,7 +356,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 10, 2019, source page 1](resources/screenshots/Week_10/2019_Week_10.png)
+![Week 10, 2019, source page 1](resources/screenshots/Week_10/2019/2019_Week_10.png)
 
 #### 2019 Q1
 

@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2007.md) · [Next](Week%2009.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 08, 2026, source page 1](resources/screenshots/Week_08/2026_Week_08_Page_01.png)
+![Week 08, 2026, source page 1](resources/screenshots/Week_08/2026/2026_Week_08_Page_01.png)
 
 #### 2026 Q1
 
@@ -52,7 +52,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 08, 2026, source page 2](resources/screenshots/Week_08/2026_Week_08_Page_02.png)
+![Week 08, 2026, source page 2](resources/screenshots/Week_08/2026/2026_Week_08_Page_02.png)
 
 #### 2026 Q5
 
@@ -116,7 +116,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 08, 2025, source page 26](resources/screenshots/Week_08/2025_Week_08_Page_01.jpg)
+![Week 08, 2025, source page 26](resources/screenshots/Week_08/2025/2025_Week_08_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -144,7 +144,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 08, 2025, source page 27](resources/screenshots/Week_08/2025_Week_08_Page_02.jpg)
+![Week 08, 2025, source page 27](resources/screenshots/Week_08/2025/2025_Week_08_Page_02.jpg)
 
 #### 2025 Q4
 
@@ -172,7 +172,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 08, 2025, source page 28](resources/screenshots/Week_08/2025_Week_08_Page_03.jpg)
+![Week 08, 2025, source page 28](resources/screenshots/Week_08/2025/2025_Week_08_Page_03.jpg)
 
 #### 2025 Q7
 
@@ -200,7 +200,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 04
 
-![Week 08, 2025, source page 29](resources/screenshots/Week_08/2025_Week_08_Page_04.jpg)
+![Week 08, 2025, source page 29](resources/screenshots/Week_08/2025/2025_Week_08_Page_04.jpg)
 
 #### 2025 Q10
 
@@ -214,6 +214,134 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=35s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 08, 2024, source page 0:35](resources/screenshots/Week_08/2024/2024_Week_08_Frame_035.jpg)
+
+[Source video at 0:35](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=35s)
+
+#### 2024 Q1
+
+**Question recap:** Which internal structures does planning exploit?
+
+**Answer:** A, B, and D — States, actions, and goals.
+
+**Why:** A logical description lets a planner inspect preconditions, effects, and goal components instead of treating states as opaque labels. This supports relevance reasoning and partial plans. Rules can be part of a planning representation, but they are not the three items named in this particular comparison.
+
+### 2024 — Page 02
+
+![Week 08, 2024, source page 0:55](resources/screenshots/Week_08/2024/2024_Week_08_Frame_055.jpg)
+
+[Source video at 0:55](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=55s)
+
+#### 2024 Q2
+
+**Question recap:** Which situation-calculus statements hold?
+
+**Answer:** A and C.
+
+**Why:** Actions and situations are objects in the formal domain, and successor-state axioms describe fluent truth after an action. Situation calculus is one way to represent change, not the only possible representation. A fluent is a property whose value can depend on the situation.
+
+#### 2024 Q3
+
+**Question recap:** Which STRIPS statements are intended?
+
+**Answer:** B — I, II, and III.
+
+**Why:** In basic STRIPS, actions are instantaneous operators that transform state descriptions through preconditions and add/delete effects. Saying actions are outside the world model concerns the state facts; the operators are still explicitly defined. This is a modelling assumption, not a claim that real actions take no time.
+
+### 2024 — Page 03
+
+![Week 08, 2024, source page 1:10](resources/screenshots/Week_08/2024/2024_Week_08_Frame_070.jpg)
+
+[Source video at 1:10](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=70s)
+
+#### 2024 Q4
+
+**Question recap:** What type of planner is ABSTRIPS?
+
+**Answer:** C — Hierarchical.
+
+**Why:** ABSTRIPS first plans at an abstract level and progressively restores lower-priority details. That can reduce the initial search space. An abstract plan may still require refinement and checking when ignored conditions are brought back.
+
+### 2024 — Page 04
+
+![Week 08, 2024, source page 1:25](resources/screenshots/Week_08/2024/2024_Week_08_Frame_085.jpg)
+
+[Source video at 1:25](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=85s)
+
+#### 2024 Q5
+
+**Question recap:** What does GraphPlan's construction stage accomplish?
+
+**Answer:** A and C — Delimiting search and reachability analysis.
+
+**Why:** Build alternating proposition/action layers and record mutex relations. An absent or mutually exclusive goal combination rules out a plan at that level. Finding a consistent set of actions is the later solution-extraction search, rather than the construction stage itself.
+
+#### 2024 Q6
+
+**Question recap:** Does the stated conflict explain a mutex condition?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** A mutex pair cannot be jointly selected at the relevant layer without conflict. For actions, conflicting effects, deleted preconditions, or mutex preconditions can establish this. Proposition mutex relations also restrict compatible goal combinations.
+
+### 2024 — Page 05
+
+![Week 08, 2024, source page 1:55](resources/screenshots/Week_08/2024/2024_Week_08_Frame_115.jpg)
+
+[Source video at 1:55](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=115s)
+
+#### 2024 Q7
+
+**Question recap:** What layers alternate in a planning graph?
+
+**Answer:** A — Propositions and actions.
+
+**Why:** Start with facts, add currently possible actions, then collect their effects as the next fact layer. Persistence actions carry an unchanged fact forward. Mutex information records combinations that cannot occur together at a particular layer.
+
+#### 2024 Q8
+
+**Question recap:** Why does the course contrast progression/regression with decomposition?
+
+**Answer:** A — The intended assertion–reason answer for basic state-space planning.
+
+**Why:** Basic progression and regression search commit to a totally ordered action sequence. A partial-order planner can leave unrelated steps unordered and avoid choosing every interleaving early. This is the course's comparison of basic algorithms; it is not a theorem that every extended progression planner is incapable of using decomposition or helpful heuristics.
+
+### 2024 — Page 06
+
+![Week 08, 2024, source page 2:25](resources/screenshots/Week_08/2024/2024_Week_08_Frame_145.jpg)
+
+[Source video at 2:25](https://www.youtube.com/watch?v=fXetpMOrwzQ&t=145s)
+
+#### 2024 Q9
+
+**Question recap:** Which strategy uses a stack of goals and proposed actions?
+
+**Answer:** B — Goal-stack planning.
+
+**Why:** To achieve a goal, push a relevant action and its preconditions; resolve those preconditions before executing the action. Update the state through add/delete effects. Interacting goals can require undoing work or interleaving actions, which is why independent goal completion can fail.
+
+#### 2024 Q10
+
+**Question recap:** Which conditions make two actions mutex?
+
+**Answer:** A, B, and D.
+
+**Why:** Inconsistent effects produce opposite literals; interference deletes a required precondition; competing needs arise from mutex preconditions. A persistence/no-op operator simply carries a fact forward and is not itself a fourth general conflict condition. Check the relationship between the two actions, not merely whether either is a no-op.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -224,7 +352,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 08, 2019, source page 1](resources/screenshots/Week_08/2019_Week_08.png)
+![Week 08, 2019, source page 1](resources/screenshots/Week_08/2019/2019_Week_08.png)
 
 #### 2019 Q1
 

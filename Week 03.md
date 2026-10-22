@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2002.md) · [Next](Week%2004.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 03, 2026, source page 1](resources/screenshots/Week_03/2026_Week_03_Page_01.png)
+![Week 03, 2026, source page 1](resources/screenshots/Week_03/2026/2026_Week_03_Page_01.png)
 
 #### 2026 Q1
 
@@ -36,7 +36,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 03, 2026, source page 2](resources/screenshots/Week_03/2026_Week_03_Page_02.png)
+![Week 03, 2026, source page 2](resources/screenshots/Week_03/2026/2026_Week_03_Page_02.png)
 
 #### 2026 Q3
 
@@ -64,7 +64,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 03, 2026, source page 3](resources/screenshots/Week_03/2026_Week_03_Page_03.png)
+![Week 03, 2026, source page 3](resources/screenshots/Week_03/2026/2026_Week_03_Page_03.png)
 
 #### 2026 Q6
 
@@ -84,7 +84,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 04
 
-![Week 03, 2026, source page 4](resources/screenshots/Week_03/2026_Week_03_Page_04.png)
+![Week 03, 2026, source page 4](resources/screenshots/Week_03/2026/2026_Week_03_Page_04.png)
 
 #### 2026 Q8
 
@@ -124,7 +124,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 03, 2025, source page 6](resources/screenshots/Week_03/2025_Week_03_Page_01.jpg)
+![Week 03, 2025, source page 6](resources/screenshots/Week_03/2025/2025_Week_03_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -160,7 +160,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 03, 2025, source page 7](resources/screenshots/Week_03/2025_Week_03_Page_02.jpg)
+![Week 03, 2025, source page 7](resources/screenshots/Week_03/2025/2025_Week_03_Page_02.jpg)
 
 #### 2025 Q5
 
@@ -176,7 +176,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** B — 3.
 
-**Why:** The leftmost MAX child returns $\max(2,3)=3$. Its MIN parent can select 3 instead of the sibling branch, which already reaches at least 5, so the root receives 3.
+**Why:** The first MAX child of MIN node A returns $\max(2,3)=3$. A now has upper bound 3. Its other MAX child B sees 5 and is cut off because it cannot improve A's minimum. A therefore returns 3, establishing root C's lower bound $\alpha(C)=3$. Keep A's beta separate from C's alpha even though both temporarily equal 3.
 
 #### 2025 Q7
 
@@ -188,7 +188,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 03, 2025, source page 8](resources/screenshots/Week_03/2025_Week_03_Page_03.jpg)
+![Week 03, 2025, source page 8](resources/screenshots/Week_03/2025/2025_Week_03_Page_03.jpg)
 
 #### 2025 Q8
 
@@ -204,7 +204,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** D — 2.
 
-**Why:** E's first MAX child returns $\max(2,1)=2$. As a MIN node, E then has an upper bound of 2, below the root's existing alpha of 3.
+**Why:** E is MIN. Its first MAX child returns $\max(2,1)=2$, setting $\beta(E)=2$. Root C already has $\alpha(C)=3$, so $2\leq3$ permits pruning E's remaining branch. The root bound 3 is not E's beta; a public 2024 video makes precisely that substitution error on the repeated tree.
 
 #### 2025 Q10
 
@@ -218,6 +218,136 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=25s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 03, 2024, source page 0:25](resources/screenshots/Week_03/2024/2024_Week_03_Frame_025.jpg)
+
+[Source video at 0:25](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=25s)
+
+#### 2024 Q1
+
+**Question recap:** What can limited game-tree search usefully provide?
+
+**Answer:** A — Both I and II.
+
+**Why:** A bounded search estimates the best next move by backing up evaluations from its frontier. This avoids the impossible requirement of exploring an entire complex game to termination. Its result depends on search depth and the quality of the evaluation function.
+
+#### 2024 Q2
+
+**Question recap:** Which two operations define AO*?
+
+**Answer:** A — Top-down expansion and bottom-up revision with solved labels.
+
+**Why:** Grow the current promising solution graph, then revise its ancestors' costs and solved status. An OR node needs one successful alternative; an AND choice needs every required child. The solution can therefore branch, unlike a single ordinary search path.
+
+### 2024 — Page 02
+
+![Week 03, 2024, source page 0:50](resources/screenshots/Week_03/2024/2024_Week_03_Frame_050.jpg)
+
+[Source video at 0:50](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=50s)
+
+#### 2024 Q3
+
+**Question recap:** How many leaves does a full depth-d, branching-b tree contain?
+
+**Answer:** A — $b^d$.
+
+**Why:** Depth zero has one node; each additional level multiplies the count by b. This is the number at the last level, rather than the total number of nodes. The full node count is $1+b+\cdots+b^d$ when all those levels are present.
+
+#### 2024 Q4
+
+**Question recap:** Which minimax descriptions are correct?
+
+**Answer:** A, B, C, and D.
+
+**Why:** MAX takes the largest child value and MIN the smallest, propagating evaluations toward the root. This identifies a move under optimal opposing play. If the leaves are heuristic cutoffs, the result is the minimax value of that evaluated tree; it is not a proof of the entire game's true outcome.
+
+### 2024 — Page 03
+
+![Week 03, 2024, source page 1:20](resources/screenshots/Week_03/2024/2024_Week_03_Frame_080.jpg)
+
+[Source video at 1:20](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=80s)
+
+#### 2024 Q5
+
+**Question recap:** Which alpha-beta statements are correct?
+
+**Answer:** A, B, C, and D.
+
+**Why:** Alpha-beta is a depth-first minimax optimisation that omits branches unable to change the backed-up decision. It preserves the same root value at the same depth and evaluation function. The video selects only D, but A–C also describe the standard algorithm correctly.
+
+### 2024 — Page 04
+
+![Week 03, 2024, source page 1:45](resources/screenshots/Week_03/2024/2024_Week_03_Frame_105.jpg)
+
+[Source video at 1:45](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=105s)
+
+This diagram supports Q6–Q10; the question frames and worked answers follow.
+
+### 2024 — Page 05
+
+![Week 03, 2024, source page 1:50](resources/screenshots/Week_03/2024/2024_Week_03_Frame_110.jpg)
+
+[Source video at 1:50](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=110s)
+
+#### 2024 Q6
+
+**Question recap:** What alpha value reaches root C from the left branch?
+
+**Answer:** B — 3.
+
+**Why:** The first MAX child of A returns $\max(2,3)=3$. A is MIN; its other child B already reaches at least 5, so that branch is cut off and A returns 3. Root C is MAX and now has lower bound $\alpha(C)=3$.
+
+#### 2024 Q7
+
+**Question recap:** What cutoff occurs at B?
+
+**Answer:** B — Beta pruning.
+
+**Why:** A, the MIN parent, already has an alternative worth 3. When MAX node B sees its first leaf 5, $\alpha(B)\geq\beta(A)=3$. A will not prefer B, so B's remaining leaf can be skipped.
+
+#### 2024 Q8
+
+**Question recap:** What cutoff occurs at D?
+
+**Answer:** A — Alpha pruning.
+
+**Why:** D is MIN and its first MAX child returns 0. Root C already has an alternative worth 3, so $\beta(D)=0\leq\alpha(C)=3$. Any other child could only keep or lower D's minimum; the unexplored branch cannot improve the root's choice.
+
+### 2024 — Page 06
+
+![Week 03, 2024, source page 2:20](resources/screenshots/Week_03/2024/2024_Week_03_Frame_140.jpg)
+
+[Source video at 2:20](https://www.youtube.com/watch?v=WuPKscWbJ9c&t=140s)
+
+#### 2024 Q9
+
+**Question recap:** What beta bound is established at E?
+
+**Answer:** D — 2; the public video later selects B — 3.
+
+**Why:** E is MIN and its first MAX child has leaves 2 and 1. That child returns $\max(2,1)=2$, so $\beta(E)=2$. The root's alpha of 3 is a different bound and must not be substituted for E's beta. Since $2\leq3$, E's remaining branch is pruned.
+
+#### 2024 Q10
+
+**Question recap:** What upper bound justifies pruning D's remaining branch?
+
+**Answer:** C — 0; the public video selects B — 3.
+
+**Why:** D is MIN and already has a child valued 0, hence its eventual result cannot exceed 0. The root's existing 3 explains why that upper bound is insufficient. The root bound and the local bound at D are different quantities.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -228,7 +358,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 03, 2019, source page 1](resources/screenshots/Week_03/2019_Week_03.png)
+![Week 03, 2019, source page 1](resources/screenshots/Week_03/2019/2019_Week_03.png)
 
 #### 2019 Q1
 

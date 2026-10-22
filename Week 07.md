@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2006.md) · [Next](Week%2008.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 07, 2026, source page 1](resources/screenshots/Week_07/2026_Week_07_Page_01.png)
+![Week 07, 2026, source page 1](resources/screenshots/Week_07/2026/2026_Week_07_Page_01.png)
 
 #### 2026 Q1
 
@@ -52,7 +52,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 07, 2026, source page 2](resources/screenshots/Week_07/2026_Week_07_Page_02.png)
+![Week 07, 2026, source page 2](resources/screenshots/Week_07/2026/2026_Week_07_Page_02.png)
 
 #### 2026 Q5
 
@@ -80,7 +80,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 07, 2026, source page 3](resources/screenshots/Week_07/2026_Week_07_Page_03.png)
+![Week 07, 2026, source page 3](resources/screenshots/Week_07/2026/2026_Week_07_Page_03.png)
 
 #### 2026 Q8
 
@@ -100,7 +100,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 04
 
-![Week 07, 2026, source page 4](resources/screenshots/Week_07/2026_Week_07_Page_04.png)
+![Week 07, 2026, source page 4](resources/screenshots/Week_07/2026/2026_Week_07_Page_04.png)
 
 #### 2026 Q10
 
@@ -124,7 +124,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 07, 2025, source page 23](resources/screenshots/Week_07/2025_Week_07_Page_01.jpg)
+![Week 07, 2025, source page 23](resources/screenshots/Week_07/2025/2025_Week_07_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -152,7 +152,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 07, 2025, source page 24](resources/screenshots/Week_07/2025_Week_07_Page_02.jpg)
+![Week 07, 2025, source page 24](resources/screenshots/Week_07/2025/2025_Week_07_Page_02.jpg)
 
 #### 2025 Q4
 
@@ -180,7 +180,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 07, 2025, source page 25](resources/screenshots/Week_07/2025_Week_07_Page_03.jpg)
+![Week 07, 2025, source page 25](resources/screenshots/Week_07/2025/2025_Week_07_Page_03.jpg)
 
 #### 2025 Q7
 
@@ -218,6 +218,140 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=25s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 07, 2024, source page 0:25](resources/screenshots/Week_07/2024/2024_Week_07_Frame_025.jpg)
+
+[Source video at 0:25](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=25s)
+
+#### 2024 Q1
+
+**Question recap:** Which listed conditions cause uncertainty about an environment?
+
+**Answer:** A and D — Incomplete or incorrect understanding.
+
+**Why:** Missing facts leave several possible states compatible with the agent's knowledge. An inaccurate model can also make its predictions unreliable. Merely using a formal representation is not itself a cause of uncertainty; uncertainty concerns what is known and how accurately it is modelled.
+
+#### 2024 Q2
+
+**Question recap:** Which listed Bayesian-network properties are intended?
+
+**Answer:** A, C, and D.
+
+**Why:** A Bayesian network is a directed acyclic graph whose nodes are random variables. Each node needs a conditional distribution given its parents; a parentless node has a prior. Option B's “some nodes” is an incomplete specification rather than the required all-node condition. The complete joint factors as $\prod_iP(X_i\mid Parents(X_i))$.
+
+### 2024 — Page 02
+
+![Week 07, 2024, source page 0:50](resources/screenshots/Week_07/2024/2024_Week_07_Frame_050.jpg)
+
+[Source video at 0:50](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=50s)
+
+#### 2024 Q3
+
+**Question recap:** What assumption is being described by the missing-direct-dependence wording?
+
+**Answer:** B — The Markov property.
+
+**Why:** The precise local statement is that a node is conditionally independent of its non-descendants given its parents. Missing an edge does not necessarily imply marginal independence: variables can still interact through other open paths. Use d-separation to decide a particular conditional independence.
+
+#### 2024 Q4
+
+**Question recap:** Which theory does this repeated course wording expect?
+
+**Answer:** B — Utility theory in the course's repeated key; the wording is loose.
+
+**Why:** Utility represents desirability, probability represents likelihood, and decision theory combines them through expected utility. The official 2019 Week 7 Q1 uses the same expected key. Learn that course convention while remembering that desirability plus likelihood is technically a decision-theory calculation.
+
+### 2024 — Page 03
+
+![Week 07, 2024, source page 1:15](resources/screenshots/Week_07/2024/2024_Week_07_Frame_075.jpg)
+
+[Source video at 1:15](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=75s)
+
+#### 2024 Q5
+
+**Question recap:** What is P(free given spam)?
+
+**Answer:** A — Approximately 0.266 using the stated percentage.
+
+**Why:** Let S denote spam and F the word free. Then $P(F\mid S)=P(F\cap S)/P(S)=0.0357/0.134\approx0.2664$. The source's counts, 774 out of 5574, actually give about 13.89%, not its stated 13.40%; the offered answers use 13.40%. Do not silently mix those inconsistent inputs.
+
+### 2024 — Page 04
+
+![Week 07, 2024, source page 1:25](resources/screenshots/Week_07/2024/2024_Week_07_Frame_085.jpg)
+
+[Source video at 1:25](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=85s)
+
+#### 2024 Q6
+
+**Question recap:** What is P(spam given free)?
+
+**Answer:** B — Approximately 0.752.
+
+**Why:** Reverse conditioning by changing the denominator: $P(S\mid F)=0.0357/0.0475\approx0.7516$. This is not the previous probability 0.266. The joint event in the numerator is the same; the condition after the bar determines which marginal belongs below it.
+
+### 2024 — Page 05
+
+![Week 07, 2024, source page 1:40](resources/screenshots/Week_07/2024/2024_Week_07_Frame_100.jpg)
+
+[Source video at 1:40](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=100s)
+
+#### 2024 Q7
+
+**Question recap:** What is P(spam given text)?
+
+**Answer:** C — Approximately 0.737 using the stated percentage.
+
+**Why:** With T denoting text, Bayes' rule gives $P(S\mid T)=P(T\mid S)P(S)/P(T)=0.3855(0.134)/0.0701\approx0.7369$. The answer again follows the printed 13.40% prior rather than the inconsistent message counts.
+
+### 2024 — Page 06
+
+![Week 07, 2024, source page 2:05](resources/screenshots/Week_07/2024/2024_Week_07_Frame_125.jpg)
+
+[Source video at 2:05](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=125s)
+
+#### 2024 Q8
+
+**Question recap:** What is the expected utility of reviewing?
+
+**Answer:** B — 800.
+
+**Why:** The topic appears with probability 0.5. Weight both review outcomes: $EU(Review)=0.5(1000)+0.5(600)=800$. Expected utility is a probability-weighted average; it is not the best listed payoff.
+
+#### 2024 Q9
+
+**Question recap:** What is the expected utility of sleeping?
+
+**Answer:** D — 750.
+
+**Why:** Sleeping gives utility 0 if the topic appears and 1500 if it does not. Hence $EU(Sleep)=0.5(0)+0.5(1500)=750$. Include the zero-payoff outcome; selecting 1500 alone ignores its uncertainty.
+
+### 2024 — Page 07
+
+![Week 07, 2024, source page 2:25](resources/screenshots/Week_07/2024/2024_Week_07_Frame_145.jpg)
+
+[Source video at 2:25](https://www.youtube.com/watch?v=gV6Yo6s08sI&t=145s)
+
+#### 2024 Q10
+
+**Question recap:** What is the maximum expected utility?
+
+**Answer:** B — 800, achieved by reviewing; the video selects A — 1500.
+
+**Why:** Compare the action expectations: $\max(800,750)=800$. The value 1500 is a possible outcome after sleeping, not that action's expected utility. A rational expected-utility choice selects Review in this table.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -228,7 +362,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 07, 2019, source page 1](resources/screenshots/Week_07/2019_Week_07.png)
+![Week 07, 2019, source page 1](resources/screenshots/Week_07/2019/2019_Week_07.png)
 
 #### 2019 Q1
 

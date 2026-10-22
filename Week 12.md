@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2011.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 12, 2026, source page 1](resources/screenshots/Week_12/2026_Week_12_Page_01.png)
+![Week 12, 2026, source page 1](resources/screenshots/Week_12/2026/2026_Week_12_Page_01.png)
 
 #### 2026 Q1
 
@@ -52,7 +52,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 12, 2026, source page 2](resources/screenshots/Week_12/2026_Week_12_Page_02.png)
+![Week 12, 2026, source page 2](resources/screenshots/Week_12/2026/2026_Week_12_Page_02.png)
 
 #### 2026 Q5
 
@@ -88,7 +88,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 12, 2026, source page 3](resources/screenshots/Week_12/2026_Week_12_Page_03.png)
+![Week 12, 2026, source page 3](resources/screenshots/Week_12/2026/2026_Week_12_Page_03.png)
 
 #### 2026 Q9
 
@@ -120,7 +120,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 12, 2025, source page 43](resources/screenshots/Week_12/2025_Week_12_Page_01.jpg)
+![Week 12, 2025, source page 43](resources/screenshots/Week_12/2025/2025_Week_12_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -136,11 +136,11 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** B — Q-learning.
 
-**Why:** It estimates $Q(s,a)$ rather than only a state value $V(s)$. Comparing action values allows a policy to be selected from the learned estimates.
+**Why:** Q-learning estimates $Q(s,a)$, the return associated with a state–action pair. Its sampled target is $r+\gamma\max_{a\prime}Q(s\prime,a\prime)$. For old value 2, reward 1, discount 0.9, best next value 4, and learning rate 0.5, the update gives $2+0.5[1+0.9(4)-2]=3.3$. A state value $V(s)$ has no action argument.
 
 ### 2025 — Page 02
 
-![Week 12, 2025, source page 44](resources/screenshots/Week_12/2025_Week_12_Page_02.jpg)
+![Week 12, 2025, source page 44](resources/screenshots/Week_12/2025/2025_Week_12_Page_02.jpg)
 
 #### 2025 Q3
 
@@ -168,7 +168,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 12, 2025, source page 45](resources/screenshots/Week_12/2025_Week_12_Page_03.jpg)
+![Week 12, 2025, source page 45](resources/screenshots/Week_12/2025/2025_Week_12_Page_03.jpg)
 
 #### 2025 Q6
 
@@ -196,7 +196,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 04
 
-![Week 12, 2025, source page 46](resources/screenshots/Week_12/2025_Week_12_Page_04.jpg)
+![Week 12, 2025, source page 46](resources/screenshots/Week_12/2025/2025_Week_12_Page_04.jpg)
 
 #### 2025 Q9
 
@@ -218,6 +218,134 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=53OMynl4OMc&t=30s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 12, 2024, source page 0:30](resources/screenshots/Week_12/2024/2024_Week_12_Frame_030.jpg)
+
+[Source video at 0:30](https://www.youtube.com/watch?v=53OMynl4OMc&t=30s)
+
+#### 2024 Q1
+
+**Question recap:** What hypothesis underlies the RL objective?
+
+**Answer:** C — The reward hypothesis.
+
+**Why:** The goal is to maximise expected cumulative reward from interaction with the environment. Future rewards matter, so the highest immediate reward need not identify the best action. A policy is the behaviour used to pursue that objective, while a value function estimates return.
+
+#### 2024 Q2
+
+**Question recap:** Which single-neuron model represents only linearly separable functions?
+
+**Answer:** A — The perceptron.
+
+**Why:** A thresholded weighted sum defines a linear boundary. For XOR, the positive examples occupy opposite corners and no single straight line separates them from the negatives. A hidden layer or suitable feature transformation can overcome this limitation; a single untransformed perceptron cannot.
+
+### 2024 — Page 02
+
+![Week 12, 2024, source page 0:55](resources/screenshots/Week_12/2024/2024_Week_12_Frame_055.jpg)
+
+[Source video at 0:55](https://www.youtube.com/watch?v=53OMynl4OMc&t=55s)
+
+#### 2024 Q3
+
+**Question recap:** Which traditional-ML versus deep-learning feature statements hold?
+
+**Answer:** A — Both I and II.
+
+**Why:** Traditional pipelines often use engineered features, whereas deep models learn layered representations from data. This is a broad contrast rather than an absolute boundary between all methods. Good training objectives, data, and input preparation remain necessary for learned representations.
+
+#### 2024 Q4
+
+**Question recap:** Which architecture trains competing generator and discriminator networks?
+
+**Answer:** C — A generative adversarial network.
+
+**Why:** The generator produces samples and the discriminator tries to distinguish them from real data. Adversarial objectives train both components. A GAN is a generative modelling method; its defining property is the two-network competition described here.
+
+### 2024 — Page 03
+
+![Week 12, 2024, source page 1:25](resources/screenshots/Week_12/2024/2024_Week_12_Frame_085.jpg)
+
+[Source video at 1:25](https://www.youtube.com/watch?v=53OMynl4OMc&t=85s)
+
+#### 2024 Q5
+
+**Question recap:** Which RL-component statements are defensible?
+
+**Answer:** A, B, and C; D is false.
+
+**Why:** A policy maps states to actions. An environment model predicts environmental outcomes; in B, “it” must refer to the environment. General RL can also involve partial observability, although a standard fully observed MDP assumes an observable state. A value function predicts expected cumulative return, not the next state. Compare the explicitly incorrect agent wording in Q8.
+
+#### 2024 Q6
+
+**Question recap:** What learns values for state–action pairs?
+
+**Answer:** B — Q-learning.
+
+**Why:** It estimates $Q(s,a)$ rather than only $V(s)$. A standard update is $Q(s,a)\leftarrow Q(s,a)+\alpha[r+\gamma\max_{a'}Q(s',a')-Q(s,a)]$. The reward plus discounted best next-action estimate is the target, and the bracketed difference is the temporal-difference error.
+
+### 2024 — Page 04
+
+![Week 12, 2024, source page 1:55](resources/screenshots/Week_12/2024/2024_Week_12_Frame_115.jpg)
+
+[Source video at 1:55](https://www.youtube.com/watch?v=53OMynl4OMc&t=115s)
+
+#### 2024 Q7
+
+**Question recap:** Does the use of backpropagation explain the representational benefit of depth?
+
+**Answer:** B — Both statements are true, but the reason is not the explanation.
+
+**Why:** Hidden layers with nonlinear activations can build useful intermediate representations. Backpropagation computes parameter gradients and is commonly used to train such networks. Naming the training algorithm does not by itself explain why multiple layers can represent some functions efficiently.
+
+### 2024 — Page 05
+
+![Week 12, 2024, source page 2:25](resources/screenshots/Week_12/2024/2024_Week_12_Frame_145.jpg)
+
+[Source video at 2:25](https://www.youtube.com/watch?v=53OMynl4OMc&t=145s)
+
+#### 2024 Q8
+
+**Question recap:** Does a model predict what the agent will do next?
+
+**Answer:** C — The assertion is true, but the stated reason is false.
+
+**Why:** A policy describes action choice. An environment model predicts the next environmental state and reward after an action, not the agent's next decision. Replacing “agent” with “environment” would repair the reason; it would still describe a separate RL component. See [Sutton and Barto](https://www.incompleteideas.net/book/bookdraft2018mar21.pdf).
+
+#### 2024 Q9
+
+**Question recap:** How do convolution and pooling support CNN representations?
+
+**Answer:** A — The intended assertion–reason answer for the typical architecture.
+
+**Why:** Convolution uses local spatial relationships and shared filters; pooling summarises local responses and can reduce resolution and sensitivity to small shifts. Pooling is common but optional in modern CNNs, and early filters are shared across locations rather than unique to one fixed image region.
+
+### 2024 — Page 06
+
+![Week 12, 2024, source page 2:55](resources/screenshots/Week_12/2024/2024_Week_12_Frame_175.jpg)
+
+[Source video at 2:55](https://www.youtube.com/watch?v=53OMynl4OMc&t=175s)
+
+#### 2024 Q10
+
+**Question recap:** Which listed deep-learning feature statements hold?
+
+**Answer:** A, B, and C.
+
+**Why:** Deep models can learn hierarchical features, while many traditional pipelines use engineered feature extraction. They still need suitable raw inputs and training choices; “no precisely defined features” refers to avoiding hand-design of every intermediate feature. The claim that deep learning is inherently unscalable is false.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -228,7 +356,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 12, 2019, source page 1](resources/screenshots/Week_12/2019_Week_12.png)
+![Week 12, 2019, source page 1](resources/screenshots/Week_12/2019/2019_Week_12.png)
 
 #### 2019 Q1
 

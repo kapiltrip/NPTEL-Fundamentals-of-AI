@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2004.md) · [Next](Week%2006.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 05, 2026, source page 1](resources/screenshots/Week_05/2026_Week_05_Page_01.png)
+![Week 05, 2026, source page 1](resources/screenshots/Week_05/2026/2026_Week_05_Page_01.png)
 
 #### 2026 Q1
 
@@ -52,7 +52,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 05, 2026, source page 2](resources/screenshots/Week_05/2026_Week_05_Page_02.png)
+![Week 05, 2026, source page 2](resources/screenshots/Week_05/2026/2026_Week_05_Page_02.png)
 
 #### 2026 Q5
 
@@ -72,7 +72,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 05, 2026, source page 3](resources/screenshots/Week_05/2026_Week_05_Page_03.png)
+![Week 05, 2026, source page 3](resources/screenshots/Week_05/2026/2026_Week_05_Page_03.png)
 
 #### 2026 Q7
 
@@ -120,7 +120,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 05, 2025, source page 14](resources/screenshots/Week_05/2025_Week_05_Page_01.jpg)
+![Week 05, 2025, source page 14](resources/screenshots/Week_05/2025/2025_Week_05_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -148,7 +148,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 05, 2025, source page 15](resources/screenshots/Week_05/2025_Week_05_Page_02.jpg)
+![Week 05, 2025, source page 15](resources/screenshots/Week_05/2025/2025_Week_05_Page_02.jpg)
 
 #### 2025 Q4
 
@@ -156,7 +156,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** A — Existential quantifiers.
 
-**Why:** Introduce a fresh constant for an independent witness or a function of preceding universal variables for a dependent witness. The transformation preserves satisfiability, rather than equivalence in the original vocabulary.
+**Why:** Skolemisation replaces existential witnesses with fresh symbols. An independent witness in $\exists yP(y)$ uses a constant c; a witness in $\forall x\exists yP(x,y)$ uses $f(x)$ because it can depend on x. The resulting clause problem preserves satisfiability in an expanded language, rather than literal equivalence in the original vocabulary.
 
 #### 2025 Q5
 
@@ -184,7 +184,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 05, 2025, source page 16](resources/screenshots/Week_05/2025_Week_05_Page_03.jpg)
+![Week 05, 2025, source page 16](resources/screenshots/Week_05/2025/2025_Week_05_Page_03.jpg)
 
 #### 2025 Q8
 
@@ -214,6 +214,140 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=pWBjsD2Btko&t=30s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 05, 2024, source page 0:30](resources/screenshots/Week_05/2024/2024_Week_05_Frame_030.jpg)
+
+[Source video at 0:30](https://www.youtube.com/watch?v=pWBjsD2Btko&t=30s)
+
+#### 2024 Q1
+
+**Question recap:** What is the relationship between a declarative formulation and a conceptualisation?
+
+**Answer:** C — An interpretation.
+
+**Why:** An interpretation assigns meanings to the language's constants, predicates, and functions in the conceptualised domain. Syntax governs permitted expressions, while the interpretation supplies the meanings needed to evaluate them. A model is an interpretation that satisfies the sentences under consideration.
+
+### 2024 — Page 02
+
+![Week 05, 2024, source page 0:45](resources/screenshots/Week_05/2024/2024_Week_05_Frame_045.jpg)
+
+[Source video at 0:45](https://www.youtube.com/watch?v=pWBjsD2Btko&t=45s)
+
+#### 2024 Q2
+
+**Question recap:** Which displayed formula is a tautology and which a contradiction?
+
+**Answer:** A — I is a tautology; II is a contradiction.
+
+**Why:** I expresses a distributive equivalence, so both sides agree under every valuation. In II, $P\leftrightarrow Q$ and $Q\leftrightarrow R$ force $P\leftrightarrow R$; conjoining its negation makes the whole formula false for every valuation. Truth-table enumeration independently confirms both classifications.
+
+#### 2024 Q3
+
+**Question recap:** Which statements describe FOL semidecidability?
+
+**Answer:** A — Both I and II, in the course's intended sense.
+
+**Why:** A complete proof search eventually confirms an entailed sentence. There is no general sound-and-complete decision procedure guaranteed to terminate on all non-entailments as well. This does not say that individual negative cases can never be established; many particular cases are decidable or have a countermodel.
+
+### 2024 — Page 03
+
+![Week 05, 2024, source page 1:00](resources/screenshots/Week_05/2024/2024_Week_05_Frame_060.jpg)
+
+[Source video at 1:00](https://www.youtube.com/watch?v=pWBjsD2Btko&t=60s)
+
+#### 2024 Q4
+
+**Question recap:** What does Skolemisation eliminate?
+
+**Answer:** A — Existential quantifiers.
+
+**Why:** In $\exists yP(y)$, use a fresh constant c. In $\forall x\exists yP(x,y)$, use a fresh function $f(x)$ because the witness may depend on x. Skolemisation preserves satisfiability in an expanded language; it is not equivalence in the original vocabulary.
+
+#### 2024 Q5
+
+**Question recap:** Can everyone liking ice cream be expressed using an existential quantifier?
+
+**Answer:** D — $\neg\exists x\,\neg Likes(x,IceCream)$.
+
+**Why:** “Everyone likes it” means there is no individual who fails to like it. Applying quantifier negation gives $\forall xL(x)\equiv\neg\exists x\neg L(x)$. Omitting either negation changes the meaning to a much weaker or entirely different claim.
+
+### 2024 — Page 04
+
+![Week 05, 2024, source page 1:10](resources/screenshots/Week_05/2024/2024_Week_05_Frame_070.jpg)
+
+[Source video at 1:10](https://www.youtube.com/watch?v=pWBjsD2Btko&t=70s)
+
+#### 2024 Q6
+
+**Question recap:** Which brother-definition statements hold?
+
+**Answer:** C — Both I and II.
+
+**Why:** Under the given family predicates, $Brother(x,y)\leftrightarrow Male(x)\land Sibling(x,y)$. Being male is necessary but does not by itself establish brotherhood. Being both male and a sibling supplies the necessary and sufficient condition in this definition.
+
+### 2024 — Page 05
+
+![Week 05, 2024, source page 1:35](resources/screenshots/Week_05/2024/2024_Week_05_Frame_095.jpg)
+
+[Source video at 1:35](https://www.youtube.com/watch?v=pWBjsD2Btko&t=95s)
+
+#### 2024 Q7
+
+**Question recap:** Does the prenex-form definition alone explain clause conversion?
+
+**Answer:** B — Both statements are true, but the reason is not the explanation.
+
+**Why:** Prenex form has a quantifier prefix and a quantifier-free matrix. Conversion to clauses also requires steps such as implication removal, negation movement, Skolemisation, and distribution into CNF. In the presence of Skolemisation the relevant preservation property is satisfiability, not literal equivalence in the old language.
+
+### 2024 — Page 06
+
+![Week 05, 2024, source page 2:00](resources/screenshots/Week_05/2024/2024_Week_05_Frame_120.jpg)
+
+[Source video at 2:00](https://www.youtube.com/watch?v=pWBjsD2Btko&t=120s)
+
+#### 2024 Q8
+
+**Question recap:** What unifies the two Older atoms?
+
+**Answer:** C — $\{y\mapsto John,\;x\mapsto John\}$.
+
+**Why:** Matching the second arguments first forces $y=John$. Matching $Father(y)$ with $Father(x)$ then forces $x=John$. Applying the substitution makes both atoms $Older(Father(John),John)$. This normalised substitution avoids ambiguity about sequentially composing variable replacements.
+
+#### 2024 Q9
+
+**Question recap:** Can Q(y,G(A,B)) and Q(G(x,x),y) unify?
+
+**Answer:** D — Cannot unify; the public video selects C.
+
+**Why:** The argument equations require $y=G(x,x)$ and $y=G(A,B)$, hence both $x=A$ and $x=B$. Distinct constant symbols A and B cannot be identified by syntactic unification. The video's substitution $y\mapsto G(A,B),x\mapsto A$ leaves $G(A,B)$ versus $G(A,A)$, so it fails when checked.
+
+### 2024 — Page 07
+
+![Week 05, 2024, source page 2:25](resources/screenshots/Week_05/2024/2024_Week_05_Frame_145.jpg)
+
+[Source video at 2:25](https://www.youtube.com/watch?v=pWBjsD2Btko&t=145s)
+
+#### 2024 Q10
+
+**Question recap:** Why do proofs rely on axioms?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** Axioms supply the domain facts and rules accepted as premises; inference rules derive further statements from them. A theorem is justified relative to those premises. The inference procedure does not independently establish that every chosen domain axiom accurately describes the real world.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -224,7 +358,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 05, 2019, source page 1](resources/screenshots/Week_05/2019_Week_05.png)
+![Week 05, 2019, source page 1](resources/screenshots/Week_05/2019/2019_Week_05.png)
 
 #### 2019 Q1
 

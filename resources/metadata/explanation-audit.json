@@ -1,0 +1,47 @@
+{
+  "audited_on": "2026-10-22",
+  "discussions": 510,
+  "official_2026_key_matches": 120,
+  "public_keys_are_not_official": true,
+  "expanded_worked_explanations": [
+    "02-2026-Q8",
+    "02-2026-Q9",
+    "02-2025-Q8",
+    "02-2025-Q9",
+    "02-2025-Q10",
+    "03-2025-Q6",
+    "03-2025-Q9",
+    "05-2025-Q4",
+    "06-2025-Q4",
+    "06-2026-Q9",
+    "10-2025-Q7",
+    "10-2025-Q8",
+    "12-2025-Q2",
+    "01-2023-Q10",
+    "02-2022-Q10"
+  ],
+  "checks": {
+    "puzzle_moves": 6,
+    "puzzle_non_goal_astar_expansions": 6,
+    "puzzle_path_states_including_goal": 7,
+    "graph_shortest_cost": 10,
+    "minimax_root_for_3125_completions": 3,
+    "entropy_2025": 0.9709505944546686,
+    "information_gains_2025": [
+      0.3219280948873623,
+      0.09546184423832171,
+      0.12451124978365313,
+      0.0912774462416801
+    ],
+    "bayes_2024": [
+      0.2664179104477612,
+      0.7515789473684211,
+      0.736904422253923
+    ],
+    "review_expected_utility": 800,
+    "sleep_expected_utility": 750,
+    "truth_tables": "passed",
+    "q_update": 3.3,
+    "mdp_backup": 3.25
+  }
+}

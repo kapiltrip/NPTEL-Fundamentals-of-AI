@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Next](Week%2002.md)
 
-[2026](#2026) · [2025](#2025) · [2023](#2023) · [2022](#2022) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2023](#2023) · [2022](#2022) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 01, 2026, source page 1](resources/screenshots/Week_01/2026_Week_01_Page_01.png)
+![Week 01, 2026, source page 1](resources/screenshots/Week_01/2026/2026_Week_01_Page_01.png)
 
 #### 2026 Q1
 
@@ -52,7 +52,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 01, 2026, source page 2](resources/screenshots/Week_01/2026_Week_01_Page_02.png)
+![Week 01, 2026, source page 2](resources/screenshots/Week_01/2026/2026_Week_01_Page_02.png)
 
 #### 2026 Q5
 
@@ -88,7 +88,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 01, 2026, source page 3](resources/screenshots/Week_01/2026_Week_01_Page_03.png)
+![Week 01, 2026, source page 3](resources/screenshots/Week_01/2026/2026_Week_01_Page_03.png)
 
 #### 2026 Q9
 
@@ -120,7 +120,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 01, 2025, source page 1](resources/screenshots/Week_01/2025_Week_01_Page_01.jpg)
+![Week 01, 2025, source page 1](resources/screenshots/Week_01/2025/2025_Week_01_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -164,7 +164,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 01, 2025, source page 2](resources/screenshots/Week_01/2025_Week_01_Page_02.jpg)
+![Week 01, 2025, source page 2](resources/screenshots/Week_01/2025/2025_Week_01_Page_02.jpg)
 
 #### 2025 Q6
 
@@ -210,6 +210,134 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=25s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 01, 2024, source page 0:25](resources/screenshots/Week_01/2024/2024_Week_01_Frame_025.jpg)
+
+[Source video at 0:25](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=25s)
+
+#### 2024 Q1
+
+**Question recap:** What argument patterns did Aristotle formalise?
+
+**Answer:** C — Syllogisms.
+
+**Why:** A syllogism is an argument form whose conclusion follows from its premises. For example: all humans are mortal; Socrates is human; therefore Socrates is mortal. A valid form preserves truth when its premises are true; it does not make false premises true.
+
+### 2024 — Page 02
+
+![Week 01, 2024, source page 0:35](resources/screenshots/Week_01/2024/2024_Week_01_Frame_035.jpg)
+
+[Source video at 0:35](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=35s)
+
+#### 2024 Q2
+
+**Question recap:** Which 1957 Newell–Simon program pursued general problem solving?
+
+**Answer:** A — General Problem Solver.
+
+**Why:** GPS tried to solve formally represented problems through means–ends analysis: compare the current state with the goal and choose an operator that reduces a difference. Logic Theorist was their earlier theorem-proving program; the imitation game is Turing's test.
+
+#### 2024 Q3
+
+**Question recap:** What does thinking rationally emphasise?
+
+**Answer:** B — Formalising inference.
+
+**Why:** This is the laws-of-thought approach: use valid reasoning rules to reach conclusions. Keep the four perspectives distinct: thinking humanly concerns cognition, acting humanly concerns human-like behaviour, and acting rationally concerns appropriate action.
+
+### 2024 — Page 03
+
+![Week 01, 2024, source page 1:00](resources/screenshots/Week_01/2024/2024_Week_01_Frame_060.jpg)
+
+[Source video at 1:00](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=60s)
+
+#### 2024 Q4
+
+**Question recap:** What chooses rules and tracks attempted rule sequences?
+
+**Answer:** B — The control strategy.
+
+**Why:** The database records current facts and production rules specify available transformations. The control strategy selects among applicable rules and manages the search history. It determines which possible reasoning step is tried next.
+
+#### 2024 Q5
+
+**Question recap:** Why can informed control have a higher selection cost?
+
+**Answer:** A — Both statements are true and the reason explains the assertion.
+
+**Why:** Heuristic guidance must store and evaluate domain knowledge before selecting a rule. That extra selection effort can save many later rule applications. The distinction is selection cost versus total search cost; informed control need not make the whole solution slower.
+
+### 2024 — Page 04
+
+![Week 01, 2024, source page 1:20](resources/screenshots/Week_01/2024/2024_Week_01_Frame_080.jpg)
+
+[Source video at 1:20](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=80s)
+
+#### 2024 Q6
+
+**Question recap:** Which AI position requires intelligent performance without a claim of a real mind?
+
+**Answer:** A — Weak AI.
+
+**Why:** Weak AI treats a program as a tool or simulation of intelligent behaviour. Strong AI adds a claim about genuine mentality. Whether an implementation is symbolic or connectionist is a separate design question.
+
+### 2024 — Page 05
+
+![Week 01, 2024, source page 1:40](resources/screenshots/Week_01/2024/2024_Week_01_Frame_100.jpg)
+
+[Source video at 1:40](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=100s)
+
+#### 2024 Q7
+
+**Question recap:** Which search uses domain knowledge to rank children?
+
+**Answer:** C — Heuristic search.
+
+**Why:** A heuristic estimates how promising a successor is relative to the goal. DFS follows depth and BFS follows generation depth; neither basic ordering uses a domain-specific estimate. A heuristic can save work without guaranteeing the best solution.
+
+#### 2024 Q8
+
+**Question recap:** What is a practical aim of searching a complex game tree?
+
+**Answer:** A — Both I and II.
+
+**Why:** Search only as far as resources permit, evaluate the resulting positions, and back those estimates up to choose a good first move. The agent can repeat the process after observing the opponent's response. It need not solve chess to termination before moving.
+
+### 2024 — Page 06
+
+![Week 01, 2024, source page 2:00](resources/screenshots/Week_01/2024/2024_Week_01_Frame_120.jpg)
+
+[Source video at 2:00](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=120s)
+
+#### 2024 Q9
+
+**Question recap:** What are AO*'s two main operations?
+
+**Answer:** A — Top-down graph growth, then bottom-up cost revision and solved labelling.
+
+**Why:** Expansion reveals promising subproblems; the resulting costs and solved status propagate back to ancestors. At OR alternatives take the best option; grouped AND alternatives require all selected subproblems. Updating ancestors can change which partial solution is most promising.
+
+#### 2024 Q10
+
+**Question recap:** Which method combines BFS and DFS in this course's broad wording?
+
+**Answer:** C — Best-first search, matching the repeated course question.
+
+**Why:** Best-first search retains competing frontier branches while pursuing a promising one. This is broad descriptive wording. When a question specifically asks for BFS's shallowest-solution guarantee with DFS-like memory, iterative deepening is the usual answer; do not transfer this letter to that different question.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2023
 
 Public copy of the 2023 assignment displaying course accepted answers.
@@ -220,7 +348,7 @@ Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#
 
 ### 2023 — Page 01
 
-![Week 01, 2023, source page 1](resources/screenshots/Week_01/2023_Week_01_Page_01.jpg)
+![Week 01, 2023, source page 1](resources/screenshots/Week_01/2023/2023_Week_01_Page_01.jpg)
 
 #### 2023 Q1
 
@@ -240,7 +368,7 @@ Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#
 
 ### 2023 — Page 02
 
-![Week 01, 2023, source page 2](resources/screenshots/Week_01/2023_Week_01_Page_02.jpg)
+![Week 01, 2023, source page 2](resources/screenshots/Week_01/2023/2023_Week_01_Page_02.jpg)
 
 #### 2023 Q3
 
@@ -268,7 +396,7 @@ Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#
 
 ### 2023 — Page 03
 
-![Week 01, 2023, source page 3](resources/screenshots/Week_01/2023_Week_01_Page_03.jpg)
+![Week 01, 2023, source page 3](resources/screenshots/Week_01/2023/2023_Week_01_Page_03.jpg)
 
 #### 2023 Q6
 
@@ -296,7 +424,7 @@ Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#
 
 ### 2023 — Page 04
 
-![Week 01, 2023, source page 4](resources/screenshots/Week_01/2023_Week_01_Page_04.jpg)
+![Week 01, 2023, source page 4](resources/screenshots/Week_01/2023/2023_Week_01_Page_04.jpg)
 
 #### 2023 Q9
 
@@ -312,7 +440,7 @@ Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#
 
 **Answer:** C — 23.
 
-**Why:** A cheapest route is S–D–E–H–Q–R–F–G, with cost $3+2+1+4+3+5+5=23$. It has more edges than the BFS route but a lower total weight.
+**Why:** Uniform-cost search returns a goal when its cheapest frontier path is selected. S–D–E–H–Q–R–F–G costs $3+2+1+4+3+5+5=23$. The four-edge BFS route S–E–R–F–G costs 28. Thus fewer edges need not mean lower cost when weights differ; using FIFO instead of accumulated path cost changes the objective.
 
 [Back to year index](#2023) · [All weeks](README.md)
 
@@ -328,7 +456,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 01
 
-![Week 01, 2022, source page 1](resources/screenshots/Week_01/2022_Week_01_Part_01.jpg)
+![Week 01, 2022, source page 1](resources/screenshots/Week_01/2022/2022_Week_01_Part_01.jpg)
 
 #### 2022 Q1
 
@@ -348,7 +476,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 02
 
-![Week 01, 2022, source page 2](resources/screenshots/Week_01/2022_Week_01_Part_02.jpg)
+![Week 01, 2022, source page 2](resources/screenshots/Week_01/2022/2022_Week_01_Part_02.jpg)
 
 #### 2022 Q3
 
@@ -368,7 +496,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 03
 
-![Week 01, 2022, source page 3](resources/screenshots/Week_01/2022_Week_01_Part_03.jpg)
+![Week 01, 2022, source page 3](resources/screenshots/Week_01/2022/2022_Week_01_Part_03.jpg)
 
 #### 2022 Q5
 
@@ -388,7 +516,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 04
 
-![Week 01, 2022, source page 4](resources/screenshots/Week_01/2022_Week_01_Part_04.jpg)
+![Week 01, 2022, source page 4](resources/screenshots/Week_01/2022/2022_Week_01_Part_04.jpg)
 
 #### 2022 Q7
 
@@ -408,7 +536,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 05
 
-![Week 01, 2022, source page 5](resources/screenshots/Week_01/2022_Week_01_Part_05.jpg)
+![Week 01, 2022, source page 5](resources/screenshots/Week_01/2022/2022_Week_01_Part_05.jpg)
 
 #### 2022 Q9
 
@@ -440,7 +568,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 01, 2019, source page 1](resources/screenshots/Week_01/2019_Week_01.png)
+![Week 01, 2019, source page 1](resources/screenshots/Week_01/2019/2019_Week_01.png)
 
 #### 2019 Q1
 

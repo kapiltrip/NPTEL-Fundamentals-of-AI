@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 06, 2026, source page 1](resources/screenshots/Week_06/2026_Week_06_Page_01.png)
+![Week 06, 2026, source page 1](resources/screenshots/Week_06/2026/2026_Week_06_Page_01.png)
 
 #### 2026 Q1
 
@@ -24,7 +24,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 **Answer:** A — Both I and II.
 
-**Why:** A complete proof search eventually finds a proof when one exists. For a non-entailed conclusion, that search may continue forever; a general terminating yes/no procedure is unavailable.
+**Why:** A complete proof search eventually finds a proof when one exists. For a non-entailed conclusion, that search may continue forever; a general terminating yes/no procedure is unavailable. Individual negative cases may still be established; semidecidability concerns the absence of a general procedure guaranteed to decide every case.
 
 #### 2026 Q2
 
@@ -44,7 +44,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 06, 2026, source page 2](resources/screenshots/Week_06/2026_Week_06_Page_02.png)
+![Week 06, 2026, source page 2](resources/screenshots/Week_06/2026/2026_Week_06_Page_02.png)
 
 #### 2026 Q4
 
@@ -80,7 +80,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 06, 2026, source page 3](resources/screenshots/Week_06/2026_Week_06_Page_03.png)
+![Week 06, 2026, source page 3](resources/screenshots/Week_06/2026/2026_Week_06_Page_03.png)
 
 #### 2026 Q8
 
@@ -96,7 +96,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 **Answer:** B — $\forall x\,[R(x)\rightarrow\neg Q(x)]$.
 
-**Why:** The restriction now applies to horses satisfying R. Keep the direction of the English conditional unchanged.
+**Why:** The antecedent is having won a race, so the supplied English sentence becomes $\forall x[R(x)\rightarrow\neg Q(x)]$. Here it is a sentence to translate. It would not follow from only $P\rightarrow\neg Q$ and $P\rightarrow R$: an unregistered thoroughbred winner is a counterexample to that inference. The older 2024 copy uses misleading “therefore” wording.
 
 #### 2026 Q10
 
@@ -120,7 +120,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 06, 2025, source page 17](resources/screenshots/Week_06/2025_Week_06_Page_01.jpg)
+![Week 06, 2025, source page 17](resources/screenshots/Week_06/2025/2025_Week_06_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -128,7 +128,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** A — Both I and II.
 
-**Why:** A complete proof procedure eventually verifies entailments. It cannot generally guarantee a terminating negative answer when entailment fails.
+**Why:** A complete proof procedure eventually verifies entailments. It cannot generally guarantee a terminating negative answer when entailment fails. Individual negative cases may still be established; semidecidability concerns the absence of a general procedure guaranteed to decide every case.
 
 #### 2025 Q2
 
@@ -140,7 +140,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 06, 2025, source page 18](resources/screenshots/Week_06/2025_Week_06_Page_02.jpg)
+![Week 06, 2025, source page 18](resources/screenshots/Week_06/2025/2025_Week_06_Page_02.jpg)
 
 #### 2025 Q3
 
@@ -156,11 +156,11 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** B — I and IV only.
 
-**Why:** A non-empty domain gives at least one related pair, and IV is a quantifier-negated restatement of the premise. A single common y for every x, or an incoming relation for every y, is not guaranteed.
+**Why:** For a nonempty domain, $\forall x\exists yR(x,y)$ entails an existing related pair and its quantifier-negated restatement IV. It does not require one common y: equality on $\{a,b\}$ is a counterexample. Nor must every y receive a relation: taking $R(x,y)$ to mean $y=a$ satisfies the premise but leaves b without an incoming relation. These are two separate counterexamples.
 
 ### 2025 — Page 03
 
-![Week 06, 2025, source page 19](resources/screenshots/Week_06/2025_Week_06_Page_03.jpg)
+![Week 06, 2025, source page 19](resources/screenshots/Week_06/2025/2025_Week_06_Page_03.jpg)
 
 #### 2025 Q5
 
@@ -172,7 +172,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 04
 
-![Week 06, 2025, source page 20](resources/screenshots/Week_06/2025_Week_06_Page_04.jpg)
+![Week 06, 2025, source page 20](resources/screenshots/Week_06/2025/2025_Week_06_Page_04.jpg)
 
 #### 2025 Q6
 
@@ -200,7 +200,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 05
 
-![Week 06, 2025, source page 21](resources/screenshots/Week_06/2025_Week_06_Page_05.jpg)
+![Week 06, 2025, source page 21](resources/screenshots/Week_06/2025/2025_Week_06_Page_05.jpg)
 
 #### 2025 Q9
 
@@ -232,7 +232,7 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 
 ### 2024 — Page 01
 
-![Week 06, 2024, source page 1](resources/screenshots/Week_06/2024_Week_06_Page_01.jpg)
+![Week 06, 2024, source page 1](resources/screenshots/Week_06/2024/2024_Week_06_Page_01.jpg)
 
 #### 2024 Q1
 
@@ -252,7 +252,7 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 
 ### 2024 — Page 02
 
-![Week 06, 2024, source page 2](resources/screenshots/Week_06/2024_Week_06_Page_02.jpg)
+![Week 06, 2024, source page 2](resources/screenshots/Week_06/2024/2024_Week_06_Page_02.jpg)
 
 #### 2024 Q3
 
@@ -288,7 +288,7 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 
 ### 2024 — Page 03
 
-![Week 06, 2024, source page 3](resources/screenshots/Week_06/2024_Week_06_Page_03.jpg)
+![Week 06, 2024, source page 3](resources/screenshots/Week_06/2024/2024_Week_06_Page_03.jpg)
 
 #### 2024 Q7
 
@@ -336,7 +336,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 06, 2019, source page 1](resources/screenshots/Week_06/2019_Week_06.png)
+![Week 06, 2019, source page 1](resources/screenshots/Week_06/2019/2019_Week_06.png)
 
 #### 2019 Q1
 

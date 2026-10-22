@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2008.md) · [Next](Week%2010.md)
 
-[2026](#2026) · [2025](#2025) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 09, 2026, source page 1](resources/screenshots/Week_09/2026_Week_09_Page_01.png)
+![Week 09, 2026, source page 1](resources/screenshots/Week_09/2026/2026_Week_09_Page_01.png)
 
 #### 2026 Q1
 
@@ -44,7 +44,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 09, 2026, source page 2](resources/screenshots/Week_09/2026_Week_09_Page_02.png)
+![Week 09, 2026, source page 2](resources/screenshots/Week_09/2026/2026_Week_09_Page_02.png)
 
 #### 2026 Q4
 
@@ -72,7 +72,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 09, 2026, source page 3](resources/screenshots/Week_09/2026_Week_09_Page_03.png)
+![Week 09, 2026, source page 3](resources/screenshots/Week_09/2026/2026_Week_09_Page_03.png)
 
 #### 2026 Q7
 
@@ -92,7 +92,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 04
 
-![Week 09, 2026, source page 4](resources/screenshots/Week_09/2026_Week_09_Page_04.png)
+![Week 09, 2026, source page 4](resources/screenshots/Week_09/2026/2026_Week_09_Page_04.png)
 
 #### 2026 Q9
 
@@ -124,7 +124,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 09, 2025, source page 31](resources/screenshots/Week_09/2025_Week_09_Page_01.jpg)
+![Week 09, 2025, source page 31](resources/screenshots/Week_09/2025/2025_Week_09_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -152,7 +152,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 09, 2025, source page 32](resources/screenshots/Week_09/2025_Week_09_Page_02.jpg)
+![Week 09, 2025, source page 32](resources/screenshots/Week_09/2025/2025_Week_09_Page_02.jpg)
 
 #### 2025 Q4
 
@@ -180,7 +180,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 09, 2025, source page 33](resources/screenshots/Week_09/2025_Week_09_Page_03.jpg)
+![Week 09, 2025, source page 33](resources/screenshots/Week_09/2025/2025_Week_09_Page_03.jpg)
 
 #### 2025 Q7
 
@@ -208,7 +208,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 04
 
-![Week 09, 2025, source page 34](resources/screenshots/Week_09/2025_Week_09_Page_04.jpg)
+![Week 09, 2025, source page 34](resources/screenshots/Week_09/2025/2025_Week_09_Page_04.jpg)
 
 #### 2025 Q10
 
@@ -222,6 +222,134 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ---
 
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=35s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 09, 2024, source page 0:35](resources/screenshots/Week_09/2024/2024_Week_09_Frame_035.jpg)
+
+[Source video at 0:35](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=35s)
+
+#### 2024 Q1
+
+**Question recap:** Does the stated model mismatch explain incomplete information?
+
+**Answer:** C — The assertion is true, but the reason describes incorrect information.
+
+**Why:** Limited sensing and missing facts cause incompleteness. A world that differs from the agent's model instead makes that model inaccurate. Both matter in practice, but the reason does not correctly name the source of incompleteness in this distinction.
+
+### 2024 — Page 02
+
+![Week 09, 2024, source page 0:55](resources/screenshots/Week_09/2024/2024_Week_09_Frame_055.jpg)
+
+[Source video at 0:55](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=55s)
+
+#### 2024 Q2
+
+**Question recap:** Which theory does the goals-and-likelihoods wording expect?
+
+**Answer:** B — Utility theory in the repeated course key.
+
+**Why:** Utilities measure desirability; probabilities measure likelihood; decision theory combines them. Expected utility uses $EU(a)=\sum_sP(s\mid a)U(s)$. This explains why a separate question explicitly asking which theory maximises expected utility has Decision theory as its answer.
+
+#### 2024 Q3
+
+**Question recap:** What compactly represents a large POMDP?
+
+**Answer:** C — Dynamic decision networks.
+
+**Why:** A factored representation connects changing state variables, observations, decisions, and utilities over time. It can describe a large problem without listing every complete-state combination explicitly. A belief state summarises the agent's uncertainty about the underlying state.
+
+### 2024 — Page 03
+
+![Week 09, 2024, source page 1:25](resources/screenshots/Week_09/2024/2024_Week_09_Frame_085.jpg)
+
+[Source video at 1:25](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=85s)
+
+#### 2024 Q4
+
+**Question recap:** Which limitations belong to basic STRIPS?
+
+**Answer:** B — I, II, and III.
+
+**Why:** Basic STRIPS has no built-in hierarchical task decomposition or rich duration/resource model. Its grounded operators describe state conditions and effects in propositional form. Extensions such as temporal or hierarchical planning formalisms address those limits; they are not features guaranteed by the basic representation.
+
+### 2024 — Page 04
+
+![Week 09, 2024, source page 1:55](resources/screenshots/Week_09/2024/2024_Week_09_Frame_115.jpg)
+
+[Source video at 1:55](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=115s)
+
+#### 2024 Q5
+
+**Question recap:** What does an MDP's transition model specify?
+
+**Answer:** B — $P(s_{t+1}\mid s_t,a_t)$.
+
+**Why:** Fix the present state and chosen action, then assign probabilities to possible next states. The probabilities over successors sum to one. A policy chooses the action; the transition model describes what the environment may do after that action.
+
+#### 2024 Q6
+
+**Question recap:** Which listed descriptions define the transition model?
+
+**Answer:** A and D.
+
+**Why:** Both describe probabilities of outcomes after actions in states. A complete state-to-action mapping is a policy instead. A value or utility function evaluates expected return, so it must also be kept distinct from the transition probabilities.
+
+### 2024 — Page 05
+
+![Week 09, 2024, source page 2:25](resources/screenshots/Week_09/2024/2024_Week_09_Frame_145.jpg)
+
+[Source video at 2:25](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=145s)
+
+#### 2024 Q7
+
+**Question recap:** Which steps describe value iteration?
+
+**Answer:** A and B.
+
+**Why:** Compute state values by Bellman backups and select actions that maximise the resulting expected return. For a discounted MDP, $V_{k+1}(s)=\max_a\sum_{s'}P(s'\mid s,a)[r(s,a,s')+\gamma V_k(s')]$. Starting from and evaluating a fixed policy describes policy iteration instead.
+
+#### 2024 Q8
+
+**Question recap:** Why can scheduling follow a partial-order plan?
+
+**Answer:** A — Both statements are true and the reason gives the intended explanation.
+
+**Why:** A complete partial-order plan provides actions and precedence constraints. A scheduler assigns times and resources while optimising its objective subject to those constraints. “Optimal” depends on the scheduling formulation and solution method; it is not a guarantee for every practical scheduling tool.
+
+### 2024 — Page 06
+
+![Week 09, 2024, source page 2:55](resources/screenshots/Week_09/2024/2024_Week_09_Frame_175.jpg)
+
+[Source video at 2:55](https://www.youtube.com/watch?v=k9R_mt1A6t0&t=175s)
+
+#### 2024 Q9
+
+**Question recap:** Which steps describe policy iteration?
+
+**Answer:** C and D.
+
+**Why:** Begin with a policy, evaluate its expected return, and improve each state's action using the evaluated values. Repeat evaluation and improvement until the policy is stable. The answer letters describe the same two operations in reverse presentation order; evaluation must precede the corresponding improvement step.
+
+#### 2024 Q10
+
+**Question recap:** Does the perfect-sensor case explain the general sensor-model definition?
+
+**Answer:** B — Both statements are true, but the reason is not the explanation.
+
+**Why:** A sensor model gives $P(observation\mid state)$, represented by a percept node's CPT. A perfect sensor makes that distribution deterministic. This is a special case of the definition, rather than the reason that noisy sensor models are conditional distributions.
+
+[Back to year index](#2024) · [All weeks](README.md)
+
+---
+
 ## 2019
 
 Official NPTEL archive with accepted answers. Any discrepancy between a printed formula and its key is identified below.
@@ -232,7 +360,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 09, 2019, source page 1](resources/screenshots/Week_09/2019_Week_09.png)
+![Week 09, 2019, source page 1](resources/screenshots/Week_09/2019/2019_Week_09.png)
 
 #### 2019 Q1
 

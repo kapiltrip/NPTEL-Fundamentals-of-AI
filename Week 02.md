@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2001.md) · [Next](Week%2003.md)
 
-[2026](#2026) · [2025](#2025) · [2022](#2022) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2022](#2022) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -16,7 +16,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 01
 
-![Week 02, 2026, source page 1](resources/screenshots/Week_02/2026_Week_02_Page_01.png)
+![Week 02, 2026, source page 1](resources/screenshots/Week_02/2026/2026_Week_02_Page_01.png)
 
 #### 2026 Q1
 
@@ -44,7 +44,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 02
 
-![Week 02, 2026, source page 2](resources/screenshots/Week_02/2026_Week_02_Page_02.png)
+![Week 02, 2026, source page 2](resources/screenshots/Week_02/2026/2026_Week_02_Page_02.png)
 
 #### 2026 Q4
 
@@ -72,7 +72,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 ### 2026 — Page 03
 
-![Week 02, 2026, source page 3](resources/screenshots/Week_02/2026_Week_02_Page_03.png)
+![Week 02, 2026, source page 3](resources/screenshots/Week_02/2026/2026_Week_02_Page_03.png)
 
 #### 2026 Q7
 
@@ -88,7 +88,7 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 **Answer:** C — 6.
 
-**Why:** Sum each numbered tile's horizontal plus vertical displacement. The contributions are $2+1+1+1+1=6$; the blank is excluded.
+**Why:** Tile 2 contributes two grid steps; tiles 3, 4, 5, and 6 contribute one each. Tiles 1, 7, and 8 contribute zero. Thus $h=2+1+1+1+1=6$. Count horizontal plus vertical displacement and exclude the blank. This is a lower bound on moves, not automatically the exact solution length for every puzzle.
 
 #### 2026 Q9
 
@@ -96,15 +96,17 @@ Jump to discussion: [Q1](#2026-q1) · [Q2](#2026-q2) · [Q3](#2026-q3) · [Q4](#
 
 **Answer:** C — 6.
 
-**Why:** The shown solution attains the Manhattan lower bound of six moves, proving it optimal for this instance. Manhattan distance is not always equal to the actual solution length.
+**Why:** A six-move route moves the blank down, right, up, up, left, down. In row-separated notation, the first state is `134/8_5/726` and the goal is `123/8_4/765`. The route attains the Manhattan lower bound of six, proving optimality for this instance. A path of six moves contains seven states including its endpoints.
 
 ### 2026 — Page 04
 
-![Week 02, 2026, source page 4](resources/screenshots/Week_02/2026_Week_02_Page_04.png)
+![Week 02, 2026, source page 4](resources/screenshots/Week_02/2026/2026_Week_02_Page_04.png)
+
+This diagram supports Q6–Q10; the question frames and worked answers follow.
 
 ### 2026 — Page 05
 
-![Week 02, 2026, source page 5](resources/screenshots/Week_02/2026_Week_02_Page_05.png)
+![Week 02, 2026, source page 5](resources/screenshots/Week_02/2026/2026_Week_02_Page_05.png)
 
 #### 2026 Q10
 
@@ -128,7 +130,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 01
 
-![Week 02, 2025, source page 3](resources/screenshots/Week_02/2025_Week_02_Page_01.jpg)
+![Week 02, 2025, source page 3](resources/screenshots/Week_02/2025/2025_Week_02_Page_01.jpg)
 
 #### 2025 Q1
 
@@ -164,7 +166,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 02
 
-![Week 02, 2025, source page 4](resources/screenshots/Week_02/2025_Week_02_Page_02.jpg)
+![Week 02, 2025, source page 4](resources/screenshots/Week_02/2025/2025_Week_02_Page_02.jpg)
 
 #### 2025 Q5
 
@@ -184,7 +186,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 ### 2025 — Page 03
 
-![Week 02, 2025, source page 5](resources/screenshots/Week_02/2025_Week_02_Page_03.jpg)
+![Week 02, 2025, source page 5](resources/screenshots/Week_02/2025/2025_Week_02_Page_03.jpg)
 
 #### 2025 Q7
 
@@ -200,7 +202,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** C — J.
 
-**Why:** J has zero remaining heuristic and the lowest total evaluation among the shown alternatives. Reaching a goal through a cheap path is preferred to a larger estimated detour.
+**Why:** At I the best path cost is $g(I)=7$. The new alternatives have $f(J)=7+3+0=10$, $f(H)=7+2+3=12$, and $f(E)=7+5+3=15$, so J is selected. G has already been expanded; returning from I would give it a worse path and is ignored by graph A*. Counting G as an eligible fresh node would confuse this comparison.
 
 #### 2025 Q9
 
@@ -208,7 +210,7 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** A — E.
 
-**Why:** Compare complete evaluation values for E, H, J, and G. E has the greatest estimated total cost in the displayed graph.
+**Why:** For the remaining eligible neighbours of I, E has $f(E)=12+3=15$, compared with H at 12 and J at 10. G is already closed with a better known path. If one instead recomputes the return route I–G as a fresh path, G also has $f=10+5=15$; E is not uniquely worst under that different convention. The source key assumes graph A* discards the worse revisit.
 
 #### 2025 Q10
 
@@ -216,9 +218,151 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 **Answer:** D — A–F–G–I–J.
 
-**Why:** Its edge costs are $3+1+3+3=10$. The heuristic prioritises this route, but the route's final actual cost is the sum of edge costs, not the sum of heuristic estimates.
+**Why:** The route A–F–G–I–J costs $3+1+3+3=10$, independently confirmed as a shortest path. These are edge costs, not a sum of heuristic estimates. The displayed heuristic is not consistent on G–I: $h(G)=5>3+h(I)=4$. That does not prevent this particular run from finding an optimal route; it means consistency cannot be claimed as the reason for this instance.
 
 [Back to year index](#2025) · [All weeks](README.md)
+
+---
+
+## 2024
+
+Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=25s)
+
+Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
+
+### 2024 — Page 01
+
+![Week 02, 2024, source page 0:25](resources/screenshots/Week_02/2024/2024_Week_02_Frame_025.jpg)
+
+[Source video at 0:25](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=25s)
+
+#### 2024 Q1
+
+**Question recap:** What score does greedy best-first search minimise?
+
+**Answer:** D — The heuristic estimate to a goal.
+
+**Why:** Greedy search chooses the smallest $h(n)$ and ignores the accumulated path cost $g(n)$. A* instead minimises $g(n)+h(n)$. “Closest” is only an estimate here; a small heuristic need not identify the actually cheapest complete route.
+
+#### 2024 Q2
+
+**Question recap:** Which listed conditions guarantee A* optimality?
+
+**Answer:** D — Both conditions, under the standard search assumptions.
+
+**Why:** Admissibility is sufficient for tree A*. For graph A* that never reopens closed states, consistency is the standard sufficient condition. An admissible but inconsistent heuristic can require reopening a state reached later through a cheaper path. Test for the goal when selecting a node, not merely when generating it.
+
+### 2024 — Page 02
+
+![Week 02, 2024, source page 0:35](resources/screenshots/Week_02/2024/2024_Week_02_Frame_035.jpg)
+
+[Source video at 0:35](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=35s)
+
+#### 2024 Q3
+
+**Question recap:** What makes a CSP assignment a solution?
+
+**Answer:** B — Both I and II.
+
+**Why:** Completeness means every variable receives a value; consistency means no constraint is violated. Both are required. A partial assignment may be legal while still requiring further decisions, and a full assignment can still violate a constraint.
+
+### 2024 — Page 03
+
+![Week 02, 2024, source page 0:50](resources/screenshots/Week_02/2024/2024_Week_02_Frame_050.jpg)
+
+[Source video at 0:50](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=50s)
+
+#### 2024 Q4
+
+**Question recap:** Which CSP algorithm jumps back according to a recorded conflict?
+
+**Answer:** C — Conflict-directed backjumping.
+
+**Why:** A conflict set records earlier assignments responsible for the dead end. The algorithm returns to a relevant decision instead of undoing every intervening choice. Ordinary chronological backtracking always returns to the latest choice point.
+
+### 2024 — Page 04
+
+![Week 02, 2024, source page 1:05](resources/screenshots/Week_02/2024/2024_Week_02_Frame_065.jpg)
+
+[Source video at 1:05](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=65s)
+
+#### 2024 Q5
+
+**Question recap:** How restrictive is consistency compared with admissibility?
+
+**Answer:** B — Stricter.
+
+**Why:** Admissibility requires $h(n)\leq h^*(n)$. Consistency additionally imposes $h(n)\leq c(n,n')+h(n')$ on every edge. With zero heuristic at a goal, applying these inequalities along a path gives the admissible lower-bound property.
+
+### 2024 — Page 05
+
+![Week 02, 2024, source page 1:20](resources/screenshots/Week_02/2024/2024_Week_02_Frame_080.jpg)
+
+[Source video at 1:20](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=80s)
+
+This diagram supports Q6–Q10; the question frames and worked answers follow.
+
+### 2024 — Page 06
+
+![Week 02, 2024, source page 1:35](resources/screenshots/Week_02/2024/2024_Week_02_Frame_095.jpg)
+
+[Source video at 1:35](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=95s)
+
+#### 2024 Q6
+
+**Question recap:** What is the puzzle's Hamming distance?
+
+**Answer:** A — 5.
+
+**Why:** Compare each numbered tile with its goal position; tiles 2, 3, 4, 5, and 6 are misplaced. Tiles 1, 7, and 8 are already correct. Exclude the blank, which is a move mechanism rather than a numbered tile.
+
+### 2024 — Page 07
+
+![Week 02, 2024, source page 1:40](resources/screenshots/Week_02/2024/2024_Week_02_Frame_100.jpg)
+
+[Source video at 1:40](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=100s)
+
+#### 2024 Q7
+
+**Question recap:** What is the puzzle's Manhattan distance?
+
+**Answer:** C — 6.
+
+**Why:** Tile 2 is two grid steps from its target; tiles 3, 4, 5, and 6 contribute one each. Thus $h=2+1+1+1+1=6$. Count horizontal plus vertical displacement and exclude the blank; diagonals are not legal puzzle moves.
+
+### 2024 — Page 08
+
+![Week 02, 2024, source page 1:50](resources/screenshots/Week_02/2024/2024_Week_02_Frame_110.jpg)
+
+[Source video at 1:50](https://www.youtube.com/watch?v=HaLXXqT2R9I&t=110s)
+
+#### 2024 Q8
+
+**Question recap:** What is the shortest solution length?
+
+**Answer:** C — 6 moves.
+
+**Why:** Move the blank down, right, up, up, left, down. This reaches the displayed goal in six moves. Since Manhattan distance supplies a lower bound of six and the route attains it, the route is optimal. This equality is specific to this instance.
+
+#### 2024 Q9
+
+**Question recap:** How many states are expanded in this puzzle search?
+
+**Answer:** C — 6 non-goal expansions for standard A*; the public video selects A — 5.
+
+**Why:** With Manhattan distance, each next state on the six-move route has $f=6$, while the other available detours have larger scores. Goal testing on removal gives six expanded non-goal states and seven removed path states including the goal. Five counts only the intermediate path states. The prompt does not define its counting convention, so preserve that distinction.
+
+#### 2024 Q10
+
+**Question recap:** Which of the two heuristics is more informative?
+
+**Answer:** B — Manhattan distance.
+
+**Why:** Every misplaced numbered tile contributes at least one Manhattan step, so Manhattan dominates Hamming while remaining admissible for unit-cost moves. It usually guides A* more effectively. Dominance concerns information and expansion guarantees under suitable tie handling, not a promise of a smaller running time in every implementation.
+
+[Back to year index](#2024) · [All weeks](README.md)
 
 ---
 
@@ -232,7 +376,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 01
 
-![Week 02, 2022, source page 1](resources/screenshots/Week_02/2022_Week_02_Part_01.jpg)
+![Week 02, 2022, source page 1](resources/screenshots/Week_02/2022/2022_Week_02_Part_01.jpg)
 
 #### 2022 Q1
 
@@ -252,7 +396,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 02
 
-![Week 02, 2022, source page 2](resources/screenshots/Week_02/2022_Week_02_Part_02.jpg)
+![Week 02, 2022, source page 2](resources/screenshots/Week_02/2022/2022_Week_02_Part_02.jpg)
 
 #### 2022 Q3
 
@@ -272,7 +416,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 03
 
-![Week 02, 2022, source page 3](resources/screenshots/Week_02/2022_Week_02_Part_03.jpg)
+![Week 02, 2022, source page 3](resources/screenshots/Week_02/2022/2022_Week_02_Part_03.jpg)
 
 #### 2022 Q5
 
@@ -292,7 +436,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 04
 
-![Week 02, 2022, source page 4](resources/screenshots/Week_02/2022_Week_02_Part_04.jpg)
+![Week 02, 2022, source page 4](resources/screenshots/Week_02/2022/2022_Week_02_Part_04.jpg)
 
 #### 2022 Q7
 
@@ -312,7 +456,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 ### 2022 — Page 05
 
-![Week 02, 2022, source page 5](resources/screenshots/Week_02/2022_Week_02_Part_05.jpg)
+![Week 02, 2022, source page 5](resources/screenshots/Week_02/2022/2022_Week_02_Part_05.jpg)
 
 #### 2022 Q9
 
@@ -328,7 +472,7 @@ Jump to discussion: [Q1](#2022-q1) · [Q2](#2022-q2) · [Q3](#2022-q3) · [Q4](#
 
 **Answer:** 5 in the webpage key; this count is unverified and underspecified.
 
-**Why:** A six-move solution contains seven path states including start and goal, or five intermediate states. The number actually generated or expanded depends on the algorithm and tie-breaking, so “five examined states” is not a general consequence of the heuristic.
+**Why:** The webpage prints 5 without defining its counting convention. This six-move route has seven path states including start and goal, or five intermediate states. Standard A* with the displayed Manhattan heuristic and a goal test on removal expands six non-goal states and then removes the goal. Five therefore matches intermediate states, rather than the usual A* expansion count. Keep the source key distinct from that definition.
 
 [Back to year index](#2022) · [All weeks](README.md)
 
@@ -344,7 +488,7 @@ Jump to discussion: [Q1](#2019-q1) · [Q2](#2019-q2) · [Q3](#2019-q3) · [Q4](#
 
 ### 2019 — Page 01
 
-![Week 02, 2019, source page 1](resources/screenshots/Week_02/2019_Week_02.png)
+![Week 02, 2019, source page 1](resources/screenshots/Week_02/2019/2019_Week_02.png)
 
 #### 2019 Q1
 
