@@ -4,7 +4,7 @@
 
 Choose a week. Screenshots, answers, and explanations are inside, grouped by year.
 
-[Course](https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93) · [Repeat map](resources/Repeat%20map.md) · [Screenshot PDF](resources/Fundamentals_AI_Weekwise_Screenshots.pdf) · [Sources](resources/README.md)
+[Supporting resources](resources/README.md)
 
 | Week | Topic | Years |
 |---|---|---|

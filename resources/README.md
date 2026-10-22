@@ -1,6 +1,6 @@
 # Resources
 
-[All weeks](../README.md) · [Repeat map](Repeat%20map.md) · [Source catalog](sources/Catalog.md)
+[All weeks](../README.md) · [Course](https://onlinecourses.nptel.ac.in/e-learning/course/noc26_ge93) · [Repeat map](Repeat%20map.md) · [Source catalog](sources/Catalog.md)
 
 [Screenshot PDF](Fundamentals_AI_Weekwise_Screenshots.pdf) · 202 pages with a linked index. Answers and explanations are in the week pages.
 
