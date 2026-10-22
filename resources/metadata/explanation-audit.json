@@ -1,6 +1,6 @@
 {
   "audited_on": "2026-10-22",
-  "discussions": 510,
+  "discussions": 530,
   "official_2026_key_matches": 120,
   "public_keys_are_not_official": true,
   "expanded_worked_explanations": [
@@ -19,6 +19,10 @@
     "12-2025-Q2",
     "01-2023-Q10",
     "02-2022-Q10"
+  ],
+  "additional_2023_sets_reviewed": [
+    "02-2023",
+    "12-2023"
   ],
   "checks": {
     "puzzle_moves": 6,

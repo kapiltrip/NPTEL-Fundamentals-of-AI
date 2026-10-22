@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2001.md) · [Next](Week%2003.md)
 
-[2026](#2026) · [2025](#2025) · [2024](#2024) · [2022](#2022) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2023](#2023) · [2022](#2022) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -361,6 +361,136 @@ This diagram supports Q6–Q10; the question frames and worked answers follow.
 **Why:** Every misplaced numbered tile contributes at least one Manhattan step, so Manhattan dominates Hamming while remaining admissible for unit-cost moves. It usually guides A* more effectively. Dominance concerns information and expansion guarantees under suitable tie handling, not a promise of a smaller running time in every implementation.
 
 [Back to year index](#2024) · [All weeks](README.md)
+
+---
+
+## 2023
+
+Public 2023 assignment-video frames from Ateeq10. The recorded course URL is noc23_ge40 and the assignment is due 9 August 2023. Selections are unsubmitted choices, not an official key; errors and ambiguous wording are discussed below.
+
+[Source](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=20s)
+
+Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#2023-q4) · [Q5](#2023-q5) · [Q6](#2023-q6) · [Q7](#2023-q7) · [Q8](#2023-q8) · [Q9](#2023-q9) · [Q10](#2023-q10)
+
+### 2023 — Page 01
+
+![Week 02, 2023, source page 0:20](resources/screenshots/Week_02/2023/2023_Week_02_Frame_020.jpg)
+
+[Source video at 0:20](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=20s)
+
+#### 2023 Q1
+
+**Question recap:** What is the principal gain from a useful heuristic?
+
+**Answer:** C — Reduction of the search space; the video later selects D.
+
+**Why:** Ranking children is an operation used to guide search, while the gain asked for is avoiding many unpromising expansions. Domain knowledge supplies the estimate. A heuristic does not physically delete valid states; it can reduce the part of the space explored before reaching a solution.
+
+#### 2023 Q2
+
+**Question recap:** What kind of heuristic comes from a relaxed problem?
+
+**Answer:** C — Admissible.
+
+**Why:** Removing restrictions makes a problem easier, so its optimal solution cost cannot exceed the original optimum. That cost is a lower bound on the remaining work in the original problem. The relaxed optimum need not itself be a legal solution of the original problem.
+
+### 2023 — Page 02
+
+![Week 02, 2023, source page 1:40](resources/screenshots/Week_02/2023/2023_Week_02_Frame_100.jpg)
+
+[Source video at 1:40](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=100s)
+
+#### 2023 Q3
+
+**Question recap:** Which admissible-heuristic statements hold?
+
+**Answer:** A, C, and D under the standard non-overestimation reading; the video selects only C and D.
+
+**Why:** Admissibility means $h(n)\leq h^*(n)$. A describes this as optimism and C states the inequality in words; equality is permitted. The null heuristic is also admissible when remaining path costs are nonnegative. B falsely claims that admissibility itself destroys the standard A* optimality guarantee.
+
+#### 2023 Q4
+
+**Question recap:** Which listed conditions support A* optimality?
+
+**Answer:** C — Both Condition 1 and Condition 2.
+
+**Why:** An admissible heuristic supports optimal tree A*. Consistency is sufficient for graph A* without reopening closed states. With an admissible but inconsistent heuristic, graph search may need to reopen a state when a cheaper route is found. Apply the goal test when the goal is selected for expansion.
+
+### 2023 — Page 03
+
+![Week 02, 2023, source page 2:20](resources/screenshots/Week_02/2023/2023_Week_02_Frame_140.jpg)
+
+[Source video at 2:20](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=140s)
+
+#### 2023 Q5
+
+**Question recap:** What makes a CSP assignment a solution?
+
+**Answer:** B — Both I and II.
+
+**Why:** A complete assignment gives every variable a value, and a consistent assignment violates no constraint. A solution needs both properties. A partial assignment can be legal without solving the entire problem, while a full assignment can still be inconsistent.
+
+### 2023 — Page 04
+
+![Week 02, 2023, source page 3:00](resources/screenshots/Week_02/2023/2023_Week_02_Frame_180.jpg)
+
+[Source video at 3:00](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=180s)
+
+This diagram supports Q6–Q10; the question frames and worked answers follow.
+
+### 2023 — Page 05
+
+![Week 02, 2023, source page 3:25](resources/screenshots/Week_02/2023/2023_Week_02_Frame_205.jpg)
+
+[Source video at 3:25](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=205s)
+
+#### 2023 Q6
+
+**Question recap:** Which search family contains A*?
+
+**Answer:** C — Best-first search.
+
+**Why:** A* selects a frontier node with the smallest $f(n)=g(n)+h(n)$. Here $g$ is the cost already paid and $h$ estimates the remaining cost. BFS orders by depth and DFS by a stack discipline; neither is the general priority rule used by A*.
+
+#### 2023 Q7
+
+**Question recap:** After A, should the algorithm expand B or F?
+
+**Answer:** D — F, because its evaluation is smaller.
+
+**Why:** The graph gives $f(F)=3+6=9$ and $f(B)=6+8=14$. Choose F because 9 is smaller than 14. Compare accumulated path cost plus heuristic, rather than comparing only the edge costs or only the red heuristic labels.
+
+#### 2023 Q8
+
+**Question recap:** Which eligible successor of I has the least A* evaluation?
+
+**Answer:** C — J.
+
+**Why:** The best route to I costs $g(I)=3+1+3=7$. Hence $f(J)=7+3+0=10$, $f(H)=7+2+3=12$, and $f(E)=7+5+3=15$. G has already been expanded with a better path; a worse return from I is ignored in graph A*.
+
+### 2023 — Page 06
+
+![Week 02, 2023, source page 3:40](resources/screenshots/Week_02/2023/2023_Week_02_Frame_220.jpg)
+
+[Source video at 3:40](https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=220s)
+
+#### 2023 Q9
+
+**Question recap:** Which successor of I is least promising?
+
+**Answer:** A — E under the usual closed-node convention; the video selects D — G.
+
+**Why:** E has evaluation 15, compared with H at 12 and J at 10. G is already closed with cost 4; returning from I would worsen that cost to 10. If every outgoing path is nevertheless scored afresh, both E and G have $f=15$, so G is not uniquely worst by that rule either. Looking only at $h(G)=5$ would instead use a greedy comparison. The prompt omits the revisit convention, so keep that ambiguity visible.
+
+#### 2023 Q10
+
+**Question recap:** What is the most effective A*-selected route to J?
+
+**Answer:** D — A–F–G–I–J, with total cost 10.
+
+**Why:** Add the actual edge costs: $3+1+3+3=10$. The repeated graph was independently checked by shortest-path search. Its displayed heuristic is inconsistent on G–I, since $h(G)=5>3+h(I)=4$; finding the optimum on this instance does not prove that the heuristic is consistent.
+
+[Back to year index](#2023) · [All weeks](README.md)
 
 ---
 

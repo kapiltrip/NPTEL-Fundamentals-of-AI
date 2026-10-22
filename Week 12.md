@@ -2,7 +2,7 @@
 
 [All weeks](README.md) · [Previous](Week%2011.md)
 
-[2026](#2026) · [2025](#2025) · [2024](#2024) · [2019](#2019)
+[2026](#2026) · [2025](#2025) · [2024](#2024) · [2023](#2023) · [2019](#2019)
 
 Screenshots appear inline. Each question has a short recap, answer, and explanation below the relevant page.
 
@@ -343,6 +343,156 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 **Why:** Deep models can learn hierarchical features, while many traditional pipelines use engineered feature extraction. They still need suitable raw inputs and training choices; “no precisely defined features” refers to avoiding hand-design of every intermediate feature. The claim that deep learning is inherently unscalable is false.
 
 [Back to year index](#2024) · [All weeks](README.md)
+
+---
+
+## 2023
+
+Public 2023 assignment-video frames from JANAK TRIVEDI, showing Assignment 12 due 18 October 2023. The uploader explicitly labels the answers as their own understanding. Submitted choices and text selections are preserved; they are not course grading feedback.
+
+[Source](https://www.youtube.com/watch?v=wROecvpizh8&t=20s)
+
+Jump to discussion: [Q1](#2023-q1) · [Q2](#2023-q2) · [Q3](#2023-q3) · [Q4](#2023-q4) · [Q5](#2023-q5) · [Q6](#2023-q6) · [Q7](#2023-q7) · [Q8](#2023-q8) · [Q9](#2023-q9) · [Q10](#2023-q10)
+
+### 2023 — Page 01
+
+![Week 12, 2023, source page 0:20](resources/screenshots/Week_12/2023/2023_Week_12_Frame_020.jpg)
+
+[Source video at 0:20](https://www.youtube.com/watch?v=wROecvpizh8&t=20s)
+
+The dated assignment header and Q1 begin here. Its remaining choices appear in the next frame.
+
+### 2023 — Page 02
+
+![Week 12, 2023, source page 0:55](resources/screenshots/Week_12/2023/2023_Week_12_Frame_055.jpg)
+
+[Source video at 0:55](https://www.youtube.com/watch?v=wROecvpizh8&t=55s)
+
+#### 2023 Q1
+
+**Question recap:** Which single-neuron model represents linearly separable functions?
+
+**Answer:** A — The perceptron.
+
+**Why:** A thresholded weighted sum separates the input space with a linear boundary. XOR cannot be separated by one line in its original two-dimensional input representation. Hidden layers or a suitable feature transformation can represent patterns that one untransformed perceptron cannot.
+
+#### 2023 Q2
+
+**Question recap:** Which architecture trains two competing networks?
+
+**Answer:** C — Generative adversarial networks.
+
+**Why:** A generator produces samples while a discriminator learns to distinguish generated examples from real ones. Their adversarial objectives define the GAN setup. A CNN, RNN, or autoencoder is not defined by this two-player competition.
+
+### 2023 — Page 03
+
+![Week 12, 2023, source page 1:15](resources/screenshots/Week_12/2023/2023_Week_12_Frame_075.jpg)
+
+[Source video at 1:15](https://www.youtube.com/watch?v=wROecvpizh8&t=75s)
+
+Q3 begins here; its final answer choice appears in the following frame.
+
+### 2023 — Page 04
+
+![Week 12, 2023, source page 1:35](resources/screenshots/Week_12/2023/2023_Week_12_Frame_095.jpg)
+
+[Source video at 1:35](https://www.youtube.com/watch?v=wROecvpizh8&t=95s)
+
+#### 2023 Q3
+
+**Question recap:** Which feature-extraction statements are intended to hold?
+
+**Answer:** A — Both I and II.
+
+**Why:** Traditional ML pipelines often use engineered features, while deep models can learn hierarchical internal representations. This is a broad course comparison, not a claim that every traditional method requires manual features or that deep models require no input preparation. The screenshot's statement concerns the intermediate features learned by the network.
+
+#### 2023 Q4
+
+**Question recap:** Which listed operations describe value iteration?
+
+**Answer:** A and B.
+
+**Why:** Bellman backups update state utilities; a greedy policy then selects the action with the greatest expected return under those values. For a discounted MDP, $V_{k+1}(s)=\max_a\sum_{s'}P(s'\mid s,a)[r(s,a,s')+\gamma V_k(s')]$. Starting with and evaluating a fixed policy belongs to policy iteration instead.
+
+### 2023 — Page 05
+
+![Week 12, 2023, source page 2:15](resources/screenshots/Week_12/2023/2023_Week_12_Frame_135.jpg)
+
+[Source video at 2:15](https://www.youtube.com/watch?v=wROecvpizh8&t=135s)
+
+#### 2023 Q5
+
+**Question recap:** Which listed operations describe policy iteration?
+
+**Answer:** C and D.
+
+**Why:** Start with a policy and evaluate its state values, then improve each state's action using those values. Repeat evaluation and improvement until the policy is stable. The source lists these operations in the opposite presentation order; the corresponding evaluation still precedes improvement. These two planning questions are part of this dated Week 12 assignment and are kept here as printed.
+
+### 2023 — Page 06
+
+![Week 12, 2023, source page 2:35](resources/screenshots/Week_12/2023/2023_Week_12_Frame_155.jpg)
+
+[Source video at 2:35](https://www.youtube.com/watch?v=wROecvpizh8&t=155s)
+
+#### 2023 Q6
+
+**Question recap:** What three elements appear in Mitchell's definition of learning?
+
+**Answer:** B — Experience E, tasks T, and performance measure P.
+
+**Why:** A program learns when its measured performance on the specified tasks improves with experience. For spam detection, the task is classification, labelled emails can supply experience, and accuracy on held-out messages can measure performance. Merely storing more examples does not establish improvement. See [Mitchell's original text](https://www.cs.cmu.edu/~tom/files/MachineLearningTomMitchell.pdf).
+
+#### 2023 Q7
+
+**Question recap:** What does the reward hypothesis say?
+
+**Answer:** C — Goals can be described by maximising expected cumulative reward.
+
+**Why:** The objective combines rewards over time and averages over possible outcomes. It is not simply the largest immediate reward or a claim that every positive action must help. An action can sacrifice immediate reward to reach a more valuable later state.
+
+### 2023 — Page 07
+
+![Week 12, 2023, source page 2:55](resources/screenshots/Week_12/2023/2023_Week_12_Frame_175.jpg)
+
+[Source video at 2:55](https://www.youtube.com/watch?v=wROecvpizh8&t=175s)
+
+#### 2023 Q8
+
+**Question recap:** Why did early perceptron work concentrate on single-layer models?
+
+**Answer:** A — The course's intended historical assertion–reason answer.
+
+**Why:** Hidden units have no directly supplied target outputs, so the simple perceptron error rule does not directly specify how to adjust their incoming weights. Difficulty assigning credit to hidden layers helps explain the focus on trainable single-layer models. Backpropagation supplies gradients through intermediate layers. The [AIMA historical discussion](https://aima.cs.berkeley.edu/newchap20.pdf) describes the early lack of effective multilayer learning algorithms.
+
+### 2023 — Page 08
+
+![Week 12, 2023, source page 3:20](resources/screenshots/Week_12/2023/2023_Week_12_Frame_200.jpg)
+
+[Source video at 3:20](https://www.youtube.com/watch?v=wROecvpizh8&t=200s)
+
+#### 2023 Q9
+
+**Question recap:** Does an environment model predict the agent's next behaviour?
+
+**Answer:** C — The assertion is true, but the reason is false; the video selects A.
+
+**Why:** A policy specifies action choice. An environment model predicts environmental outcomes, such as the next state and reward after an action. The printed reason substitutes the agent's future behaviour for that environmental prediction. Repairing that word would describe another RL component, rather than explain the policy definition; compare [Sutton and Barto](https://www.incompleteideas.net/book/bookdraft2018mar21.pdf).
+
+### 2023 — Page 09
+
+![Week 12, 2023, source page 3:35](resources/screenshots/Week_12/2023/2023_Week_12_Frame_215.jpg)
+
+[Source video at 3:35](https://www.youtube.com/watch?v=wROecvpizh8&t=215s)
+
+#### 2023 Q10
+
+**Question recap:** How do convolution and pooling contribute to a CNN?
+
+**Answer:** A — The intended assertion–reason answer for the typical architecture.
+
+**Why:** Convolutions use local spatial relationships and shared filters. Pooling summarises local responses and often reduces resolution and sensitivity to small shifts. Filters are shared across positions, rather than being exclusive to one fixed part of an image. Pooling is common but optional; it is not a requirement of every modern CNN.
+
+[Back to year index](#2023) · [All weeks](README.md)
 
 ---
 

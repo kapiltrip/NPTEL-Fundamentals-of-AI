@@ -1,9 +1,9 @@
 {
   "collected_on": "2026-10-22",
   "course": "noc26_ge93",
-  "assignment_sets": 51,
-  "question_discussions": 510,
-  "screenshots": 186,
+  "assignment_sets": 53,
+  "question_discussions": 530,
+  "screenshots": 201,
   "sets": [
     {
       "week": 1,
@@ -370,6 +370,72 @@
             10
           ],
           "sha256": "2587245ecc756401350652a580606c20784d0532b37933036c2151a43c65cacd"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "year": 2023,
+      "questions_discussed": 10,
+      "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=20s",
+      "provenance": "public assignment-video frame; selections are not an official key",
+      "images": [
+        {
+          "path": "resources/screenshots/Week_02/2023/2023_Week_02_Frame_020.jpg",
+          "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=20s",
+          "source_page": "0:20",
+          "questions": [
+            1,
+            2
+          ],
+          "sha256": "191311f3c720efea3461ea20591fd0ca5269b0ecfa41c4f8a6b8e3195bb5f7dd"
+        },
+        {
+          "path": "resources/screenshots/Week_02/2023/2023_Week_02_Frame_100.jpg",
+          "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=100s",
+          "source_page": "1:40",
+          "questions": [
+            3,
+            4
+          ],
+          "sha256": "2fca266f2e88fac7e9b19e0bcfafb8e19773b61588e75a92394aa3198487da6b"
+        },
+        {
+          "path": "resources/screenshots/Week_02/2023/2023_Week_02_Frame_140.jpg",
+          "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=140s",
+          "source_page": "2:20",
+          "questions": [
+            5
+          ],
+          "sha256": "95b6628ac46aa069a8846c537b3f1d9e05ef99dbb8688dc2bd1d9e039e9fb520"
+        },
+        {
+          "path": "resources/screenshots/Week_02/2023/2023_Week_02_Frame_180.jpg",
+          "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=180s",
+          "source_page": "3:00",
+          "questions": [],
+          "sha256": "88641fa006603e8a60d43c0e6e37d61db5d358d23ab34c38a1713056815d200a"
+        },
+        {
+          "path": "resources/screenshots/Week_02/2023/2023_Week_02_Frame_205.jpg",
+          "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=205s",
+          "source_page": "3:25",
+          "questions": [
+            6,
+            7,
+            8
+          ],
+          "sha256": "768f0dc473e6512d2fb1cc136568560cf0a4c4f31b9fd613fca71ae67b2aefd1"
+        },
+        {
+          "path": "resources/screenshots/Week_02/2023/2023_Week_02_Frame_220.jpg",
+          "source": "https://www.youtube.com/watch?v=ZwCa_iuvKwM&t=220s",
+          "source_page": "3:40",
+          "questions": [
+            9,
+            10
+          ],
+          "sha256": "bd12c7ef01a205bffa7445431cfe964fd233063f9bb50f5e855a8487ea6c99ee"
         }
       ]
     },
@@ -2295,6 +2361,95 @@
             10
           ],
           "sha256": "bf495bbc3393c9770c9217928ac7808d130769cd3ee6c18d532450b6996f3c42"
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "year": 2023,
+      "questions_discussed": 10,
+      "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=20s",
+      "provenance": "public assignment-video frame; selections are not an official key",
+      "images": [
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_020.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=20s",
+          "source_page": "0:20",
+          "questions": [],
+          "sha256": "836653c54e422cebc3c87199cc4878ecd25c2561cc069e86f3902a49f7649cec"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_055.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=55s",
+          "source_page": "0:55",
+          "questions": [
+            1,
+            2
+          ],
+          "sha256": "45070ec0a12f59c9250533e7014ddec1ef9332aad5f6565b15a722e6c186d282"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_075.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=75s",
+          "source_page": "1:15",
+          "questions": [],
+          "sha256": "9242aa0618c4c12cee80bf34056abd55d8d0e665d53a93ff0e173dd2e07090de"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_095.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=95s",
+          "source_page": "1:35",
+          "questions": [
+            3,
+            4
+          ],
+          "sha256": "7e824b4d3a796e291609325027688c9a2da14c9aa55067651b5c084ccf94f8e8"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_135.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=135s",
+          "source_page": "2:15",
+          "questions": [
+            5
+          ],
+          "sha256": "d8ad7c833012ba524912cb19e1d8c2381cb68fa156b90c9e9089fe79cfeaa4de"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_155.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=155s",
+          "source_page": "2:35",
+          "questions": [
+            6,
+            7
+          ],
+          "sha256": "a1c5c4fe6e50b15624313a018fac04133c5804790344d9233e005c21228c676c"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_175.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=175s",
+          "source_page": "2:55",
+          "questions": [
+            8
+          ],
+          "sha256": "bf1077cf58d784f5b89790eaf713a5e5dde0ef2c9dcac08c21a4864d23bf768c"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_200.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=200s",
+          "source_page": "3:20",
+          "questions": [
+            9
+          ],
+          "sha256": "2fe5cbe347eff6da42aa7f1e101f233ca723f52030cd6468db46aa5e1019ca7f"
+        },
+        {
+          "path": "resources/screenshots/Week_12/2023/2023_Week_12_Frame_215.jpg",
+          "source": "https://www.youtube.com/watch?v=wROecvpizh8&t=215s",
+          "source_page": "3:35",
+          "questions": [
+            10
+          ],
+          "sha256": "6aa8e1ac5533e7d296e34947e168f64c60dc285c385db933a9c10e217cf88d67"
         }
       ]
     },
