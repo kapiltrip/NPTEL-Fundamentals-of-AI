@@ -25,4 +25,4 @@ Counts include repeated questions. These are weekly assignments; source mistakes
 
 ## Found
 
-[Additional questions not already in the main collection](Found/README.md) — 13 verified additions organised in outermost `Found/Week 0`, `Found/Week 4`, and `Found/Week 6` folders. The pages include answers, worked explanations, source references, and corrections to incorrect video selections. Further located sources and partial checks are recorded in the Found index.
+[Additional questions not already in the main collection](Found/README.md) — 19 verified additions organised in outermost `Found/Week 0`, `Found/Week 3`, `Found/Week 4`, `Found/Week 6`, and `Found/Week 11` folders. The pages include answers, worked explanations, source references, and corrections to incorrect video selections. Further located sources and partial checks are recorded in the Found index.

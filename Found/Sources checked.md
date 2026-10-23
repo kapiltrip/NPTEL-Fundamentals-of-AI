@@ -9,8 +9,10 @@ Search date: **23 October 2026**. The comparison baseline is the existing **53 a
 | Source | Result |
 |---|---|
 | [2023 Assignment 0 video](https://www.youtube.com/watch?v=lfhGtpQGyRs) | All ten questions are new to the collection. [Saved screenshots and worked solutions](Week%200/2023.md). The selected answers for Q2, Q7, and Q9 are incorrect; corrections are explained individually. |
+| [2023 Assignment 3 scored follow-up](https://www.youtube.com/watch?v=mY0jKapeCDw) and [original video](https://www.youtube.com/watch?v=18WufMMOwag) | Five additions: Q4, Q5, Q7, Q8, and Q10. [Saved questions, the different game tree, and worked solutions](Week%203/2023.md). The recording's accepted-answer feedback is visible; Q8's selected $9$ is marked wrong and $11$ is accepted. |
 | [2022 Assignment 4, dated 24 August 2022](https://www.scribd.com/document/594634865/Fundamentals-Of-Artificial-Intelligence-Unit-6-Week-4-Knowledge-Representation-and-Reasoning-I) | Q10 is new: interpret a negated three-place predicate over people and time. [Saved question and solution](Week%204/2022.md). |
 | [2022 Assignment 6 video](https://www.youtube.com/watch?v=SeLKa6CYCHQ) | Q7 and Q10 are new tasks: selecting an additional axiom for a target conclusion and extracting a home-builder's identity. [Saved facts, screenshots, and solutions](Week%206/2022.md). Q7 has multiple sufficient options under its literal wording; Q10's selected Reena answer is wrong. |
+| [2023 Assignment 11 video](https://www.youtube.com/watch?v=1G9YWY29qIs) | Q2 is new: classify statements about dependent and explanatory variables. [Saved question and option analysis](Week%2011/2023.md). D is unselected in the video but definitionally correct; B's manipulation wording needs qualification. |
 
 ### Question-by-question check of the 2023 Week 0 quiz
 
@@ -28,6 +30,29 @@ Search date: **23 October 2026**. The comparison baseline is the existing **53 a
 | Q10 | Five of ninety-five raffle tickets win both prizes | $2/893$, assuming distinct winning tickets |
 
 None of these numerical problems or matrix questions occurs in the main collection. The Week 7 single-die question concerns an even outcome, rather than three simultaneous sixes. Q2 and Q8 use the same probability principle but different supplied data; both are distinct source questions, as allowed by the collection's comparison rule.
+
+### Question-by-question check of 2023 Week 3
+
+| Source question | Decision | Existing counterpart or reason |
+|---|---|---|
+| Q1 — Limited game-tree search | Repeat | [Week 3, 2024 Q1](../Week%2003.md#2024-q1) |
+| Q2 — AO*'s two operations | Repeat | [Week 3, 2024 Q2](../Week%2003.md#2024-q2) |
+| Q3 — Saddle point | Repeat | [Week 3, 2025 Q4](../Week%2003.md#2025-q4) |
+| Q4 — Early alpha–beta work for checkers | New | Different task from identifying Samuel's machine-learning program in Week 10. The saved solution qualifies the source's broad “earliest” wording. |
+| Q5 — Solution-graph assertion and AO* representation reason | New | [Week 3, 2019 Q3](../Week%2003.md#2019-q3) asks the analogy alone; this question adds a separate representation claim and requires assessing whether it explains the analogy. |
+| Q6 — Inefficient minimax and separate generation/evaluation | Repeat | [Week 3, 2025 Q5](../Week%2003.md#2025-q5) |
+| Q7 — Minimax at $V$ | New | Different tree and leaf data from the main 2024–2026 examples. |
+| Q8 — Alpha at $U$ | New | Uses the new tree to distinguish the inherited $11$ bound from the subtree value $9$. |
+| Q9 — Cutoff at a MIN node below a sufficient MAX alternative | Repeat | [Week 3, 2019 Q6](../Week%2003.md#2019-q6) |
+| Q10 — Cutoff types in the supplied tree | New | Requires tracing the new instance; the only cut is $U$'s leaf $12$. |
+
+The game tree was checked independently by full minimax and left-to-right alpha–beta search. Both return $11$; alpha–beta visits $4,13,5,10,11,16,9,6$ and prunes only $12$.
+
+### Inspected portions of 2023 Week 11
+
+Q2 is retained because evaluating variable-role statements differs from naming regression as a technique, which is already covered in [Week 10, 2024 Q2](../Week%2010.md#2024-q2). The video selects B and C; D also follows directly from the terminology. The saved solution distinguishes B's intended response-variable meaning from a guarantee of causal change.
+
+The displayed portions of Q4/Q5 repeat the cluster-evaluation and least-squares material in [Week 11, 2024 Q6](../Week%2011.md#2024-q6) and [Q5](../Week%2011.md#2024-q5). Q8 repeats the clustering assertion–reason item in [Week 11, 2024 Q9](../Week%2011.md#2024-q9). The remaining questions have not received a complete question-by-question review and contribute no further additions.
 
 ### Inspected portions of the 2022 Week 6 video
 
@@ -78,7 +103,7 @@ Only the retained questions described above contribute to the count. The rest of
 | Year | Week | Located source | Review status |
 |---|---|---|---|
 | 2023 | 0 | [Prerequisite quiz](https://www.youtube.com/watch?v=lfhGtpQGyRs) | All ten questions read and saved. |
-| 2023 | 3 | [Assignment 3](https://www.youtube.com/watch?v=18WufMMOwag) · [Uploader's scored follow-up](https://www.youtube.com/watch?v=mY0jKapeCDw) | Questions not yet reviewed. |
+| 2023 | 3 | [Assignment 3](https://www.youtube.com/watch?v=18WufMMOwag) · [Uploader's scored follow-up](https://www.youtube.com/watch?v=mY0jKapeCDw) | All ten checked; five retained and five repeats identified above. |
 | 2023 | 4 | [Assignment 4](https://www.youtube.com/watch?v=ufGVap8nIzw) | Questions not yet reviewed. |
 | 2023 | 5 | [Assignment 5](https://www.youtube.com/watch?v=tjqaXklmsWA) | Questions not yet reviewed. |
 | 2023 | 6 | [Assignment 6](https://www.youtube.com/watch?v=FnfgnZLTW3g) | Partial check: Q5 subsumption, Q6 domain of discourse, and Q7 Jack's dog are repeats. Other questions remain unverified; no addition counted. |
@@ -86,7 +111,7 @@ Only the retained questions described above contribute to the count. The rest of
 | 2023 | 8 | [Assignment 8](https://www.youtube.com/watch?v=yCAqfvlnsZs) | Questions not yet reviewed. |
 | 2023 | 9 | [Assignment 9](https://www.youtube.com/watch?v=DK7n3Q5PVg0) | Questions not yet reviewed. |
 | 2023 | 10 | [Assignment 10](https://www.youtube.com/watch?v=W8mq2Ff4Cug) | Questions not yet reviewed. |
-| 2023 | 11 | [Assignment 11](https://www.youtube.com/watch?v=1G9YWY29qIs) | Questions not yet reviewed. |
+| 2023 | 11 | [Assignment 11](https://www.youtube.com/watch?v=1G9YWY29qIs) | Partial check; Q2 retained, with inspected repeats described above. |
 | 2022 | 6 | [Assignment 6, uploaded 7 September 2022](https://www.youtube.com/watch?v=SeLKa6CYCHQ) | Two additions; repeats and unreviewed Q4 identified above. |
 | 2021 | 5 | [Assignment 5, uploaded 1 September 2021](https://www.youtube.com/watch?v=IJ64CETYqRI) | Questions not yet reviewed. |
 | 2020 | 6 | [Assignment 6, uploaded 28 October 2020](https://www.youtube.com/watch?v=em3_0Ee23p0) | Questions not yet reviewed. |
