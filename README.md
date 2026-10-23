@@ -4,7 +4,7 @@
 
 Choose a week. Screenshots, answers, and explanations are inside, grouped by year.
 
-[Supporting resources](resources/README.md)
+[Practice quiz](https://kapil-ai-weekly-practice.dreamysnipe514.chatgpt.site) · [Supporting resources](resources/README.md)
 
 | Week | Topic | Years |
 |---|---|---|
