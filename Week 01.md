@@ -214,6 +214,8 @@ Jump to discussion: [Q1](#2025-q1) · [Q2](#2025-q2) · [Q3](#2025-q3) · [Q4](#
 
 Question screenshots captured from MY SWAYAM’s public 2024 assignment video, linked to course noc24_ge47. The uploader’s unsubmitted choices, annotations, and occasional overlay text are preserved. They are not an official answer key; corrections and ambiguous wording are discussed below.
 
+The frames overlap. The solution table directly below each screenshot covers every visible question, including cropped continuations.
+
 [Source](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=25s)
 
 Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#2024-q4) · [Q5](#2024-q5) · [Q6](#2024-q6) · [Q7](#2024-q7) · [Q8](#2024-q8) · [Q9](#2024-q9) · [Q10](#2024-q10)
@@ -221,6 +223,13 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 ### 2024 — Page 01
 
 ![Week 01, 2024, source page 0:25](resources/screenshots/Week_01/2024/2024_Week_01_Frame_025.jpg)
+
+| Question visible in this screenshot | Solution |
+|---|---|
+| Q1 — Aristotle's argument patterns | **C — Syllogisms.** A valid syllogism derives a conclusion from its premises. |
+| Q2 — Newell and Simon's 1957 program | **A — General Problem Solver.** GPS used means–ends analysis to work towards a goal. |
+| Q3 — “Think Rationally” | **B — Formalize the inference process.** This approach focuses on valid reasoning. |
+| Q4 — Question begins at the bottom | **B — Control Strategy.** It selects rules and keeps track of rule sequences already tried. |
 
 [Source video at 0:25](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=25s)
 
@@ -235,6 +244,13 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 ### 2024 — Page 02
 
 ![Week 01, 2024, source page 0:35](resources/screenshots/Week_01/2024/2024_Week_01_Frame_035.jpg)
+
+| Question visible in this screenshot | Solution |
+|---|---|
+| Q1 — Remaining options at the top | **C — Syllogisms.** This is the answer to the Aristotle question in the previous frame. |
+| Q2 — Newell and Simon's 1957 program | **A — General Problem Solver.** It aimed at general problem solving through means–ends analysis. |
+| Q3 — “Think Rationally” | **B — Formalize the inference process.** “Do the right thing” instead describes acting rationally. |
+| Q4 — Rule selection and search history; options continue in the next frame | **B — Control Strategy.** It decides which rule to try next and records earlier attempts. |
 
 [Source video at 0:35](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=35s)
 
@@ -258,6 +274,12 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 
 ![Week 01, 2024, source page 1:00](resources/screenshots/Week_01/2024/2024_Week_01_Frame_060.jpg)
 
+| Question visible in this screenshot | Solution |
+|---|---|
+| Q3 — Remaining options at the top | **B — Formalize the inference process.** This is the “Think Rationally” answer. |
+| Q4 — Rule selection and search history | **B — Control Strategy.** The database holds facts; the strategy chooses rules and tracks attempts. |
+| Q5 — Informed control: assertion and reason | **A — Both A and R are true, and R correctly explains A.** Storing and evaluating domain knowledge adds control-strategy cost. |
+
 [Source video at 1:00](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=60s)
 
 #### 2024 Q4
@@ -280,6 +302,12 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 
 ![Week 01, 2024, source page 1:20](resources/screenshots/Week_01/2024/2024_Week_01_Frame_080.jpg)
 
+| Question visible in this screenshot | Solution |
+|---|---|
+| Q5 — Informed control: assertion and reason | **A — Both A and R are true, and R correctly explains A.** Domain knowledge requires storage and computation, explaining the possible higher selection cost. |
+| Q6 — Intelligent behaviour without a claim about a real mind | **A — Weak AI.** It requires intelligent performance without taking a position on genuine mentality. |
+| Q7 — Domain knowledge; options continue in the next frame | **C — Heuristic Search.** Domain knowledge helps choose promising child nodes. |
+
 [Source video at 1:20](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=80s)
 
 #### 2024 Q6
@@ -293,6 +321,13 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 ### 2024 — Page 05
 
 ![Week 01, 2024, source page 1:40](resources/screenshots/Week_01/2024/2024_Week_01_Frame_100.jpg)
+
+| Question visible in this screenshot | Solution |
+|---|---|
+| Q6 — Remaining options at the top | **A — Weak AI.** The complete question and option A appear in the previous frame. |
+| Q7 — Domain knowledge chooses child nodes | **C — Heuristic Search.** A heuristic ranks successors using knowledge about the problem. |
+| Q8 — Practical game-tree search goals | **A — Both I and II.** Search can aim to find a good first move and estimate the best first move without reaching terminal positions. |
+| Q9 — AO* operations; options continue in the next frame | **A — Top-down graph-growing, then bottom-up cost-revising and SOLVE-labelling.** Expand subproblems, then update their ancestors. |
 
 [Source video at 1:40](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=100s)
 
@@ -315,6 +350,12 @@ Jump to discussion: [Q1](#2024-q1) · [Q2](#2024-q2) · [Q3](#2024-q3) · [Q4](#
 ### 2024 — Page 06
 
 ![Week 01, 2024, source page 2:00](resources/screenshots/Week_01/2024/2024_Week_01_Frame_120.jpg)
+
+| Question visible in this screenshot | Solution |
+|---|---|
+| Q8 — Remaining options at the top | **A — Both I and II.** Both statements about selecting a first move are true. |
+| Q9 — AO*'s two major operations | **A — Top-down graph-growing, then bottom-up cost-revising and SOLVE-labelling.** Costs and solved status propagate back towards the root. |
+| Q10 — Combining advantages of DFS and BFS | **C — Best First Search**, for this course's broad wording. The distinction from iterative deepening is explained below. |
 
 [Source video at 2:00](https://www.youtube.com/watch?v=Ihoz1RHUQ0Y&t=120s)
 
