@@ -22,3 +22,7 @@ Choose a week. Screenshots, answers, and explanations are inside, grouped by yea
 | [Week 12](Week%2012.md) | Machine Learning III | [2026](Week%2012.md#2026) · [2025](Week%2012.md#2025) · [2024](Week%2012.md#2024) · [2023](Week%2012.md#2023) · [2019](Week%2012.md#2019) |
 
 Counts include repeated questions. These are weekly assignments; source mistakes are flagged beside the questions.
+
+## Found
+
+[Additional questions not already in the main collection](Found/README.md) — organised in week folders, with answers, worked explanations, and sources. The current search has verified 1 new question from 2022 Week 4; further located sources are recorded in the Found index.
