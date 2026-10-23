@@ -1,0 +1,819 @@
+[
+  {
+    "id": "w04-2022-q10",
+    "week": 4,
+    "year": 2022,
+    "number": 10,
+    "type": "single",
+    "mode": "recap",
+    "additional": true,
+    "prompt": "Let $F(x,y,t)$ mean that person x can fool person y at time t. Which choice best expresses $\\forall x\\,\\exists y\\,\\exists t\\;\\neg F(x,y,t)$?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Every individual can fool at least one person at some time."
+      },
+      {
+        "id": "b",
+        "text": "Nobody can fool everybody at every time."
+      },
+      {
+        "id": "c",
+        "text": "Everyone has some individual whom they fail to fool at every time."
+      },
+      {
+        "id": "d",
+        "text": "Nobody can fool anybody at any time."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "For every person x, there must be a person y and a time t at which $\\neg F(x,y,t)$ holds. These witnesses may depend on x. Negating “someone fools everybody at every time” gives $\\neg\\exists x\\forall y\\forall t F(x,y,t)\\equiv\\forall x\\exists y\\exists t\\neg F(x,y,t)$. Thus B is the clearest translation. A changes failure to success. C is stronger: it requires failure against one individual at every time, $\\forall x\\exists y\\forall t\\neg F(x,y,t)$. D forbids every success. The original English for C has ambiguous negation scope; this practice version makes its all-times meaning explicit.",
+    "sourceQuestion": "2022 Assignment 4, Q10: interpret a negated predicate over people and time.",
+    "sourceAnswer": "B, independently derived. The public source does not display accepted grading feedback; the English of C has a scope ambiguity.",
+    "note": "Additional verified question from Found. Choices are paraphrased to make the quantifier scope explicit.",
+    "source": "https://www.scribd.com/document/594634865/Fundamentals-Of-Artificial-Intelligence-Unit-6-Week-4-Knowledge-Representation-and-Reasoning-I",
+    "studyPage": "Found/Week 4/2022.md",
+    "images": []
+  },
+  {
+    "id": "w00-2023-q01",
+    "week": 0,
+    "year": 2023,
+    "number": 1,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "A card is selected from a standard deck. Find the probability that it is a 3 or a heart.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$17/52$"
+      },
+      {
+        "id": "b",
+        "text": "$4/13$"
+      },
+      {
+        "id": "c",
+        "text": "$11/26$"
+      },
+      {
+        "id": "d",
+        "text": "$13/52$"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "There are 4 threes and 13 hearts, with the three of hearts counted in both groups. Inclusion–exclusion gives $(4+13-1)/52=16/52=4/13$. “Or” includes their overlap. The distractor $17/52$ counts the three of hearts twice.",
+    "sourceQuestion": "2023 Assignment 0, Q1: A card is selected from a standard deck. Find the probability that it is a 3 or a heart.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q01.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q01.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q02",
+    "week": 0,
+    "year": 2023,
+    "number": 2,
+    "type": "single",
+    "mode": "recap",
+    "additional": true,
+    "prompt": "The probability that Mr. X visits a town museum is 0.36, that he takes a river cruise is 0.47, and that he does both is 0.22. Find the probability of visiting the museum or taking the cruise.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$0.83$"
+      },
+      {
+        "id": "b",
+        "text": "$0.61$"
+      },
+      {
+        "id": "c",
+        "text": "$0.58$"
+      },
+      {
+        "id": "d",
+        "text": "$0.69$"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Use $P(M\\cup C)=P(M)+P(C)-P(M\\cap C)=0.36+0.47-0.22=0.61$. Museum-only, cruise-only and both have probabilities 0.14, 0.25 and 0.22. They sum to 0.61. The source prints B as 0.62, so none of its printed options is correct; B is repaired to 0.61 here. This is not a rounding difference.",
+    "sourceQuestion": "2023 Assignment 0, Q2: The probability that Mr. X visits a town museum is 0.36, that he takes a river cruise is 0.47, and that he does both is 0.22. Find the probability of visiting the museum or taking the cruise.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q02.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q02.png"
+    ],
+    "note": "Corrected practice choice: the source prints B = 0.62. The supplied data give 0.61, which is absent from the original options."
+  },
+  {
+    "id": "w00-2023-q03",
+    "week": 0,
+    "year": 2023,
+    "number": 3,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Let $A=\\begin{bmatrix}1&1/3\\\\c&d\\end{bmatrix}$. Find $c$ and $d$ such that $A^2=-I$.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$c=-6,\\ d=1$"
+      },
+      {
+        "id": "b",
+        "text": "$c=-6,\\ d=-1$"
+      },
+      {
+        "id": "c",
+        "text": "$c=-1,\\ d=6$"
+      },
+      {
+        "id": "d",
+        "text": "$c=-1,\\ d=-6$"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Matrix multiplication gives upper-right entry $(1+d)/3=0$, hence $d=-1$. The upper-left entry is $1+c/3=-1$, hence $c=-6$. The lower-left entry $c(1+d)$ becomes 0 and the lower-right entry $c/3+d^2$ becomes $-2+1=-1$. Thus all four entries agree with $-I$. Squaring entries individually would miss the cross terms.",
+    "sourceQuestion": "2023 Assignment 0, Q3: Let $A=\\begin{bmatrix}1&1/3\\\\c&d\\end{bmatrix}$. Find $c$ and $d$ such that $A^2=-I$.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q03.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q03.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q04",
+    "week": 0,
+    "year": 2023,
+    "number": 4,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "The angle between $(1,0,-1,3)$ and $(1,\\sqrt3,3,-3)$ in $\\mathbb R^4$ is $\\alpha\\pi$. Find $\\alpha$.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$3/4$"
+      },
+      {
+        "id": "b",
+        "text": "$1$"
+      },
+      {
+        "id": "c",
+        "text": "$1/2$"
+      },
+      {
+        "id": "d",
+        "text": "$0$"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The dot product is $1+0-3-9=-11$. The squared lengths are 11 and 22, so $\\cos\\theta=-11/(\\sqrt{11}\\sqrt{22})=-1/\\sqrt2$. The angle between real nonzero vectors lies between 0 and $\\pi$, giving $\\theta=3\\pi/4$ and $\\alpha=3/4$. A negative dot product means an obtuse angle.",
+    "sourceQuestion": "2023 Assignment 0, Q4: The angle between $(1,0,-1,3)$ and $(1,\\sqrt3,3,-3)$ in $\\mathbb R^4$ is $\\alpha\\pi$. Find $\\alpha$.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q04.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q04.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q05",
+    "week": 0,
+    "year": 2023,
+    "number": 5,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Three fair, independent dice are rolled. Find the probability of getting three 6s.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$1/6$"
+      },
+      {
+        "id": "b",
+        "text": "$1/216$"
+      },
+      {
+        "id": "c",
+        "text": "$1/18$"
+      },
+      {
+        "id": "d",
+        "text": "$5/36$"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Each die shows six with probability $1/6$. The three independent conditions must all hold, so multiply: $(1/6)^3=1/216$. There are $6^3=216$ equally likely ordered outcomes and only $(6,6,6)$ is favourable. Adding the three single-die probabilities would not compute their intersection.",
+    "sourceQuestion": "2023 Assignment 0, Q5: Three fair, independent dice are rolled. Find the probability of getting three 6s.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q05.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q05.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q06",
+    "week": 0,
+    "year": 2023,
+    "number": 6,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Let $A$ be a Hermitian matrix. Which statement is false?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The diagonal entries of $A$ are all real."
+      },
+      {
+        "id": "b",
+        "text": "There exists a unitary $U$ such that $U^*AU$ is diagonal."
+      },
+      {
+        "id": "c",
+        "text": "If $A^3=I$, then $A=I$."
+      },
+      {
+        "id": "d",
+        "text": "If $A^2=I$, then $A=I$."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "D is false: $A=-I$ is Hermitian, has $A^2=I$, and differs from $I$. Hermitian matrices have real diagonal entries and can be unitarily diagonalized with real eigenvalues. If $A^3=I$, every real eigenvalue satisfies $\\lambda^3=1$, whose only real solution is 1; diagonalization then gives $A=I$. In contrast, $\\lambda^2=1$ allows both 1 and $-1$.",
+    "sourceQuestion": "2023 Assignment 0, Q6: Let $A$ be a Hermitian matrix. Which statement is false?",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q06.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q06.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q07",
+    "week": 0,
+    "year": 2023,
+    "number": 7,
+    "type": "single",
+    "mode": "recap",
+    "additional": true,
+    "prompt": "Matrices $A=\\begin{bmatrix}a&1\\\\-2&d\\end{bmatrix}$ and $B=\\frac1{25}\\begin{bmatrix}114&48\\\\48&86\\end{bmatrix}$ have the same eigenvalues, including multiplicity. Find $a$ and $d$.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$(4+\\sqrt6,4-\\sqrt6)$ or the swapped pair"
+      },
+      {
+        "id": "b",
+        "text": "$(3,7)$ or $(7,3)$"
+      },
+      {
+        "id": "c",
+        "text": "$(1,1)$"
+      },
+      {
+        "id": "d",
+        "text": "$(4,16)$ or $(16,4)$"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "For a $2\\times2$ matrix, matching eigenvalues means matching trace and determinant. Here $\\mathrm{tr}(B)=200/25=8$ and $\\det(B)=(114\\cdot86-48^2)/625=12$. Thus $a+d=8$ and $ad+2=12$, so $ad=10$. The roots of $z^2-8z+10=0$ are $4\\pm\\sqrt6$. The source selects $(2,6)$, but that gives determinant 14 for A rather than 12. No original printed pair is correct; A is repaired here.",
+    "sourceQuestion": "2023 Assignment 0, Q7: Matrices $A=\\begin{bmatrix}a&1\\\\-2&d\\end{bmatrix}$ and $B=\\frac1{25}\\begin{bmatrix}114&48\\\\48&86\\end{bmatrix}$ have the same eigenvalues, including multiplicity. Find $a$ and $d$.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q07.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q07.png"
+    ],
+    "note": "Corrected practice choice: none of the original pairs satisfies both trace and determinant. A now contains the independently derived pair."
+  },
+  {
+    "id": "w00-2023-q08",
+    "week": 0,
+    "year": 2023,
+    "number": 8,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Let $P(A)=3/8$, $P(B)=1/2$, and $P(A\\cap B)=1/4$. Find $P(A\\cup B)$.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$5/8$"
+      },
+      {
+        "id": "b",
+        "text": "$3/8$"
+      },
+      {
+        "id": "c",
+        "text": "$1/2$"
+      },
+      {
+        "id": "d",
+        "text": "$3/4$"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Inclusion–exclusion gives $P(A\\cup B)=3/8+1/2-1/4=3/8+4/8-2/8=5/8$. Subtract the intersection once because it occurs in both individual probabilities. Independence is neither stated nor needed: the intersection probability is already supplied.",
+    "sourceQuestion": "2023 Assignment 0, Q8: Let $P(A)=3/8$, $P(B)=1/2$, and $P(A\\cap B)=1/4$. Find $P(A\\cup B)$.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q08.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q08.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q09",
+    "week": 0,
+    "year": 2023,
+    "number": 9,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Let $A$ be a real $5\\times5$ matrix and $x\\ne0$. The vectors $x,Ax,A^2x,A^3x,A^4x,A^5x$ are:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Linearly independent."
+      },
+      {
+        "id": "b",
+        "text": "Linearly dependent."
+      },
+      {
+        "id": "c",
+        "text": "Linearly independent if and only if $A$ is symmetric."
+      },
+      {
+        "id": "d",
+        "text": "Their linear dependence or independence cannot be determined."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "All six vectors belong to $\\mathbb R^5$. A five-dimensional space contains at most five linearly independent vectors, so these six must be dependent. The condition $x\\ne0$ does not increase the dimension. Symmetry cannot remove this bound. For example, if $A=I$, all six vectors are equal. The uploader selects A, but the dimension argument gives B.",
+    "sourceQuestion": "2023 Assignment 0, Q9: Let $A$ be a real $5\\times5$ matrix and $x\\ne0$. The vectors $x,Ax,A^2x,A^3x,A^4x,A^5x$ are:",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q09.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q09.png"
+    ]
+  },
+  {
+    "id": "w00-2023-q10",
+    "week": 0,
+    "year": 2023,
+    "number": 10,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Amrita buys 5 tickets in a raffle where 95 tickets are sold altogether. Find the probability of her winning both first and second prizes, drawn on distinct tickets.",
+    "options": [
+      {
+        "id": "a",
+        "text": "$2/5$"
+      },
+      {
+        "id": "b",
+        "text": "$20/9025$"
+      },
+      {
+        "id": "c",
+        "text": "$2/893$"
+      },
+      {
+        "id": "d",
+        "text": "$5/95$"
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "The first winning ticket is hers with probability $5/95$. After that ticket is removed, she has 4 tickets among the remaining 94, giving $(5/95)(4/94)=20/8930=2/893$. Equivalently, $\\binom52/\\binom{95}2=2/893$. This uses distinct winning tickets (sampling without replacement). It asks for both prizes, not at least one.",
+    "sourceQuestion": "2023 Assignment 0, Q10: Amrita buys 5 tickets in a raffle where 95 tickets are sold altogether. Find the probability of her winning both first and second prizes, drawn on distinct tickets.",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=lfhGtpQGyRs",
+    "studyPage": "Found/Week 0/2023.md",
+    "images": [
+      "figures/found/week-0-2023/Q10.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 0/images/2023/Q10.png"
+    ],
+    "note": "The standard distinct-ticket raffle assumption is explicit here; the source does not state the replacement rule."
+  },
+  {
+    "id": "w06-2022-q07",
+    "week": 6,
+    "year": 2022,
+    "number": 7,
+    "type": "single",
+    "mode": "recap",
+    "additional": true,
+    "prompt": "Which additional rule expresses the intended spouse-and-male condition for inferring $Female(Reena)$ from the supplied facts, without dropping either condition?",
+    "options": [
+      {
+        "id": "a",
+        "text": "$\\forall x\\forall y\\,[(Spouse(x,y)\\lor Male(x))\\rightarrow Female(y)]$"
+      },
+      {
+        "id": "b",
+        "text": "$\\forall x\\forall y\\,[Spouse(x,y)\\rightarrow Female(y)]$"
+      },
+      {
+        "id": "c",
+        "text": "$\\forall x\\forall y\\,[(Spouse(x,y)\\land Male(x))\\rightarrow Female(y)]$"
+      },
+      {
+        "id": "d",
+        "text": "$\\forall x\\forall y\\,[Male(x)\\rightarrow Female(y)]$"
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Instantiate C with Rohan and Reena. The facts $Spouse(Rohan,Reena)$ and $Male(Rohan)$ satisfy its conjunction, so modus ponens derives $Female(Reena)$. C requires both conditions. A uses disjunction, B drops the male condition, and D drops the spouse relationship. With one male in the domain, A and D would even imply that every object is female. The original question only asks for an axiom “required to infer” the target; literally all four options suffice for this particular target. This practice wording asks for the least overbroad intended rule, making C unambiguous. This is a rule of the exercise’s model, not a consequence of first-order logic alone.",
+    "sourceQuestion": "2022 Assignment 6, Q7: Which additional rule expresses the intended spouse-and-male condition for inferring $Female(Reena)$ from the supplied facts, without dropping either condition?",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=SeLKa6CYCHQ",
+    "studyPage": "Found/Week 6/2022.md",
+    "images": [
+      "figures/found/week-6-2022/Shared facts.png",
+      "figures/found/week-6-2022/Q07.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 6/images/2022/Shared facts.png",
+      "Found/Week 6/images/2022/Q07.png"
+    ],
+    "note": "Original wording is ambiguous: all four rules suffice for the one target. This version asks for the intended rule retaining both conditions.",
+    "context": "facts2022"
+  },
+  {
+    "id": "w06-2022-q10",
+    "week": 6,
+    "year": 2022,
+    "number": 10,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Given the supplied facts, who is established to be a home-builder?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rohan"
+      },
+      {
+        "id": "b",
+        "text": "Reena"
+      },
+      {
+        "id": "c",
+        "text": "Nobody"
+      },
+      {
+        "id": "d",
+        "text": "Everybody"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The facts say that Rohan owns a house and that every house owner is a home-builder. Universal instantiation and modus ponens therefore give $HomeBuilder(Rohan)$. With a fresh house constant k, the clauses $House(k)$ and $Owns(Rohan,k)$ resolve with $\\neg House(h)\\lor\\neg Owns(x,h)\\lor HomeBuilder(x)$ to derive the same result. An answer literal $\\neg HomeBuilder(z)\\lor Answer(z)$ then yields $Answer(Rohan)$. Reena’s spouse relationship does not transfer ownership. Her being a home-builder is unproved, rather than disproved. The video selects Reena; the supplied premises establish Rohan.",
+    "sourceQuestion": "2022 Assignment 6, Q10: Given the supplied facts, who is established to be a home-builder?",
+    "sourceAnswer": "Independently derived; the video selection is not official grading feedback.",
+    "source": "https://www.youtube.com/watch?v=SeLKa6CYCHQ",
+    "studyPage": "Found/Week 6/2022.md",
+    "images": [
+      "figures/found/week-6-2022/Shared facts.png",
+      "figures/found/week-6-2022/Q10.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 6/images/2022/Shared facts.png",
+      "Found/Week 6/images/2022/Q10.png"
+    ],
+    "context": "facts2022"
+  },
+  {
+    "id": "w11-2023-q02",
+    "week": 11,
+    "year": 2023,
+    "number": 2,
+    "type": "multiple",
+    "mode": "recap",
+    "additional": true,
+    "prompt": "In a regression problem, which statements correctly identify dependent and independent variables? Select all that apply.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A variable affected by other variables is called an independent variable."
+      },
+      {
+        "id": "b",
+        "text": "A variable modelled as the response to predictor variables is called a dependent variable."
+      },
+      {
+        "id": "c",
+        "text": "Explanatory variables are termed independent variables."
+      },
+      {
+        "id": "d",
+        "text": "Variables being explained are termed dependent variables."
+      }
+    ],
+    "correct": [
+      "b",
+      "c",
+      "d"
+    ],
+    "explanation": "In $Y=\\beta_0+\\beta_1X+\\varepsilon$, Y is the dependent, response or outcome variable, while X is the independent, explanatory or predictor variable. Thus B, C and D identify the intended roles; A reverses them. For a model predicting house price from floor area, price is the dependent variable and area is explanatory. The source’s B says the response changes whenever the predictor is manipulated. That is too strong as a universal claim: regression can use observational data, a zero slope is possible, and statistical association alone does not prove causation. B is reworded here to state the response role without that guarantee. The video checks only B and C, but D is also a definitional truth. No official accepted checkbox key is visible.",
+    "sourceQuestion": "2023 Assignment 11, Q2: identify statements about dependent and independent variables.",
+    "sourceAnswer": "B, C and D in the intended introductory sense. C and D are unqualified definitions; original B needs a qualification. Independently derived, with no official checkbox key visible.",
+    "note": "B is clarified to describe the response role rather than guarantee a causal change after every manipulation. Select every correct statement.",
+    "source": "https://www.youtube.com/watch?v=1G9YWY29qIs&t=70s",
+    "studyPage": "Found/Week 11/2023.md",
+    "images": [
+      "figures/found/week-11-2023/Q02.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 11/images/2023/Q02.png"
+    ]
+  },
+  {
+    "id": "w03-2023-q04",
+    "week": 3,
+    "year": 2023,
+    "number": 4,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Alpha–beta pruning had been reinvented a number of times. The earliest version was by whom for a checkers simulation?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Marvin Minsky"
+      },
+      {
+        "id": "b",
+        "text": "Alan Turing"
+      },
+      {
+        "id": "c",
+        "text": "Arthur Samuel"
+      },
+      {
+        "id": "d",
+        "text": "Peter Corke"
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "The scored source accepts C, Arthur Samuel. The association tested is Samuel’s checkers research. Treat the word “earliest” cautiously: alpha–beta search has several independent origins, and the checkers-specific accepted answer does not establish a unique invention history. This history item differs from computing an alpha bound or identifying a cutoff.",
+    "sourceQuestion": "2023 Assignment 3, Q4: Alpha–beta pruning had been reinvented a number of times. The earliest version was by whom for a checkers simulation?",
+    "sourceAnswer": "The saved scored source visibly displays this accepted answer; the explanation is independently checked.",
+    "source": "https://www.youtube.com/watch?v=mY0jKapeCDw",
+    "studyPage": "Found/Week 3/2023.md",
+    "images": [
+      "figures/found/week-3-2023/Q04.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 3/images/2023/Q04.png"
+    ],
+    "note": "The saved source displays accepted answer C. The priority wording is historically simplified."
+  },
+  {
+    "id": "w03-2023-q05",
+    "week": 3,
+    "year": 2023,
+    "number": 5,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Assertion: A solution graph of an AND/OR graph is analogous to a path in an ordinary graph.\n\nReason: AO* uses a graph representing the part of the search graph explicitly generated so far. Select the correct relation.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Both are true, and the reason correctly explains the assertion."
+      },
+      {
+        "id": "b",
+        "text": "Both are true, but the reason does not correctly explain the assertion."
+      },
+      {
+        "id": "c",
+        "text": "The assertion is true, but the reason is false."
+      },
+      {
+        "id": "d",
+        "text": "The assertion is false, but the reason is true."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Both claims are true. An OR node permits a chosen alternative, while an AND node requires all required successor subproblems, so a solution can branch. A solution graph therefore generalizes the role of a path. AO* also maintains a working graph of generated states, dependencies, estimates and solved information, which may contain alternatives absent from the final solution. Keeping that working graph does not explain why a solution branches; the AND/OR semantics do. The scored source accepts B.",
+    "sourceQuestion": "2023 Assignment 3, Q5: Assertion: A solution graph of an AND/OR graph is analogous to a path in an ordinary graph.\n\nReason: AO* uses a graph representing the part of the search graph explicitly generated so far. Select the correct relation.",
+    "sourceAnswer": "The saved scored source visibly displays this accepted answer; the explanation is independently checked.",
+    "source": "https://www.youtube.com/watch?v=mY0jKapeCDw",
+    "studyPage": "Found/Week 3/2023.md",
+    "images": [
+      "figures/found/week-3-2023/Q05.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 3/images/2023/Q05.png"
+    ]
+  },
+  {
+    "id": "w03-2023-q07",
+    "week": 3,
+    "year": 2023,
+    "number": 7,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "What is the minimax value at node $V$ in the supplied game tree?",
+    "options": [
+      {
+        "id": "a",
+        "text": "$12$"
+      },
+      {
+        "id": "b",
+        "text": "$11$"
+      },
+      {
+        "id": "c",
+        "text": "$13$"
+      },
+      {
+        "id": "d",
+        "text": "$16$"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Back up according to the indicated node types: $S=\\min(5,10)=5$, $Q=\\max(4,13)=13$, and $R=\\max(S,11)=11$. Then $P=\\min(Q,R,16)=11$. On the right, $T=\\max(9,6)=9$ and $U=\\min(T,12)=9$. Finally, $V=\\max(P,U)=11$. MAX prefers P, but MIN at P can choose R, so the leaf 16 does not become the root value. The displayed accepted answer is B.",
+    "sourceQuestion": "2023 Assignment 3, Q7: What is the minimax value at node $V$ in the supplied game tree?",
+    "sourceAnswer": "The saved scored source visibly displays this accepted answer; the explanation is independently checked.",
+    "source": "https://www.youtube.com/watch?v=mY0jKapeCDw",
+    "studyPage": "Found/Week 3/2023.md",
+    "images": [
+      "figures/found/week-3-2023/Game tree.png",
+      "figures/found/week-3-2023/Q07.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 3/images/2023/Game tree.png",
+      "Found/Week 3/images/2023/Q07.png"
+    ],
+    "context": "tree2023found"
+  },
+  {
+    "id": "w03-2023-q08",
+    "week": 3,
+    "year": 2023,
+    "number": 8,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "Using left-to-right alpha–beta search on the supplied tree, what alpha bound is inherited at node $U$?",
+    "options": [
+      {
+        "id": "a",
+        "text": "$11$"
+      },
+      {
+        "id": "b",
+        "text": "$9$"
+      },
+      {
+        "id": "c",
+        "text": "$6$"
+      },
+      {
+        "id": "d",
+        "text": "$12$"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Complete the left branch first: $P=11$, so the root’s alpha bound becomes 11. Exploring U inherits that bound, hence $\\alpha(U)=11$. The minimax value of U is 9, which is different from the inherited alpha bound. At MIN node U, child results tighten beta. After T returns 9, $\\beta(U)=9\\le\\alpha(U)=11$, allowing the remaining leaf 12 to be pruned. The source marks selected 9 wrong and explicitly accepts 11.",
+    "sourceQuestion": "2023 Assignment 3, Q8: Using left-to-right alpha–beta search on the supplied tree, what alpha bound is inherited at node $U$?",
+    "sourceAnswer": "The saved scored source visibly displays this accepted answer; the explanation is independently checked.",
+    "source": "https://www.youtube.com/watch?v=mY0jKapeCDw",
+    "studyPage": "Found/Week 3/2023.md",
+    "images": [
+      "figures/found/week-3-2023/Game tree.png",
+      "figures/found/week-3-2023/Q08.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 3/images/2023/Game tree.png",
+      "Found/Week 3/images/2023/Q08.png"
+    ],
+    "context": "tree2023found"
+  },
+  {
+    "id": "w03-2023-q10",
+    "week": 3,
+    "year": 2023,
+    "number": 10,
+    "type": "single",
+    "mode": "original",
+    "additional": true,
+    "prompt": "For the supplied game tree and left-to-right traversal, which type of cutoff occurs?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Beta cutoff"
+      },
+      {
+        "id": "b",
+        "text": "Alpha cutoff"
+      },
+      {
+        "id": "c",
+        "text": "Both"
+      },
+      {
+        "id": "d",
+        "text": "None"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "The left subtree returns $P=11$, setting the root’s alpha to 11. At MIN node U, T returns 9, giving $\\beta(U)=9\\le\\alpha(U)=11$. U’s remaining leaf 12 is skipped: this is an alpha cutoff at a MIN node. No MAX node reaches the beta bound required for a beta cutoff in this traversal. Visited terminal values are 4, 13, 5, 10, 11, 16, 9, 6; only 12 is pruned. Full minimax and alpha–beta both return 11. The scored source accepts B.",
+    "sourceQuestion": "2023 Assignment 3, Q10: For the supplied game tree and left-to-right traversal, which type of cutoff occurs?",
+    "sourceAnswer": "The saved scored source visibly displays this accepted answer; the explanation is independently checked.",
+    "source": "https://www.youtube.com/watch?v=mY0jKapeCDw",
+    "studyPage": "Found/Week 3/2023.md",
+    "images": [
+      "figures/found/week-3-2023/Game tree.png",
+      "figures/found/week-3-2023/Q10.png"
+    ],
+    "sourceFiles": [
+      "Found/Week 3/images/2023/Game tree.png",
+      "Found/Week 3/images/2023/Q10.png"
+    ],
+    "context": "tree2023found"
+  }
+]
