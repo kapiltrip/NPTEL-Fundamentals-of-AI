@@ -1,6 +1,6 @@
 import { STORAGE_KEY, PROGRESS_KEY, questionsFor, grade, questionForAttempt, wasCorrect, makeAttempt,
   readProgress, summarize, filterQuestions, parseRoute, routeFor, nextUnanswered, resetAnswers,
-  createFlashRound, parseFlashRoute, flashRoute } from './quiz-core.mjs?v=3';
+  createFlashRound, parseFlashRoute, flashRoute, FLASH_DELAYS } from './quiz-core.mjs?v=4';
 
 const root = document.getElementById('app');
 let bank, progress, draft = [], storageAvailable = true, notice = null;
@@ -15,8 +15,9 @@ function stopAutoNext() {
 function pauseForReading() {
   if (!parseFlashRoute(location.hash, bank) || !progress.flash) return;
   stopAutoNext(); progress.flash.autoNext = false; save();
-  const toggle = document.querySelector('.auto-toggle');
-  if (toggle) { toggle.textContent = 'Resume auto next'; toggle.setAttribute('aria-pressed', 'false'); }
+  for (const toggle of document.querySelectorAll('.auto-toggle, .mobile-auto-toggle')) {
+    toggle.textContent = toggle.classList.contains('mobile-auto-toggle') ? 'Resume' : 'Resume auto next'; toggle.setAttribute('aria-pressed', 'false');
+  }
   const status = document.querySelector('.auto-status');
   if (status) status.textContent = 'Paused — take your time. Next when you’re ready.';
 }
@@ -334,23 +335,25 @@ function renderPractice(main, route) {
 
 const FLASH_LABELS = { current: 'Shuffled · 2026 first, then older', all: 'Mix all years', '2026': '2026 assignments only', missed: 'Retry missed questions', saved: 'Saved questions' };
 
-function startFlash(scope, fresh = false) {
-  if (fresh || !progress.flash || progress.flash.scope !== scope) {
-    progress.flash = createFlashRound(bank, scope, progress.answers, progress.flagged, progress.flash || {});
+function startFlash(scope, fresh = false, bypass = progress.flash?.bypass || false) {
+  if (fresh || !progress.flash || progress.flash.scope !== scope || progress.flash.bypass !== bypass) {
+    const preferences = { ...progress.flash, bypass };
+    if (!!progress.flash?.bypass !== bypass) { preferences.autoNext = true; preferences.delay = bypass ? 3 : 6; }
+    progress.flash = createFlashRound(bank, scope, progress.answers, progress.flagged, preferences);
   }
-  draft = []; save(); changeHash(flashRoute(scope), { focusQuestion: true });
+  draft = []; save(); changeHash(flashRoute(scope, null, bypass), { focusQuestion: true });
 }
 
 function stepFlash(direction = 1) {
   stopAutoNext();
   const round = progress.flash, current = round.ids[round.index];
-  if (round.answers[current]) round.last = current;
+  if (round.answers[current] || round.bypass) round.last = current;
   if (direction < 0) { round.index = Math.max(0, round.index - 1); round.autoNext = false; }
   else {
     let pending = -1;
     for (let step = 1; step <= round.ids.length; step++) {
       const index = (round.index + step) % round.ids.length;
-      if (!round.answers[round.ids[index]]) { pending = index; break; }
+      if (!(round.bypass ? round.seen.includes(round.ids[index]) : round.answers[round.ids[index]])) { pending = index; break; }
     }
     if (pending >= 0) round.index = pending; else round.complete = true;
   }
@@ -359,26 +362,28 @@ function stepFlash(direction = 1) {
 
 function submitFlash(q, selected) {
   const round = progress.flash;
-  if (round.answers[q.id] || !selected.length) return;
+  if (round.bypass || round.answers[q.id] || !selected.length) return;
   const attempt = makeAttempt(q, selected, progress.answers[q.id]);
   progress.answers[q.id] = attempt; round.answers[q.id] = attempt; round.last = q.id;
+  if (!round.seen.includes(q.id)) round.seen.push(q.id);
   draft = []; save(); render({ focusFeedback: true });
 }
 
-function flashFeedback(canonical, attempt, previous = false) {
-  const q = questionForAttempt(canonical, attempt), correct = wasCorrect(canonical, attempt);
-  const feedback = el('section', `feedback ${correct ? 'correct' : 'wrong'}${previous ? ' previous-feedback' : ''}`);
+function flashFeedback(canonical, attempt, previous = false, revealOnly = false) {
+  const q = revealOnly ? canonical : questionForAttempt(canonical, attempt), correct = revealOnly || wasCorrect(canonical, attempt);
+  const feedback = el('section', `feedback ${correct ? 'correct' : 'wrong'}${previous ? ' previous-feedback' : ''}${revealOnly ? ' bypass-answer' : ''}`);
   feedback.setAttribute('aria-live', previous ? 'off' : 'polite');
   if (previous) {
     feedback.append(el('p', 'eyebrow', 'LAST ANSWER'));
     const meta = el('p', 'muted', `${q.year} · Week ${q.week} · Q${q.number}`); feedback.append(meta);
   }
-  const heading = el('h3', '', correct ? '✓ Correct' : '× Not quite'); heading.tabIndex = -1;
+  const heading = el('h3', '', revealOnly ? 'Answer to remember' : correct ? '✓ Correct' : '× Not quite'); heading.tabIndex = -1;
   if (previous) feedback.append(heading);
   else { const bar = el('div', 'feedback-heading'); bar.append(heading, button('Pause & read', 'text-button pause-reading', pauseForReading)); feedback.append(bar); }
   if (previous) { const prompt = el('p', 'previous-prompt'); prompt.append(rich(q.prompt)); feedback.append(prompt); }
   const answer = el('p', 'correct-answer', 'Correct answer: ');
   answer.append(rich(q.options.filter(o => q.correct.includes(o.id)).map(o => `${o.id.toUpperCase()}. ${o.text}`).join(' · '))); feedback.append(answer);
+  if (revealOnly && q.context) feedback.append(contextView(bank.contexts[q.context]));
   if (!correct && q.type === 'multiple') {
     const missing = q.options.filter(o => q.correct.includes(o.id) && !attempt.selected.includes(o.id));
     const extra = q.options.filter(o => attempt.selected.includes(o.id) && !q.correct.includes(o.id));
@@ -388,18 +393,23 @@ function flashFeedback(canonical, attempt, previous = false) {
   if (previous && q.context) {
     const context = el('details', 'previous-context'); context.append(el('summary', '', 'Show question information'), contextView(bank.contexts[q.context])); feedback.append(context);
   }
-  feedback.append(rich(q.explanation), sourceNotes(q), sourceScreenshots(q));
+  feedback.append(rich(q.explanation));
+  if (revealOnly && q.note) feedback.append(el('p', 'question-note', q.note));
+  feedback.append(sourceNotes(q), sourceScreenshots(q));
   return feedback;
 }
 
 function scheduleAutoNext(round, q, attempt) {
   const status = document.querySelector('.auto-status');
-  if (!attempt) { status.textContent = 'Choose an answer. Feedback appears immediately.'; return; }
+  if (!attempt && !round.bypass) { status.textContent = 'Choose an answer. Feedback appears immediately.'; return; }
   if (!round.autoNext || document.visibilityState === 'hidden') {
     status.textContent = 'Paused — take your time. Next when you’re ready.'; return;
   }
   const due = Date.now() + round.delay * 1000;
-  const update = () => { status.textContent = `Next question in ${Math.max(1, Math.ceil((due - Date.now()) / 1000))}s · Pause to read longer`; };
+  const update = () => {
+    const message = `Next ${round.bypass ? 'card' : 'question'} in ${Math.max(1, Math.ceil((due - Date.now()) / 1000))}s · Pause to read longer`;
+    if (status.textContent !== message) status.textContent = message;
+  };
   update(); countdownTimer = window.setInterval(update, 250);
   advanceTimer = window.setTimeout(() => {
     if (parseFlashRoute(location.hash, bank) && progress.flash === round && round.ids[round.index] === q.id && !document.querySelector('dialog[open]')) stepFlash();
@@ -410,68 +420,81 @@ function renderFlash(main, route) {
   let automatic = null;
   main.addEventListener('toggle', event => { if (event.target.open) pauseForReading(); }, true);
   const scope = route.scope || progress.flash?.scope || 'current';
-  if (!progress.flash || progress.flash.scope !== scope) progress.flash = createFlashRound(bank, scope, progress.answers, progress.flagged, progress.flash || {});
+  const bypass = route.bypass ?? progress.flash?.bypass ?? false;
+  if (!progress.flash || progress.flash.scope !== scope || progress.flash.bypass !== bypass) {
+    const preferences = { ...progress.flash, bypass };
+    if (!!progress.flash?.bypass !== bypass) { preferences.autoNext = true; preferences.delay = bypass ? 3 : 6; }
+    progress.flash = createFlashRound(bank, scope, progress.answers, progress.flagged, preferences);
+  }
   const round = progress.flash;
   if (route.id) { const index = round.ids.indexOf(route.id); if (index >= 0) { round.index = index; round.complete = false; } }
   // Position lives in saved state; the address keeps a simple entry point for this feed.
-  if (location.hash !== flashRoute(scope)) history.replaceState(null, '', flashRoute(scope));
+  if (location.hash !== flashRoute(scope, null, bypass)) history.replaceState(null, '', flashRoute(scope, null, bypass));
   const header = el('header', 'flash-header'), brand = el('a', 'brand', 'AI Practice'); brand.href = '#/revise/current';
   const browse = el('a', 'browse-weeks', 'Browse by week'); browse.href = '#/weeks'; header.append(brand, browse); main.append(header);
-  const title = el('div', 'flash-title'); title.append(el('p', 'eyebrow', 'RANDOM REVISION'), el('h1', '', 'One question at a time'));
+  const title = el('div', 'flash-title'); title.append(el('p', 'eyebrow', bypass ? 'BYPASS · ANSWERS SHOWN' : 'RANDOM REVISION'), el('h1', '', bypass ? 'Quick answer cards' : 'One question at a time'));
   const tools = el('div', 'flash-tools'), scopeLabel = el('label', 'flash-select-label', 'Question pool'), select = el('select', 'flash-scope');
   for (const [value, label] of Object.entries(FLASH_LABELS)) { const option = el('option', '', label); option.value = value; option.selected = scope === value; select.append(option); }
-  select.setAttribute('aria-label', 'Question pool'); select.addEventListener('change', () => startFlash(select.value, true)); scopeLabel.append(select); tools.append(scopeLabel);
+  select.setAttribute('aria-label', 'Question pool'); select.addEventListener('change', () => startFlash(select.value, true)); scopeLabel.append(select);
+  const bypassButton = button(bypass ? 'Bypass ON · answers shown' : 'Bypass · show answers', `secondary bypass-toggle ${bypass ? 'active' : ''}`, () => startFlash(scope, true, !bypass));
+  bypassButton.setAttribute('aria-pressed', String(bypass)); tools.append(bypassButton);
   const toggle = button(round.autoNext ? 'Pause auto next' : 'Resume auto next', 'secondary auto-toggle', () => { round.autoNext = !round.autoNext; save(); render(); });
   toggle.setAttribute('aria-pressed', String(round.autoNext)); tools.append(toggle);
   const speedLabel = el('label', 'flash-select-label', 'Reading time'), speed = el('select', 'flash-speed');
-  for (const seconds of [3, 6, 12]) { const option = el('option', '', `${seconds} seconds`); option.value = seconds; option.selected = round.delay === seconds; speed.append(option); }
-  speed.setAttribute('aria-label', 'Seconds before the next question'); speed.addEventListener('change', () => { round.delay = Number(speed.value); save(); render(); }); speedLabel.append(speed); tools.append(speedLabel);
+  for (const seconds of FLASH_DELAYS) { const option = el('option', '', `${seconds} second${seconds === 1 ? '' : 's'}`); option.value = seconds; option.selected = round.delay === seconds; speed.append(option); }
+  speed.setAttribute('aria-label', 'Seconds before the next question'); speed.addEventListener('change', () => { round.delay = Number(speed.value); save(); render(); }); speedLabel.append(speed);
+  const settings = el('details', 'flash-settings'), fields = el('div', 'settings-fields'); settings.append(el('summary', '', 'Settings')); fields.append(scopeLabel, speedLabel); settings.append(fields); tools.append(settings);
   title.append(tools); main.append(title);
   const lookup = new Map(bank.questions.map(q => [q.id, q])), list = round.ids.map(id => lookup.get(id));
+  if (bypass && list.length && !round.complete && !round.seen.includes(round.ids[round.index])) round.seen.push(round.ids[round.index]);
   const stats = summarize(list, round.answers), summary = el('div', 'flash-summary');
-  summary.append(el('span', 'flash-position', round.complete ? 'Round complete' : `${round.ids.length ? round.index + 1 : 0} / ${round.ids.length} in this shuffle`), el('span', 'flash-score', `${stats.correct} correct · ${stats.wrong} missed · ${stats.answered} answered`)); main.append(summary);
-  const meter = el('progress', 'progress'); meter.max = Math.max(stats.total, 1); meter.value = stats.answered; meter.setAttribute('aria-label', 'Questions answered in this shuffle'); main.append(meter);
+  summary.append(el('span', 'flash-position', round.complete ? 'Round complete' : `${round.ids.length ? round.index + 1 : 0} / ${round.ids.length} in this shuffle`), el('span', 'flash-score', bypass ? `${round.seen.length} shown · quiz scores unchanged` : `${stats.correct} correct · ${stats.wrong} missed · ${stats.answered} answered`)); main.append(summary);
+  const meter = el('progress', 'progress'); meter.max = Math.max(stats.total, 1); meter.value = bypass ? round.seen.length : stats.answered; meter.setAttribute('aria-label', bypass ? 'Answer cards shown in this shuffle' : 'Questions answered in this shuffle'); main.append(meter);
   if (!list.length || round.complete) {
     const empty = el('section', 'flash-complete empty-review');
     empty.append(el('h2', '', round.complete ? 'You finished this shuffle' : scope === 'missed' ? 'No missed questions yet' : 'No saved questions yet'));
-    empty.append(el('p', '', round.complete ? `${stats.correct} correct out of ${stats.total}. Your previous results are saved.` : scope === 'missed' ? 'Missed answers will be available here after you practise.' : 'Star any question to keep it for later.'));
-    if (stats.wrong) empty.append(button(`Retry ${stats.wrong} missed`, 'primary flash-retry-missed', () => {
+    empty.append(el('p', '', round.complete ? bypass ? `All ${round.ids.length} answer cards shown. Your quiz scores are unchanged.` : `${stats.correct} correct out of ${stats.total}. Your previous results are saved.` : scope === 'missed' ? 'Missed answers will be available here after you practise.' : 'Star any question to keep it for later.'));
+    if (!bypass && stats.wrong) empty.append(button(`Retry ${stats.wrong} missed`, 'primary flash-retry-missed', () => {
       const missed = list.filter(q => round.answers[q.id] && !wasCorrect(q, round.answers[q.id]));
       const next = createFlashRound({ ...bank, questions: missed }, 'all', {}, [], round); next.scope = 'missed'; progress.flash = next; save(); changeHash(flashRoute('missed'));
     }));
     empty.append(button('New shuffle · all questions', 'secondary', () => startFlash('current', true))); main.append(empty);
   } else {
-    const canonical = list[round.index], attempt = round.answers[canonical.id], attempted = !!attempt;
+    const canonical = list[round.index], attempt = bypass ? null : round.answers[canonical.id], attempted = !!attempt, revealed = bypass || attempted;
     const q = attempt ? questionForAttempt(canonical, attempt) : canonical;
     const grid = el('div', 'flash-grid'), current = el('div', 'flash-current'), card = el('section', 'question-card'); card.dataset.question = q.id;
     const meta = el('div', 'question-meta'); meta.append(el('span', 'question-position', `${q.year} · Week ${q.week} · Q${q.number}`), el('span', 'question-kind', q.savedRecap ? 'Saved recap attempt' : q.mode === 'original' ? 'Source MCQ' : 'Recap practice')); card.append(meta);
     const prompt = el('h2', 'question-prompt'); prompt.tabIndex = -1; prompt.append(rich(q.prompt)); card.append(prompt);
+    if (bypass) card.append(flashFeedback(q, null, false, true));
     const flagged = progress.flagged.includes(q.id), flag = button(flagged ? '★ Saved for review' : '☆ Save for review', 'save-question text-button', () => {
       progress.flagged = flagged ? progress.flagged.filter(id => id !== q.id) : [...progress.flagged, q.id]; save(); render({ focusFlag: true });
     }); flag.setAttribute('aria-pressed', String(flagged)); card.append(flag);
-    if (q.context) card.append(contextView(bank.contexts[q.context]));
+    if (q.context && !bypass) card.append(contextView(bank.contexts[q.context]));
     if (q.note && attempted) card.append(el('p', 'question-note', q.note));
-    if (q.type === 'multiple') card.append(el('p', 'multi-hint', 'Select every correct option, then check your answer.'));
+    if (q.type === 'multiple' && !bypass) card.append(el('p', 'multi-hint', 'Select every correct option, then check your answer.'));
     const choices = el('div', 'answer-options'); choices.setAttribute('role', q.type === 'multiple' ? 'group' : 'radiogroup'); choices.setAttribute('aria-label', 'Answer choices');
     for (const option of q.options) {
       const chosen = (attempt?.selected || draft).includes(option.id), correct = q.correct.includes(option.id);
-      const choice = button('', `answer-option ${chosen ? 'chosen' : ''} ${attempted && correct ? 'correct' : ''} ${attempted && chosen && !correct ? 'wrong' : ''}`, () => {
-        if (attempted) return;
+      const choice = button('', `answer-option ${chosen ? 'chosen' : ''} ${revealed && correct ? 'correct' : ''} ${attempted && chosen && !correct ? 'wrong' : ''}`, () => {
+        if (revealed) return;
         if (q.type === 'multiple') { draft = draft.includes(option.id) ? draft.filter(id => id !== option.id) : [...draft, option.id]; render({ focusOption: option.id }); }
         else submitFlash(q, [option.id]);
       });
-      choice.dataset.option = option.id; choice.setAttribute('role', q.type === 'multiple' ? 'checkbox' : 'radio'); choice.setAttribute('aria-checked', String(chosen)); choice.disabled = attempted;
+      choice.dataset.option = option.id; choice.setAttribute('role', q.type === 'multiple' ? 'checkbox' : 'radio'); choice.setAttribute('aria-checked', String(chosen)); choice.disabled = revealed;
       choice.append(el('span', 'option-letter', option.id.toUpperCase()), rich(option.text));
-      if (attempted && correct) choice.append(el('span', 'option-status', '✓ Correct')); else if (attempted && chosen) choice.append(el('span', 'option-status', '× Your choice')); choices.append(choice);
+      if (revealed && correct) choice.append(el('span', 'option-status', '✓ Correct')); else if (attempted && chosen) choice.append(el('span', 'option-status', '× Your choice')); choices.append(choice);
     }
-    card.append(choices);
-    if (q.type === 'multiple' && !attempted) { const check = button('Check answer', 'primary check-answer', () => submitFlash(q, draft)); check.disabled = !draft.length; card.append(check); }
+    if (bypass) { const allOptions = el('details', 'bypass-options'); allOptions.append(el('summary', '', 'Show all four options'), choices); card.append(allOptions); }
+    else card.append(choices);
+    if (q.type === 'multiple' && !revealed) { const check = button('Check answer', 'primary check-answer', () => submitFlash(q, draft)); check.disabled = !draft.length; card.append(check); }
     if (attempted) card.append(flashFeedback(q, attempt));
     const status = el('p', 'auto-status'); status.setAttribute('role', 'status'); card.append(status); current.append(card);
     const controls = el('div', 'question-controls flash-controls');
     const prev = button('← Previous', 'secondary', () => stepFlash(-1)); prev.disabled = round.index === 0; prev.dataset.navigation = 'previous';
-    const next = button(attempted ? 'Next question →' : 'Skip for now →', 'primary', () => stepFlash()); next.dataset.navigation = 'next'; controls.append(prev, next); current.append(controls); grid.append(current);
-    if (round.last && round.last !== q.id && round.answers[round.last]) {
+    const mobilePause = button(round.autoNext ? 'Pause' : 'Resume', 'secondary mobile-auto-toggle', () => { round.autoNext = !round.autoNext; save(); render(); });
+    mobilePause.setAttribute('aria-label', 'Pause or resume automatic next questions'); mobilePause.setAttribute('aria-pressed', String(round.autoNext));
+    const next = button(bypass ? 'Next card →' : attempted ? 'Next question →' : 'Skip for now →', 'primary', () => stepFlash()); next.dataset.navigation = 'next'; controls.append(prev, mobilePause, next); current.append(controls); grid.append(current);
+    if (!bypass && round.last && round.last !== q.id && round.answers[round.last]) {
       const last = el('aside', 'last-answer'); last.setAttribute('aria-label', 'Previous answer and explanation'); last.append(flashFeedback(lookup.get(round.last), round.answers[round.last], true)); grid.append(last); grid.classList.add('has-last-answer');
     }
     main.append(grid); automatic = { round, q, attempt };
@@ -495,7 +518,7 @@ function render(options={}){
   if(flash)automatic=renderFlash(main,flash);else if(route)renderPractice(main,route);else renderHome(main);
   layout.append(main);root.replaceChildren(layout);save();
   if(automatic)scheduleAutoNext(automatic.round,automatic.q,automatic.attempt);
-  document.title=flash?'Flash revision · AI Practice':route?`Week ${String(route.week).padStart(2,'0')} · AI Practice`:'AI Practice · Fundamentals of AI';
+  document.title=flash?(progress.flash?.bypass?'Quick answer cards · AI Practice':'Flash revision · AI Practice'):route?`Week ${String(route.week).padStart(2,'0')} · AI Practice`:'AI Practice · Fundamentals of AI';
   const target=options.focusFeedback?document.querySelector('.feedback h3'):options.focusOption?document.querySelector(`[data-option="${options.focusOption}"]`):options.focusFlag?document.querySelector('.save-question'):options.focusQuestion?document.querySelector('.question-prompt'):null;
   target?.focus({preventScroll:true});
   if(options.focusQuestion&&target?.scrollIntoView)target.scrollIntoView({block:'start',behavior:'instant'});
@@ -518,7 +541,7 @@ window.addEventListener('keydown',event=>{
 
 async function boot(){
   try{
-    const response=await fetch(new URL('./data/questions.json?v=3',import.meta.url));
+    const response=await fetch(new URL('./data/questions.json?v=4',import.meta.url));
     if(!response.ok)throw new Error(`Question data returned HTTP ${response.status}.`);
     bank=await response.json();
     if(bank.schemaVersion!==2||bank.weeks.length!==12||bank.questions.some(q=>q.options.length!==4||!q.revision||!q.correct.length))throw new Error('Question data is incomplete. Reload to get the matching version.');

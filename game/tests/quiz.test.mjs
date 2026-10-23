@@ -138,14 +138,30 @@ test('flash rounds shuffle without replacement, preserve current-year priority a
   assert.deepEqual(flashQuestions(bank,'missed',answers).map(q=>q.id),[q.id]);
   assert.deepEqual(createFlashRound(bank,'saved',answers,[q.id]).ids,[q.id]);
   assert.equal(createFlashRound(bank,'all').ids.length,549);
-  assert.deepEqual(parseFlashRoute('',bank),{scope:null,id:null});assert.equal(parseFlashRoute('#/weeks',bank),null);
+  assert.deepEqual(parseFlashRoute('',bank),{scope:null,id:null,bypass:null});assert.equal(parseFlashRoute('#/weeks',bank),null);
   assert.equal(parseFlashRoute(flashRoute('all',q.id),bank).id,q.id);
   assert.equal(parseFlashRoute('#/revise/2026/question/w00-2023-q01',bank),null);
-  const snapshot=createFlashRound(bank,'missed',answers);snapshot.answers[q.id]=makeAttempt(q,q.correct);snapshot.last=q.id;snapshot.autoNext=false;
+  const snapshot=createFlashRound(bank,'missed',answers);snapshot.answers[q.id]=makeAttempt(q,q.correct);snapshot.seen=[q.id];snapshot.last=q.id;snapshot.autoNext=false;
   assert.deepEqual(readFlashRound(bank,JSON.parse(JSON.stringify(snapshot))),snapshot,'a corrected question remains in the missed snapshot');
   const persisted=readProgress(bank,{version:2,answers,flash:snapshot},null);assert.deepEqual(persisted.flash,snapshot);
   const bad=readFlashRound(bank,{...round,ids:[round.ids[0],round.ids[0],'unknown'],index:999,answers:{[q.id]:answers[q.id]},delay:-1});
   assert.equal(bad.ids.length,1);assert.equal(bad.index,0);assert.equal(bad.delay,6);
   assert.equal(readFlashRound(bank,{scope:'unknown',ids:[]}),null);
   assert.equal(readFlashRound(bank,{scope:'current',ids:[]}),null);
+});
+
+test('bypass cards preserve separate seen state without manufacturing scored attempts',()=>{
+  const q=bank.questions[0],record=makeAttempt(q,q.correct),answers={[q.id]:record};
+  const round=createFlashRound(bank,'all',answers,[],{bypass:true});
+  assert.equal(round.bypass,true);assert.equal(round.delay,3);assert.equal(round.ids.length,549);
+  assert.deepEqual(round.answers,{});assert.deepEqual(round.seen,[]);assert.deepEqual(answers[q.id],record);
+  round.seen=round.ids.slice(0,10);round.index=9;round.last=round.ids[8];round.delay=1;
+  const restored=readProgress(bank,{version:2,answers,flash:round},null);
+  assert.deepEqual(restored.flash,round);assert.deepEqual(restored.answers,answers);
+  const finished=readFlashRound(bank,{...round,seen:round.ids,complete:true});assert.equal(finished.complete,true);
+  assert.equal(readFlashRound(bank,{...round,complete:true}).complete,false,'partly shown decks cannot be complete');
+  assert.deepEqual(parseFlashRoute('#/cards/all',bank),{scope:'all',id:null,bypass:true});
+  assert.equal(flashRoute('all',null,true),'#/cards/all');
+  const old={scope:'all',ids:[q.id],index:0,answers:{[q.id]:record},last:q.id,autoNext:false,delay:6,complete:true};
+  const migrated=readFlashRound(bank,old);assert.equal(migrated.bypass,false);assert.deepEqual(migrated.seen,[q.id]);assert.equal(migrated.complete,true);
 });

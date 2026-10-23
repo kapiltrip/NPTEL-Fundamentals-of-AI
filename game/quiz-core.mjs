@@ -129,6 +129,7 @@ export function resetAnswers(answers, ids) {
 }
 
 export const FLASH_SCOPES = ['current', 'all', '2026', 'missed', 'saved'];
+export const FLASH_DELAYS = [1, 2, 3, 6, 12];
 
 export function shuffled(items, random = Math.random) {
   const result = [...items];
@@ -149,8 +150,8 @@ export function createFlashRound(bank, scope = 'current', answers = {}, flagged 
   const list = scope === 'current'
     ? [...shuffled(pool.filter(q => q.year === 2026), random), ...shuffled(pool.filter(q => q.year !== 2026), random)]
     : shuffled(pool, random);
-  return { scope, ids: list.map(q => q.id), index: 0, answers: {}, last: null,
-    autoNext: preferences.autoNext !== false, delay: [3, 6, 12].includes(preferences.delay) ? preferences.delay : 6, complete: false };
+  return { scope, ids: list.map(q => q.id), index: 0, answers: {}, seen: [], last: null, bypass: preferences.bypass === true,
+    autoNext: preferences.autoNext !== false, delay: FLASH_DELAYS.includes(preferences.delay) ? preferences.delay : preferences.bypass === true ? 3 : 6, complete: false };
 }
 
 export function readFlashRound(bank, raw) {
@@ -162,19 +163,23 @@ export function readFlashRound(bank, raw) {
   if (!ids.length && !['missed', 'saved'].includes(raw.scope)) return null;
   const allAnswers = validAnswers(bank, raw.answers);
   const answers = Object.fromEntries(ids.filter(id => allAnswers[id]).map(id => [id, allAnswers[id]]));
+  const seen = [...new Set([...(Array.isArray(raw.seen) ? raw.seen.filter(id => ids.includes(id)) : []), ...Object.keys(answers)])];
   const index = Number.isSafeInteger(raw.index) ? Math.min(Math.max(raw.index, 0), Math.max(ids.length - 1, 0)) : 0;
-  return { scope: raw.scope, ids, index, answers, last: ids.includes(raw.last) && answers[raw.last] ? raw.last : null,
-    autoNext: raw.autoNext !== false, delay: [3, 6, 12].includes(raw.delay) ? raw.delay : 6,
-    complete: raw.complete === true && ids.length > 0 && ids.every(id => answers[id]) };
+  const bypass = raw.bypass === true;
+  return { scope: raw.scope, ids, index, answers, seen, bypass, last: ids.includes(raw.last) && (answers[raw.last] || bypass && seen.includes(raw.last)) ? raw.last : null,
+    autoNext: raw.autoNext !== false, delay: FLASH_DELAYS.includes(raw.delay) ? raw.delay : bypass ? 3 : 6,
+    complete: raw.complete === true && ids.length > 0 && ids.every(id => bypass ? seen.includes(id) : answers[id]) };
 }
 
 export function parseFlashRoute(hash, bank) {
-  if (!hash || hash === '#' || hash === '#/') return { scope: null, id: null };
+  if (!hash || hash === '#' || hash === '#/') return { scope: null, id: null, bypass: null };
+  const cards = /^#\/cards\/(current|all|2026|missed|saved)$/.exec(hash);
+  if (cards) return { scope: cards[1], id: null, bypass: true };
   const match = /^#\/revise\/(current|all|2026|missed|saved)(?:\/question\/(w\d{2}-\d{4}-q\d{2}))?$/.exec(hash);
   if (!match || (match[2] && !bank.questions.some(q => q.id === match[2] && (match[1] !== '2026' || q.year === 2026)))) return null;
-  return { scope: match[1], id: match[2] || null };
+  return { scope: match[1], id: match[2] || null, bypass: false };
 }
 
-export function flashRoute(scope, id = null) {
-  return `#/revise/${scope}${id ? '/question/' + id : ''}`;
+export function flashRoute(scope, id = null, bypass = false) {
+  return bypass ? `#/cards/${scope}` : `#/revise/${scope}${id ? '/question/' + id : ''}`;
 }

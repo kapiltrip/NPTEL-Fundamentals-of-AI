@@ -8,8 +8,9 @@ const bank=JSON.parse(readFileSync(new URL('../data/questions.json',import.meta.
 const katex=createRequire(import.meta.url)('../vendor/katex/dist/katex.min.js');
 let serial=0;
 const tick=()=>new Promise(resolve=>setTimeout(resolve,0));
-async function setup({legacy=null,modern=null,hash='#/weeks',host='http://127.0.0.1:8765',blocked=false}={}){
-  const window=new Window({url:host+'/game/'+hash});window.document.body.innerHTML='<div id="app"></div>';window.katex=katex;
+async function setup({legacy=null,modern=null,hash='#/weeks',host='http://127.0.0.1:8765',blocked=false,width=1024,styles=false}={}){
+  const window=new Window({url:host+'/game/'+hash,width,height:844});window.document.body.innerHTML='<div id="app"></div>';window.katex=katex;
+  if(styles){const style=window.document.createElement('style');style.textContent=readFileSync(new URL('../styles.css',import.meta.url),'utf8');window.document.head.append(style);}
   if(legacy)window.localStorage.setItem(STORAGE_KEY,JSON.stringify(legacy));
   if(modern)window.localStorage.setItem(PROGRESS_KEY,JSON.stringify(modern));
   const storage=blocked?{getItem:()=>null,setItem:()=>{throw new Error('Storage denied');}}:window.localStorage;
@@ -157,3 +158,65 @@ w=await setup({hash:'#/revise/all',modern:{version:2,answers:retained.answers,fl
 assert.match(document.querySelector('.question-kind').textContent,/Saved recap/);assert.ok(document.querySelector('.flash-current .feedback.correct'));
 assert.equal(document.querySelectorAll('[role="checkbox"]').length,0);await w.happyDOM.close();
 console.log(JSON.stringify({defaultFlash:'passed',randomPool:'passed',autoAdvance:'passed',noDuplicateSubmission:'passed',pause:'passed',sourceReadingPause:'passed',navigationCancelsTimers:'passed',resumeFlash:'passed',shufflePreservesScores:'passed',skippedQuestionsReturn:'passed',noForwardRepeats:'passed',flashMultiSelect:'passed',flashRecapMigration:'passed'}));
+
+// Bypass works from a shareable mobile URL, with answers shown before any click.
+const existingAnswers={[first.id]:makeAttempt(first,[wrong])};
+w=await setup({hash:'#/cards/all',modern:{version:2,answers:existingAnswers}});
+assert.equal(saved().flash.bypass,true);assert.equal(saved().flash.delay,3);assert.equal(saved().flash.ids.length,549);
+assert.equal(document.querySelector('.bypass-toggle').getAttribute('aria-pressed'),'true');
+assert.ok(document.querySelector('.bypass-answer'));assert.match(document.querySelector('.bypass-answer h3').textContent,/Answer to remember/);
+assert.equal(document.querySelector('.bypass-options').open,false);assert.equal(document.querySelector('.flash-settings').open,false);
+assert.equal(document.querySelector('.flash-current .check-answer'),null);assert.equal(Object.keys(saved().flash.answers).length,0);
+assert.deepEqual(saved().answers,existingAnswers);assert.equal(saved().flash.seen.length,1);
+assert.ok(document.querySelector('.mobile-auto-toggle'));assert.deepEqual([...document.querySelector('.flash-speed').options].map(o=>o.value),['1','2','3','6','12']);
+// Capture the real app's next-card timer without waiting or controlling a browser.
+const bypassSet=w.setTimeout.bind(w),bypassClear=w.clearTimeout.bind(w),cardTimers=new Map();let cardTimerId=20000;
+w.setTimeout=(fn,delay,...args)=>{if([1000,2000,3000,6000,12000].includes(delay)){const id=cardTimerId++;cardTimers.set(id,{fn,delay});return id;}return bypassSet(fn,delay,...args);};
+w.clearTimeout=id=>{cardTimers.delete(id);bypassClear(id);};
+document.querySelector('.auto-toggle').click();document.querySelector('.auto-toggle').click();
+assert.equal(cardTimers.size,1);assert.equal([...cardTimers.values()][0].delay,3000);
+const shownFirst=flashId();[...cardTimers.values()][0].fn();assert.notEqual(flashId(),shownFirst);
+assert.ok(document.querySelector('.bypass-answer'));assert.equal(cardTimers.size,1);assert.equal(saved().flash.seen.length,2);
+assert.deepEqual(saved().answers,existingAnswers);assert.equal(Object.keys(saved().flash.answers).length,0);
+const speed=document.querySelector('.flash-speed');speed.value='1';speed.dispatchEvent(new w.Event('change'));
+assert.equal([...cardTimers.values()][0].delay,1000);assert.match(document.querySelector('.auto-status').textContent,/Next card in 1s/);
+document.querySelector('.mobile-auto-toggle').click();assert.equal(cardTimers.size,0);assert.equal(saved().flash.autoNext,false);
+const savedCards=saved(),savedCardId=flashId();await w.happyDOM.close();
+w=await setup({hash:'#/cards/all',modern:savedCards});assert.equal(flashId(),savedCardId);assert.equal(saved().flash.autoNext,false);assert.equal(saved().flash.delay,1);
+document.querySelector('.bypass-toggle').click();await tick();assert.equal(saved().flash.bypass,false);
+assert.equal(document.querySelector('.flash-current .feedback'),null);assert.equal(document.querySelector('.bypass-options'),null);assert.deepEqual(saved().answers,existingAnswers);
+document.querySelector('.bypass-toggle').click();await tick();assert.equal(saved().flash.bypass,true);assert.ok(document.querySelector('.bypass-answer'));assert.deepEqual(saved().answers,existingAnswers);
+document.querySelector('.auto-toggle').click();await w.happyDOM.close();
+
+// Every card is reached exactly once, including multi-select and image questions.
+const deck=createFlashRound(bank,'all',existingAnswers,[],{bypass:true,autoNext:false});
+w=await setup({hash:'#/cards/all',modern:{version:2,answers:existingAnswers,flash:deck}});
+const shown=new Set();
+for(let i=0;i<bank.questions.length;i++){
+  const id=flashId(),q=bank.questions.find(item=>item.id===id);assert.ok(!shown.has(id),id);shown.add(id);
+  const feedback=document.querySelector('.flash-current .bypass-answer');assert.ok(feedback,id);
+  for(const option of q.options.filter(o=>q.correct.includes(o.id)))assert.ok(feedback.textContent.includes(option.id.toUpperCase()+'. '),id);
+  assert.equal(document.querySelectorAll('.katex-error').length,0,id);
+  assert.equal(Object.keys(saved().flash.answers).length,0,id);
+  assert.deepEqual(saved().answers,existingAnswers,id);
+  findButton('Next card →').click();
+}
+assert.equal(shown.size,549);assert.equal(saved().flash.seen.length,549);assert.equal(saved().flash.complete,true);
+assert.match(document.querySelector('.flash-complete').textContent,/All 549 answer cards shown/);assert.deepEqual(saved().answers,existingAnswers);
+await w.happyDOM.close();
+console.log(JSON.stringify({bypassCardsShown:shown.size,answerRevealedImmediately:'passed',bypassAutomaticNext:'passed',fastOneSecondMode:'passed',mobilePauseControl:'passed',bypassResume:'passed',switchQuizAndBypass:'passed',scoresUnchanged:'passed',completeDeckWithoutRepeats:'passed'}));
+
+// Check the responsive CSS in small phone viewports without opening a browser.
+const phoneDeck=createFlashRound(bank,'all',{},[],{bypass:true,autoNext:false});phoneDeck.ids=[multi.id];
+for(const width of [320,360,390,430]){
+  w=await setup({hash:'#/cards/all',modern:{version:2,answers:{},flash:phoneDeck},width,styles:true});
+  assert.equal(window.innerWidth,width);assert.equal(window.getComputedStyle(document.querySelector('.flash-controls')).position,'fixed');
+  assert.equal(window.getComputedStyle(document.querySelector('.mobile-auto-toggle')).display,'block');
+  assert.equal(window.getComputedStyle(document.querySelector('.flash-tools .auto-toggle')).display,'none');
+  assert.equal(window.getComputedStyle(document.querySelector('.bypass-toggle')).minHeight,'44px');
+  assert.equal(window.getComputedStyle(document.querySelector('.bypass-answer .correct-answer')).fontSize,'17px');
+  assert.equal(window.getComputedStyle(document.querySelector('.question-prompt')).fontSize,'20px');
+  assert.equal(document.querySelector('.bypass-options').open,false);await w.happyDOM.close();
+}
+assert.match(readFileSync(new URL('../index.html',import.meta.url),'utf8'),/name="viewport" content="width=device-width, initial-scale=1"/);
+console.log(JSON.stringify({responsiveCSSWidths:[320,360,390,430],fixedMobileControls:'passed',readableAnswerSize:'passed',viewportMeta:'passed',visualBrowserCheck:'not performed'}));

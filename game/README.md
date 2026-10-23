@@ -1,6 +1,6 @@
 # AI Practice
 
-[Open in ChatGPT Sites](https://kapil-ai-weekly-practice.dreamysnipe514.chatgpt.site) · [Local app](http://127.0.0.1:8765/game/)
+[Quiz](https://kapil-ai-weekly-practice.dreamysnipe514.chatgpt.site/#/revise/all) · [Bypass answer cards](https://kapil-ai-weekly-practice.dreamysnipe514.chatgpt.site/#/cards/all) · [Local app](http://127.0.0.1:8765/game/)
 
 Run `python game/server.py` from the repository, then open [the local app](http://127.0.0.1:8765/game/). On Windows, `game/start.ps1` starts it quietly in the background.
 
@@ -8,7 +8,11 @@ The app opens straight into **random flash revision**. Answer one question, see 
 
 All **549 entries** are included: 53 full assignment sets and 19 reviewed additions from `Found`, including the Week 0 prerequisites. **164 MCQs** retain source wording and choices, including all 120 from 2026; **385** use labelled recap wording and practice choices. Source wording does not make an unofficial answer key official. Corrections and source notes accompany the feedback.
 
-Use **Pause & read**, choose a 3/6/12-second reading time, or move on immediately with **Next**. The last explanation stays available beside the next question. Opening a source or expanding a diagram pauses automatic movement. Your place, shuffle, and scores survive a reload. Starting another shuffle keeps earlier results. Select-all questions use **Check answer**. Keys: **1–4** answer, **N** next, **P** previous, **A** pause/resume, **S** save.
+Turn on **Bypass · show answers** for quick revision: each card immediately shows its correct answer and explanation, then advances without a selection. All 549 cards are covered once per full shuffle. Cards keep a separate “shown” count and never add correct answers to your quiz score. Switching modes starts a fresh shuffle and preserves scored results.
+
+Use **Pause & read**, choose a 1/2/3/6/12-second reading time under **Settings**, or move on immediately with **Next**. On a phone, Previous, Pause/Resume, and Next stay at the bottom. In quiz mode the last explanation stays available beside the next question. Opening settings, a source, or a diagram pauses automatic movement. Your place, shuffle, and scores survive a reload. Starting another shuffle keeps earlier results. Select-all questions use **Check answer**. Keys: **1–4** answer, **N** next, **P** previous, **A** pause/resume, **S** save.
+
+The hosted links work away from this computer; sign into the same ChatGPT account if asked. Progress is stored separately in each phone or browser. The local loopback address is for this computer.
 
 **Browse by week** keeps the week/year view with **Unanswered**, **Missed**, **Saved**, and **Continue**. Old recap attempts preserve their original wording and score when source choices become available; **Try original wording** starts the new version. The flash pool also offers missed and saved questions.
 
