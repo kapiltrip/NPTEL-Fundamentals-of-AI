@@ -344,6 +344,17 @@ function startFlash(scope, fresh = false, bypass = progress.flash?.bypass || fal
   draft = []; save(); changeHash(flashRoute(scope, null, bypass), { focusQuestion: true });
 }
 
+function answerForMe() {
+  const round = progress.flash;
+  if (!round || round.bypass || round.complete) return;
+  stopAutoNext();
+  round.bypass = true; round.autoNext = true; round.delay = Math.min(round.delay, 3);
+  round.seen = [...new Set([...round.seen, ...Object.keys(round.answers)])];
+  draft = []; save();
+  history.replaceState(null, '', flashRoute(round.scope, null, true));
+  render({ focusFeedback: true });
+}
+
 function stepFlash(direction = 1) {
   stopAutoNext();
   const round = progress.flash, current = round.ids[round.index];
@@ -465,6 +476,10 @@ function renderFlash(main, route) {
     const grid = el('div', 'flash-grid'), current = el('div', 'flash-current'), card = el('section', 'question-card'); card.dataset.question = q.id;
     const meta = el('div', 'question-meta'); meta.append(el('span', 'question-position', `${q.year} · Week ${q.week} · Q${q.number}`), el('span', 'question-kind', q.savedRecap ? 'Saved recap attempt' : q.mode === 'original' ? 'Source MCQ' : 'Recap practice')); card.append(meta);
     const prompt = el('h2', 'question-prompt'); prompt.tabIndex = -1; prompt.append(rich(q.prompt)); card.append(prompt);
+    if (!bypass && !attempted) {
+      card.append(button('You answer', 'secondary you-answer', answerForMe));
+      card.append(el('p', 'answer-for-me-hint', 'Show this answer and continue with automatic answers.'));
+    }
     if (bypass) card.append(flashFeedback(q, null, false, true));
     const flagged = progress.flagged.includes(q.id), flag = button(flagged ? '★ Saved for review' : '☆ Save for review', 'save-question text-button', () => {
       progress.flagged = flagged ? progress.flagged.filter(id => id !== q.id) : [...progress.flagged, q.id]; save(); render({ focusFlag: true });
@@ -501,7 +516,7 @@ function renderFlash(main, route) {
   }
   const footer = el('footer', 'flash-footer');
   footer.append(button('Start a new shuffle', 'text-button', () => startFlash(scope, true)), el('p', 'local-note', storageAvailable ? 'Progress saved in this browser. Earlier results stay saved when you start a shuffle.' : 'Storage unavailable. Progress stays in this tab.'));
-  footer.append(el('p', 'keyboard-hint', 'Keys: 1–4 answer · N next · P previous · A pause/resume · S save'));
+  footer.append(el('p', 'keyboard-hint', 'Keys: 1–4 answer · U you answer · N next · P previous · A pause/resume · S save'));
   if (scope === 'current') footer.append(el('p', 'muted', 'All 2026 questions first, shuffled across weeks. Older questions follow in random order. No repeats within the shuffle.'));
   main.append(footer);
   return automatic;
@@ -536,6 +551,7 @@ window.addEventListener('keydown',event=>{
   else if(event.key.toLowerCase()==='p')target=document.querySelector('[data-navigation="previous"]');
   else if(event.key.toLowerCase()==='s')target=document.querySelector('.save-question');
   else if(event.key.toLowerCase()==='a')target=document.querySelector('.auto-toggle');
+  else if(event.key.toLowerCase()==='u')target=document.querySelector('.you-answer');
   if(target&&!target.disabled){event.preventDefault();target.click();}
 });
 

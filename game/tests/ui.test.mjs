@@ -220,3 +220,30 @@ for(const width of [320,360,390,430]){
 }
 assert.match(readFileSync(new URL('../index.html',import.meta.url),'utf8'),/name="viewport" content="width=device-width, initial-scale=1"/);
 console.log(JSON.stringify({responsiveCSSWidths:[320,360,390,430],fixedMobileControls:'passed',readableAnswerSize:'passed',viewportMeta:'passed',visualBrowserCheck:'not performed'}));
+
+// “You answer” begins automatic answers at the current card, keeping the deck and scores.
+const preservedAttempt=makeAttempt(first,first.correct),assistedRound=createFlashRound(bank,'all',{},[],{autoNext:false});
+assistedRound.ids=[first.id,multi.id,pair[1].id];assistedRound.index=1;
+assistedRound.answers[first.id]=preservedAttempt;assistedRound.seen=[first.id];assistedRound.last=first.id;
+const preservedScores={[first.id]:preservedAttempt};
+w=await setup({hash:'#/revise/all',modern:{version:2,answers:preservedScores,flash:assistedRound},width:390,styles:true});
+assert.equal(flashId(),multi.id);assert.equal(window.getComputedStyle(document.querySelector('.you-answer')).minHeight,'44px');
+choose('b');assert.equal(document.querySelector('.flash-current .feedback'),null);
+const assistedSet=w.setTimeout.bind(w),assistedClear=w.clearTimeout.bind(w),assistedTimers=new Map();let assistedTimerId=30000;
+w.setTimeout=(fn,delay,...args)=>{if([1000,2000,3000,6000,12000].includes(delay)){const id=assistedTimerId++;assistedTimers.set(id,{fn,delay});return id;}return assistedSet(fn,delay,...args);};
+w.clearTimeout=id=>{assistedTimers.delete(id);assistedClear(id);};
+findButton('You answer').click();
+assert.equal(flashId(),multi.id);assert.equal(location.hash,'#/cards/all');assert.deepEqual(saved().flash.ids,assistedRound.ids);
+assert.equal(saved().flash.index,1);assert.equal(saved().flash.bypass,true);assert.equal(saved().flash.autoNext,true);
+assert.deepEqual(saved().answers,preservedScores);assert.deepEqual(saved().flash.answers,{[first.id]:preservedAttempt});
+assert.ok(document.querySelector('.flash-current .bypass-answer'));assert.equal(document.querySelectorAll('.answer-option.correct').length,3);
+assert.equal(document.querySelectorAll('.answer-option[aria-checked="true"]').length,0,'partial selections are not submitted');
+assert.equal(assistedTimers.size,1);assert.equal([...assistedTimers.values()][0].delay,3000);
+[...assistedTimers.values()][0].fn();assert.equal(flashId(),pair[1].id);assert.ok(document.querySelector('.bypass-answer'));
+assert.deepEqual(saved().answers,preservedScores);assert.equal(assistedTimers.size,1);
+findButton('Pause & read').click();assert.equal(assistedTimers.size,0);const assistedSaved=saved();await w.happyDOM.close();
+w=await setup({hash:'#/cards/all',modern:assistedSaved});assert.equal(flashId(),pair[1].id);assert.deepEqual(saved().answers,preservedScores);await w.happyDOM.close();
+w=await setup({hash:'#/revise/all',modern:{version:2,answers:preservedScores,flash:assistedRound}});
+window.dispatchEvent(new w.KeyboardEvent('keydown',{key:'u'}));assert.equal(saved().flash.bypass,true);assert.equal(flashId(),multi.id);
+findButton('Pause & read').click();await w.happyDOM.close();
+console.log(JSON.stringify({youAnswer:'passed',currentCardAndShufflePreserved:'passed',continuousAnswers:'passed',noInventedScore:'passed',partialMultiSelectionNotSubmitted:'passed',youAnswerResume:'passed',youAnswerKeyboard:'passed'}));

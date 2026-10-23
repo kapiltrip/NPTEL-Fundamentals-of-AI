@@ -8,7 +8,9 @@ The app opens straight into **random flash revision**. Answer one question, see 
 
 All **549 entries** are included: 53 full assignment sets and 19 reviewed additions from `Found`, including the Week 0 prerequisites. **164 MCQs** retain source wording and choices, including all 120 from 2026; **385** use labelled recap wording and practice choices. Source wording does not make an unofficial answer key official. Corrections and source notes accompany the feedback.
 
-Turn on **Bypass · show answers** for quick revision: each card immediately shows its correct answer and explanation, then advances without a selection. All 549 cards are covered once per full shuffle. Cards keep a separate “shown” count and never add correct answers to your quiz score. Switching modes starts a fresh shuffle and preserves scored results.
+Click **You answer** on an unanswered quiz question to reveal its correct answer and explanation, then continue automatically showing answers. This keeps the current question, shuffle, and earlier scores. Press **U** for the same action.
+
+Turn on **Bypass · show answers** for quick revision from a fresh shuffle: each card immediately shows its correct answer and explanation, then advances without a selection. All 549 cards are covered once per full shuffle. Cards keep a separate “shown” count and never add correct answers to your quiz score. The top Bypass switch starts a fresh shuffle and preserves scored results.
 
 Use **Pause & read**, choose a 1/2/3/6/12-second reading time under **Settings**, or move on immediately with **Next**. On a phone, Previous, Pause/Resume, and Next stay at the bottom. In quiz mode the last explanation stays available beside the next question. Opening settings, a source, or a diagram pauses automatic movement. Your place, shuffle, and scores survive a reload. Starting another shuffle keeps earlier results. Select-all questions use **Check answer**. Keys: **1–4** answer, **N** next, **P** previous, **A** pause/resume, **S** save.
 
